@@ -70,6 +70,31 @@ class clinicalPartner(models.Model):
     companion_document = fields.Integer(string="No. Documento", readonly=1, default=None)
     companion_parentezco = fields.Char(string="Parentezco")
     companion_tel = fields.Char(string="Telefono de Contacto")
+    # company_type is only an interface field, do not use it in business logic
+    company_type = fields.Selection(string='Company Type',
+                                    selection=[('person', 'Individual'), ('company', 'Company'), ('patient', 'Paciente')],
+                                    compute='_compute_company_type', inverse='_write_company_type')
+
+    @api.depends('is_company')
+    def _compute_ofimatica_company_type(self):
+        for partner in self:
+            partner.company_type = 'company' if partner.is_company else 'person'
+
+    def _write_ofimatica_company_type(self):
+        for partner in self:
+            partner.is_company = partner.company_type == 'company'
+
+    @api.onchange('company_type')
+    def onchange_ofimatica_company_type(self):
+        self.is_company = False
+        if self.company_type == 'person':
+            print('es persona')
+        elif self.company_type == 'company':
+            print('es compañia')
+        elif self.company_type == 'patient':
+            print('es paciente')
+
+
 
     @api.onchange('first_name', 'second_name', 'last_name', 'second_last_name')
     def _onchange_person_names(self):
