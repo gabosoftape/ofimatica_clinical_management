@@ -1,0 +1,88 @@
+<odoo>
+    <record id="ofimatica_partner_form" model="ir.ui.view">
+        <field name="name">clinical.view_partner_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="replace">
+                <field name="name" attrs="{'readonly': [('is_company','==', False)]}"/>
+            </field>
+            <field name="company_type" position="replace">
+                <field name="contact_type" attrs="{'invisible': [('is_company','==', True)]}" ></field>
+                <field name="company_type" attrs="{'invisible': [('is_company','==', True)]}" ></field>
+            </field>
+            <field name="vat" position="replace">
+                <field name="vat" invisible="1"/>
+            </field>
+            <field name="parent_id" position="replace">
+                <field name="parent_id" invisible="1"/>
+            </field>
+            <field name="website" position="replace">
+                <field name="website" invisible="1"/>
+            </field>
+            <field name="title" position="replace">
+                <field name="title" invisible="1"/>
+            </field>
+            <field name="lang" position="replace">
+                <field name="lang" invisible="1"/>
+            </field>
+            <field name="category_id" position="replace">
+                <field name="category_id" invisible="1"/>
+            </field>
+            <field name="type" position="before">
+                <label for="first_name" string="Nombres y apellidos" attrs="{'invisible': [('is_company','==', True)]}"/>
+                            <div class="o_address_format">
+                                <field name="first_name" placeholder="Primer Nombre" attrs="{'invisible': [('is_company','==', True)]}"/>
+                                <field name="second_name" placeholder="Segundo Nombre" attrs="{'invisible': [('is_company','==', True)]}" />
+                                <field name="last_name" placeholder="Primer Apellido" attrs="{'invisible': [('is_company','==', True)]}"/>
+                                <field name="second_last_name" placeholder="Segundo Apellido" attrs="{'invisible': [('is_company','==', True)]}"/>
+                            </div>
+                <label for="id_type" string="Identificacion"/>
+                            <div class="o_address_format">
+                                <field name="id_type" placeholder="Tipo de Documento"/>
+                                <field name="id_document" placeholder="No. Documento"/>
+                            </div>
+                <label for="age" string="Edad"/>
+                            <div class="o_address">
+                                <field name="age" string="Edad"/>
+                                <field name="age_udm" string="Unidad"/>
+
+                            </div>
+                <label for="sex" string="Sexo"/>
+                            <div class="o_address">
+                                <field name="sex" string="Sexo"/>
+
+                            </div>
+                <label for="zone" string="zona de residencia"/>
+                            <div class="o_address">
+                                <field name="zone" string="Zona Residencia"/>
+
+                            </div>
+                <label for="function" string="Profesion/ocupacion"/>
+                            <div class="o_address">
+                                <field name="function"/>
+                            </div>
+            </field>
+            <field name="email" position="after">
+                <label for="companion" string="Datos Acompañante" attrs="{'invisible': [('age','>', 17)]}"/>
+                    <div class="o_address">
+                        <field name="companion" attrs="{'invisible': [('age','>', 17)]}"/>
+                    </div>
+                <label for="companion_document" string="No. Documento" attrs="{'invisible': [('age','>', 17)]}"/>
+                    <div class="o_address">
+                        <field name="companion_document" attrs="{'invisible': [('age','>', 17)]}"/>
+                    </div>
+                <label for="companion_parentezco" string="Parentezco" attrs="{'invisible': [('age','>', 17)]}"/>
+
+                    <div class="o_address">
+                        <field name="companion_parentezco" attrs="{'invisible': [('age','>', 17)]}"/>
+                    </div>
+                <label for="companion_tel" string="Telefono" attrs="{'invisible': [('age','>', 17)]}"/>
+                    <div class="o_address">
+                        <field name="companion_tel" attrs="{'invisible': [('age','>', 17)]}"/>
+                    </div>
+
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,1 +1,2 @@
-ofimatica_clinical_management
+RCM
+La fila que falla contiene (8, null, 1, null, null, null, null, null, es_CO, null, null, null, null, null, null, null, t, t, f, f, Profesor, contact, null, null, null, null, null, null, null, null, null, f, null, 0, f, null, null, null, null, 1, 2019-07-29 20:17:06.285622, 1, 2019-07-29 20:17:06.285622, null, 1, null, 1121924149, Gabriel, Arturo, Pabon, Errigure, 25, 1, M, Zona1, null, null, null, null).

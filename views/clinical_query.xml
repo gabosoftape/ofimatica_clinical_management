@@ -1,0 +1,282 @@
+<odoo>
+
+<!--
+**********************************
+convenios
+**********************************
+-->
+           <record model="ir.actions.act_window" id="action_convenios">
+                <field name="name">Convenios</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">convenio.cliente</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+
+<!--
+**********************************
+historial clinico
+**********************************
+-->
+
+        <record id="historial_clinico_list" model="ir.ui.view">
+            <field name="name">historial.clinico.tree</field>
+            <field name="model">historial.clinico</field>
+            <field name="arch" type="xml">
+                <tree string="Consulta Clinica"  decoration-bf="state=='cita'" decoration-muted="state=='cerrada'" decoration-danger="state=='cancelada'" decoration-info="state=='proceso'">
+                    <field name="folio"/>
+                    <field name="partner_id"/>
+                    <field name="convenio_id"/>
+                    <field name="fecha"/>
+                    <field name="motivo"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="historial_clinico_form" model="ir.ui.view">
+            <field name="name">historial.clinico.form</field>
+            <field name="model">historial.clinico</field>
+            <field name="arch" type="xml">
+                <form string="Consulta Clinica">
+                    <header>
+                        <button name="cita" states="cancelada" string="Cita" type="object" />
+                        <button name="proceso" states="cita" string="En Proceso" type="object" />
+                        <button name="cerrada" states="proceso" string="Finalizar Consulta" type="object" />
+                        <button name="cancelada" states="cita,proceso" string="Cancelar" type="object" />
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Folio: <field name="folio" readonly="1"/></h1>
+                        </div>
+                         <div class="oe_title">
+                            <label class="oe_edit_only" for="partner_id" string="Cliente"/>
+                            <h1><field name="partner_id" options="{'no_create': True,'no_create_edit':True}" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="fecha" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="nombre" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="edad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="telefono" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" />
+                                <field name="convenio_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                            </group>
+                            <group>
+                                <field name="documento_identidad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="apellidos"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="ocupacion"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="celular"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="optometra_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="anamnesis" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                            <field name="motivo" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                            <field name="antecedentes_familiares" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                            <field name="antecedentes_oculares" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                        </group>
+                        <notebook>
+                            <page string="Agudeza Visual">
+                                <group>
+                                    <group>
+                                       <field name="agudeza_derecho_ids" nolabel="1" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}">
+                                        <tree  editable="botoom" create="false">
+                                            <field name="name" required="1" />
+                                            <field name="sc" />
+                                            <field name="vl" />
+                                            <field name="vp" />
+                                            <field name="no_unlink" invisible="1"/>
+                                        </tree>
+                                        </field>
+                                    </group>
+                                    <group>
+                                        <field name="agudeza_izquierdo_ids" nolabel="1" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}">
+                                            <tree  editable="botoom" create="false">
+                                                <field name="name" required="1" />
+                                                <field name="sc" />
+                                                <field name="vl" />
+                                                <field name="vp" />
+                                                <field name="no_unlink" invisible="1"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                </group>
+
+                            </page>
+                            <page string="Lensometria">
+                                <group>
+                                    <group>
+                                       <field name="lensometria_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="lensometria_id"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                             <page string="Examen">
+                                <group>
+                                    <field name="examen_anterior"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    <field name="examen_motor"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    <field name="examen_posterior"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                </group>
+                                <group>
+                                    <group>
+                                       <field name="ishihara"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="estereopsis"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Queratometria y Refraccion">
+                                <group string="Queratometria">
+                                    <group>
+                                        <field name="queratometria_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="queratometria_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <group string="Refraccion">
+                                     <group>
+                                        <field name="refraccion_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="refraccion_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <group string="Refraccion Bajo Cicloplejia">
+                                     <group>
+                                        <field name="refraccion_bajo_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="refraccion_bajo_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <group string="Notas">
+                                    <field name="notas_queratometria_refraccion" nolabel="1" placeholder="Notas..." attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                </group>
+                            </page>
+                            <page string="RX FINAL" >
+                                <group>
+                                    <group>
+                                        <field name="rx_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="rx_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="rx_od_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="rx_oi_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="rx_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="rx_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="rx_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="primas"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="tipo_de_lente"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <group>
+                                    <field name="diagnostico"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    <field name="plan"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                </group>
+                            </page>
+                            <page string="Formula">
+                                <group>
+                                    <group>
+                                        <field name="formula_rx_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="formula_rx_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="formula_rx_od_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="formula_rx_oi_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="formula_rx_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="formula_rx_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="formula_rx_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="formula_primas"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="formula_tipo_de_lente"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="material"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="filtros"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="uso"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="farmaco_1"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                        <field name="farmaco_2"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+
+                                <group>
+                                    <field name="formula_plan"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    <field name="formula_notas"  placeholder="Notas..." attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                </group>
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="historial_clinico_search" model="ir.ui.view">
+            <field name="name">historial.clinico.serch</field>
+            <field name="model">historial.clinico</field>
+            <field name="arch" type="xml">
+                <search string="Consulta Clinica">
+                    <field name="folio" />
+                    <field name="nombre" filter_domain="['|', ('nombre','ilike',self),('apellidos','ilike',self)]" string="Paciente..."/>
+                    <field name="partner_id"/>
+                    <field name="motivo"/>
+                    <filter domain="[('state', '=', 'cita')]" string="Citas" name="citas_programadas"/>
+                    <filter domain="[('state', '=', 'cancelada')]" string="Canceladas"/>
+                    <group expand="0" string="Agrupar...">
+                        <filter string="Paciente" domain="" context="{'group_by':'partner_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record  id="calendar_clinic_historial" model="ir.ui.view">
+            <field name="name">historial.clinico.calendar.lead</field>
+            <field name="model">historial.clinico</field>
+            <field name="priority" eval="2"/>
+            <field name="arch" type="xml">
+                <calendar string="Consultas" date_start="fecha" color="state" mode="month">
+                    <field name="nombre"/>
+                    <field name="convenio_id"/>
+                </calendar>
+            </field>
+        </record>
+
+
+
+    <record id="action_historial_clinico" model="ir.actions.act_window">
+            <field name="name">Consulta Clinica</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">historial.clinico</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="view_id" ref="historial_clinico_list"/>
+        </record>
+
+    <record id="action_historial_clinico_agenda" model="ir.actions.act_window">
+            <field name="name">Citas Programadas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">historial.clinico</field>
+            <field name="view_type">form</field>
+            <field name="context">{'search_default_citas_programadas': True,}</field>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="historial_clinico_list"/>
+        </record>
+
+
+</odoo>
