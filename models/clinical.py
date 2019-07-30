@@ -77,32 +77,6 @@ class clinicalPartner(models.Model):
             names = [name for name in [self.first_name, self.second_name, self.last_name, self.second_last_name] if name]
             self.name = u' '.join(names)
 
-    @api.multi
-    def person_name(self, vals):
-        values = vals or {}
-        person_field = ['first_name', 'second_name', 'last_name', 'second_last_name']
-        person_names = set(person_field)
-        values_keys = set(values.keys())
-
-        if person_names.intersection(values_keys):
-            names = []
-            for x in person_field:
-                if x in values.keys():
-                    names += [values.get(x, False) and values.get(x).strip() or '']
-                else:
-                    names += [self[x] or '']
-            name = ' '.join(names)
-            if name.strip():
-                values.update({
-                    'name': name,
-                })
-
-        if values.get('name', False):
-            values.update({
-                'name': values.get('name').strip(),
-            })
-
-        return values
 
 class ConvenioCliente(models.Model):
     _name = 'convenio.cliente'
