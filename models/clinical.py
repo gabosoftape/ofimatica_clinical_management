@@ -179,17 +179,13 @@ class HistorialClinico(models.Model):
 
     fecha = fields.Date('Fecha', default=fields.Date.today())
 
-    documento_identidad = fields.Char('Documento de Identidad', size=128)
+    documento_identidad = fields.Char('Documento de Identidad',  related='partner_id.id_document')
 
-    nombre = fields.Char('Nombre', size=128)
+    edad = fields.Integer('Edad', related='partner_id.id_document')
 
-    apellidos = fields.Char('Apellidos', size=128)
+    ocupacion = fields.Char('Ocupacion', related='partner_id.age')
 
-    edad = fields.Integer('Edad')
-
-    ocupacion = fields.Char('Ocupacion', size=128)
-
-    telefono = fields.Char('Telefono', size=128)
+    telefono = fields.Char('Telefono', related='partner_id.phone')
 
     celular = fields.Char('Celular', size=128)
 
@@ -291,28 +287,21 @@ class HistorialClinico(models.Model):
 
     @api.onchange('load_default', 'partner_id')
     def onchange_load_defaults(self):
-        personas = self.env['res.partner']
-        pacientes = personas.search([('company_type','=','patient')])
-        for paciente in pacientes:
-            if paciente.id == self.partner_id.id:
-                print(pacientes)
-                
         if self.partner_id:
             ojo_derecho = [(0, 0, {
                 'name': 'OD',
                 'no_unlink': True,
-            }), (0, 0, {
+           }), (0, 0, {
                 'name': 'OI',
                 'no_unlink': True,
 
-            })]
+           })]
             ojo_izquierdo = [(0, 0, {
-                'name': 'OD',
+               'name': 'OD',
                 'no_unlink': True,
-            }), (0, 0, {
+           }), (0, 0, {
                 'name': 'OI',
                 'no_unlink': True,
-
             })]
             self.agudeza_derecho_ids = ojo_derecho
             self.agudeza_izquierdo_ids = ojo_izquierdo
