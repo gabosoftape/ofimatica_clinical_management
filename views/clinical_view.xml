@@ -26,7 +26,7 @@
                 <field name="category_id" invisible="1"/>
             </field>
             <field name="type" position="before">
-                <label for="first_name" string="Nombres y apellidos"/>
+                <label for="first_name" string="Nombres y apellidos" />
                             <div class="o_address_format">
                                 <field name="first_name" placeholder="Primer Nombre" attrs="{'required' : [('type', '=', 'contact')]}"/>
                                 <field name="second_name" placeholder="Segundo Nombre" attrs="{'required' : [('type', '=', 'contact')]}" />

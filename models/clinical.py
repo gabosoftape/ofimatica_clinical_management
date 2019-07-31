@@ -291,6 +291,12 @@ class HistorialClinico(models.Model):
 
     @api.onchange('load_default', 'partner_id')
     def onchange_load_defaults(self):
+        personas = self.env['res.partner']
+        pacientes = personas.search([('company_type','=','patient')])
+        for paciente in pacientes:
+            if paciente.id == self.partner_id.id:
+                print(pacientes)
+                
         if self.partner_id:
             ojo_derecho = [(0, 0, {
                 'name': 'OD',

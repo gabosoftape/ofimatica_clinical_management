@@ -58,16 +58,16 @@ historial clinico
                         <group>
                             <group>
                                 <field name="fecha" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="nombre" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="edad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="telefono" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" />
-                                <field name="convenio_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="nombre" readonly="1"/>
+                                <field name="edad" readonly="1"/>
+                                <field name="telefono" readonly="1" />
+                                <field name="convenio_id" readonly="1"/>
                             </group>
                             <group>
-                                <field name="documento_identidad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="apellidos"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="ocupacion"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="celular"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="documento_identidad" readonly="1"/>
+                                <field name="apellidos"  readonly="1"/>
+                                <field name="ocupacion"  readonly="1"/>
+                                <field name="celular"  readonly="1"/>
                                 <field name="optometra_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" required="1"/>
                             </group>
                         </group>
