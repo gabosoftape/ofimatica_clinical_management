@@ -19,5 +19,4 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 ###################################################################################
-from . import project_report_pdf
-from . import project_report_xls
+from . import project_report_wizard
