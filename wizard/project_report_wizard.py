@@ -40,7 +40,7 @@ class ProjectReportButton(models.TransientModel):
             'model': self._name,
             'record': record.id,
         }
-        return self.env.ref('project_report_pdf.report_project_pdf').report_action(self, data=data)
+        return self.env.ref('ofimatica_clinical_management.report_project_pdf').report_action(self, data=data)
 
     @api.multi
     def print_project_report_xls(self):
@@ -52,4 +52,4 @@ class ProjectReportButton(models.TransientModel):
             'model': self._name,
             'record': record.id,
         }
-        return self.env.ref('project_report_pdf.project_xlsx').report_action(self, data=data)
+        return self.env.ref('ofimatica_clinical_management.project_xlsx').report_action(self, data=data)
