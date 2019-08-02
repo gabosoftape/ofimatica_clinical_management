@@ -11,6 +11,17 @@ convenios
                 <field name="res_model">convenio.cliente</field>
                 <field name="view_type">form</field>
                 <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                      <p class="oe_view_nocontent_create">
+                        Click para agregar un convenio a el sistema.
+                      </p><p>
+                        lorep ipsum
+                      </p>
+                </field>
+
+
+
+
             </record>
 
 
@@ -52,22 +63,17 @@ historial clinico
                             <h1>Folio: <field name="folio" readonly="1"/></h1>
                         </div>
                          <div class="oe_title">
-                            <label class="oe_edit_only" for="partner_id" string="Cliente"/>
-                            <h1><field name="partner_id" options="{'no_create': True,'no_create_edit':True}" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></h1>
+                            <label class="oe_edit_only" for="partner_id" string="Paciente"/>
+                            <h1><field name="partner_id" options="{'no_create': False,'no_create_edit':False}" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></h1>
                         </div>
                         <group>
                             <group>
                                 <field name="fecha" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="nombre" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="edad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="telefono" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" />
+                                <label class="oe_edit_only" for="nombre" string="Paciente"/>
+                                <field name="nombre" attrs="{'invisible':[('state','in',('cita','proceso'))]}"/>
                                 <field name="convenio_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                             </group>
                             <group>
-                                <field name="documento_identidad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="apellidos"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="ocupacion"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                <field name="celular"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                 <field name="optometra_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" required="1"/>
                             </group>
                         </group>
@@ -233,7 +239,7 @@ historial clinico
             <field name="arch" type="xml">
                 <search string="Consulta Clinica">
                     <field name="folio" />
-                    <field name="nombre" filter_domain="['|', ('nombre','ilike',self),('apellidos','ilike',self)]" string="Paciente..."/>
+                    <field name="nombre" filter_domain="[('nombre','ilike',self)]" string="Paciente..."/>
                     <field name="partner_id"/>
                     <field name="motivo"/>
                     <filter domain="[('state', '=', 'cita')]" string="Citas" name="citas_programadas"/>
@@ -277,6 +283,8 @@ historial clinico
             <field name="view_mode">calendar</field>
             <field name="view_id" ref="historial_clinico_list"/>
         </record>
+
+    <!--print_report method is called from server action-->
 
 
 </odoo>

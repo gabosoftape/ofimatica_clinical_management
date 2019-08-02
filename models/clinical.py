@@ -51,9 +51,9 @@ class clinicalPartner(models.Model):
     age_udm = fields.Selection(
         string=u'Selecciona Unidad',
         selection=[
-            ('1', u'1 - Años'),
-            ('2', u'2 - Meses'),
-            ('3', u'3 - Dias')
+            ('1', u'Años'),
+            ('2', u'Meses'),
+            ('3', u'Dias')
         ],
         default='1',
     )
@@ -65,7 +65,6 @@ class clinicalPartner(models.Model):
         ],
     )
     zone = fields.Selection([('Zona1','zona1')])
-    function = fields.Char('Profesion')
     companion = fields.Many2one('res.partner', string="Acompañante")
     companion_document = fields.Integer(string="No. Documento", readonly=1, default=None)
     companion_parentezco = fields.Char(string="Parentezco")
@@ -108,6 +107,7 @@ class ConvenioCliente(models.Model):
     _description = 'Convenio de Clientes'
 
     name = fields.Char('Descripcion', size=128, required=True)
+    code = fields.Char('Codigo de Convenio', size=128, required=True)
 
 
 class HistorialAgudezaDerecho(models.Model):
@@ -179,15 +179,7 @@ class HistorialClinico(models.Model):
 
     fecha = fields.Date('Fecha', default=fields.Date.today())
 
-    documento_identidad = fields.Char('Documento de Identidad',  related='partner_id.id_document')
-
-    edad = fields.Integer('Edad', related='partner_id.id_document')
-
-    ocupacion = fields.Char('Ocupacion', related='partner_id.age')
-
-    telefono = fields.Char('Telefono', related='partner_id.phone')
-
-    celular = fields.Char('Celular', size=128)
+    nombre = fields.Char('Nombre', related='partner_id.name')
 
     motivo = fields.Text('Motivo de Consulta')
 
@@ -260,14 +252,20 @@ class HistorialClinico(models.Model):
     optometra_id = fields.Many2one('res.partner', 'Optometra')
     folio = fields.Char('Folio', size=128)
 
+    @api.multi
+    def print_report(self):
+    # Method to print sale order report
+        historial_ids = self.search([], limit=1).ids
+        return self.env.ref(
+        'ofimatica_clinical_management.report_custom_template').report_action(historial_ids)
+
     @api.onchange('partner_id')
     def onchange_partner_id(self):
         if self.partner_id and self.partner_id.convenio_id:
             self.convenio_id = self.partner_id.convenio_id.id
         if self.partner_id:
             self.nombre = self.partner_id.name
-            self.telefono = self.partner_id.phone
-            self.celular = self.partner_id.mobile
+
 
     @api.multi
     def cita(self):
@@ -311,5 +309,9 @@ class HistorialClinico(models.Model):
         vals['folio'] = self.env['ir.sequence'].next_by_code('historial.clinico') or _('Folio No.')
         result = super(HistorialClinico, self).create(vals)
         return result
+
+
+
+
 
 

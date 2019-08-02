@@ -3,18 +3,19 @@
         <menuitem id="principal_optica" name="Optica" web_icon="eyes_management_clinic,static/description/icon.png"/>
 
         <!-- Categorias -->
-            <!-- Pacientes -->
-                <menuitem id="clientes" parent="principal_optica" name="Pacientes" sequence="01"/>
-                <menuitem id="directorio" parent="clientes" name="Personas" action="base.action_partner_customer_form" sequence="01"/>
-            <!-- Historias -->
+                <!-- Historias -->
                 <menuitem id="clinical_histories" parent="principal_optica" name="Historias Clinicas" sequence="02"/>
                 <menuitem id="consultas" parent="clinical_histories" name="Historial clinico" action="action_historial_clinico" sequence="01"/>
                 <menuitem id="agendar_citas" parent="clinical_histories" name="Agendar Citas" action="action_historial_clinico_agenda" sequence="01"/>
 
-           	<!-- administracion -->
+           	    <!-- administracion -->
                 <menuitem id="clinical_admin" parent="principal_optica" name="Administracion" sequence="03"/>
-                <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="base.action_partner_customer_form" sequence="01"/>
-                <menuitem id="clinical_rx" parent="clinical_admin" name="RX"  action="base.action_partner_customer_form" sequence="02"/>
-
+                <!-- Pacientes -->
+                <menuitem id="clientes" parent="clinical_admin" name="Directorio" sequence="01"/>
+                <menuitem id="directorio" parent="clientes" name="Pacientes" action="base.action_partner_customer_form" sequence="01"/>
+                <!-- convenios -->
+                <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="action_convenios" sequence="02"/>
+                <!-- Informes -->
+                <menuitem id="informes" parent="clinical_admin" name="Informes"  action="base.action_partner_customer_form" sequence="03"/>
 
 </odoo>
