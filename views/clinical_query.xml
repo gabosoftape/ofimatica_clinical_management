@@ -52,6 +52,7 @@ historial clinico
             <field name="arch" type="xml">
                 <form string="Consulta Clinica">
                     <header>
+                        <button name="%(ofimatica_clinical_management.project_report_open_wizard)d" type="action" string="Print" class="oe_highlight"/>
                         <button name="cita" states="cancelada" string="Cita" type="object" />
                         <button name="proceso" states="cita" string="En Proceso" type="object" />
                         <button name="cerrada" states="proceso" string="Finalizar Consulta" type="object" />

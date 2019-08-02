@@ -19,7 +19,6 @@
             'views/menus.xml',
             'wizard/project_report_wizard_view.xml',
             'report/project_report_pdf_view.xml',
-            'views/project_report_button.xml',
             'views/project_report.xml',
     ],
     'css': ['static/src/css/clinical.css'],
