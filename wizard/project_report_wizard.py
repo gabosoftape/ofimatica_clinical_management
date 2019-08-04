@@ -26,8 +26,8 @@ class ProjectReportButton(models.TransientModel):
     _name = 'wizard.project.report'
 
 
-    partner_select = fields.Many2many('res.users', string='Assigned to')
-    stage_select = fields.Many2many('project.task.type', string="Stage")
+    partner_select = fields.Many2many('res.partner', string='Assigned to', domain=[('company_type','==','person')])
+    stage_select = fields.Many2many('hitorial.clinico', string="Historial")
 
     @api.multi
     def print_project_report_pdf(self):
