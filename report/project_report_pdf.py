@@ -31,37 +31,25 @@ class ProjectReportParser(models.AbstractModel):
         name = data['record']
         wizard_record = request.env['wizard.project.report'].search([])[-1]
         task_obj = request.env['historial.clinico']
-        partner_selected = []
         stages_selected = []
-        for elements in wizard_record.partner_select:
-            users_selected.append(elements.id)
+        current_task = task_obj.search([('stage_id', 'in', stages_selected)])
+
         for elements in wizard_record.stage_select:
             stages_selected.append(elements.id)
-        if wizard_record.partner_select:
-            if wizard_record.stage_select:
-                current_task = task_obj.search([('partner_id', 'in', partner_selected),
-                                                ('stage_id', 'in', stages_selected)])
-
-            else:
-                current_task = task_obj.search([('partner_id', 'in', partner_selected)])
-
-        else:
-            if wizard_record.stage_select:
-                current_task = task_obj.search([('stage_id', 'in', stages_selected)])
-            else:
-                print("no hay datos brother.")
+        
         vals = []
-        for i in current_task:
-            vals.append({
-                'name': i.partner_id.name,
-                'partner_id': i.partner_id,
-                'stage_id': i.stage_id,
-            })
+        for i in stages_selected:
+            record = self.env['res.partner'].search([('name', '=', i.partner_id.name)])
+            if record:
+                vals.append({
+                    'nombre': record.name,
+                    'id_document': record.id_document,
+                    'function': record.function
+                })
+
         return {
             'vals': vals,
-            'name': current_task[0]._id.nombre,
             'manager': current_task[0].partner_id.name,
-            'date_start': current_task[0].fecha,
             'date_end': current_task[0].fecha,
         }
 

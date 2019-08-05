@@ -4,7 +4,7 @@
      <report
             id="report_project_pdf"
             string="Project PDF Report"
-            model="project.project"
+            model="historial.clinico"
             report_type="qweb-pdf"
             file="ofimatica_clinical_management.project_report_template"
             name="ofimatica_clinical_management.project_report_template"
