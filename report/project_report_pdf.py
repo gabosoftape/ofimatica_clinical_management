@@ -30,7 +30,7 @@ class ProjectReportParser(models.AbstractModel):
     def get_report_values(self, docids, data=None):
         name = data['record']
         wizard_record = request.env['wizard.project.report'].search([])[-1] 
-        partner_id = self.env['res_partner'].search([('partner_id','=',wizard_record.partner_id)])       
+        partner_id = self.env['res_partner'].search([('partner_id','=',self.wizard_record.partner_id)])       
         vals = []
         vals.append({
                     'name': self.wizard_record.nombre,
