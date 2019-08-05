@@ -8,7 +8,7 @@ class ProjectReportButton(models.TransientModel):
 
     @api.multi
     def test_log(self):
-        print(history_select)
+        print(history_select[0])
         return self
 
     @api.multi
