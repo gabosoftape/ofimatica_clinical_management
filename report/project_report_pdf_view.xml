@@ -9,9 +9,7 @@
                         <h1><center>CERTIFICADO</center></h1>
                     </div>
                     <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                        <t t-foreach="vals" t-as="o">
-                            <p> Nuestra empresa <t t-esc="o.name"/> manifiesta por meio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a) @partner con el documento de identidad No. @id_document. </p>
-                        </t>
+                        <t t-esc="manager"/>
                     </div>  
                     <div class="row">
                         <div>
