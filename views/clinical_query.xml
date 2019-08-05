@@ -13,7 +13,6 @@
 
                     <footer>
                         <button name="print_project_report_pdf" type="object" string="Imprimir Certificado" class="oe_highlight"/>
-                        <button name="test_log" type="object" string="Imprimir Certificado" class="oe_highlight"/>
                         <button special="cancel" string="Cancel"/>
                     </footer>
                 </form>
