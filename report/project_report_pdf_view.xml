@@ -8,9 +8,14 @@
                     <div style="text-align:center;color:black!important;">
                         <h1><center>CERTIFICADO</center></h1>
                     </div>
+                    <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                        <p> Nuestra empresa @company manifiesta por meio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a) @partner con el documento de identidad No. @id_document. </p>
+                    </div>  
                     <div class="row">
-                        Nuestra empresa <t t-esc="vals"/> 
-                    </div>    
+                        <div>
+                            <h3>Datos: </h3>
+                        </div>
+                    </div>  
                 </div>
             </t>
         </t>      
