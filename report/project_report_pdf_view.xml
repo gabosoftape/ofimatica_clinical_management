@@ -6,7 +6,7 @@
               <t t-call="web.external_layout">
                 <div class="page" >
                     <br/>
-                    <div style="text-align:left;color:black!important;">
+                    <div style="text-align:center;color:black!important;">
                         <h1>Este es el nuevo informe pdf</h1>
                     </div>
 
