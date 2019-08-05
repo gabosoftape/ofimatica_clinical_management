@@ -9,7 +9,7 @@
                         <h1><center>CERTIFICADO</center></h1>
                     </div>
                     <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                        <t t-esc="user"/>
+                        <t t-esc="user.name"/>
                     </div>  
                     <div class="row">
                         <div>
