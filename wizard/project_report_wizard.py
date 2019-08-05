@@ -13,7 +13,7 @@ class ProjectReportButton(models.TransientModel):
 
     @api.multi
     def print_project_report_pdf(self):
-        record = self.env['historial.clinico'].search(['id','=',self.history_select.id])
+        record = self.env['historial.clinico'].search(['id','==',self.history_select.id])
         data = {
             'ids': self.ids,
             'model': self._name,
