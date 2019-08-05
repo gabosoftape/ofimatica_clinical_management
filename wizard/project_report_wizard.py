@@ -32,7 +32,7 @@ class ProjectReportButton(models.TransientModel):
     @api.multi
     def print_project_report_pdf(self):
 
-        record = stage_select.search([('partner_id.id','==',self.partner_select.id)])
+        record = stage_select.search([('partner_id.id','=', self.partner_select.id)])
         data = {
             'ids': self.ids,
             'model': self._name,
