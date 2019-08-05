@@ -11,7 +11,7 @@ class ProjectReportButton(models.TransientModel):
         data = {
             'ids': self.ids,
             'model': self._name,
-            'record': history_select.id,
+            'record': history_select[0].id,
         }
         return self.env.ref('ofimatica_clinical_management.report_project_pdf').report_action(self, data=data)
 
