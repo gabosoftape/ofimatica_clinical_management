@@ -26,13 +26,12 @@ class ProjectReportButton(models.TransientModel):
     _name = 'wizard.project.report'
 
 
-    partner_select = fields.Many2one('res.partner', string='Asignado a:', domain=[('customer', '=', True)], required=True)
     stage_select = fields.Many2one('historial.clinico', string="Historial" , required=True)
 
     @api.multi
     def print_project_report_pdf(self):
 
-        record = self.env['historial.clinico'].search([('partner_id.id','==',self.partner_select.id)])
+        record = self.env['historial.clinico']
         data = {
             'ids': self.ids,
             'model': self._name,
