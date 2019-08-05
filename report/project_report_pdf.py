@@ -49,8 +49,8 @@ class ProjectReportParser(models.AbstractModel):
 
         return {
             'vals': vals,
-            'manager': current_task[0].partner_id.name,
-            'date_end': current_task[0].fecha,
+            'manager': current_task.partner_id.name,
+            'date_end': current_task.fecha,
         }
 
 
