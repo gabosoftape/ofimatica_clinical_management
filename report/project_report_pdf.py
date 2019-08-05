@@ -33,15 +33,15 @@ class ProjectReportParser(models.AbstractModel):
         partner_id = self.env['res_partner'].search([('partner_id','=',wizard_record.partner_id)])       
         vals = []
         vals.append({
-                    'name': wizard_record.nombre,
-                    'id_document': partner_id.id_document,
-                    'function': partner_id.function,
+                    'name': wizard_record[0].nombre,
+                    'id_document': partner_id[0].id_document,
+                    'function': partner_id[0].function,
                 })
 
         return {
             'vals': vals,
-            'manager': partner_id.name,
-            'date_end': wizard_record.fecha,
+            'manager': partner_id[0].name,
+            'date_end': wizard_record[0].fecha,
         }
 
 
