@@ -7,6 +7,11 @@ class ProjectReportButton(models.TransientModel):
     history_select = fields.Many2one('historial.clinico', string="Historial" , required=True)
 
     @api.multi
+    def test_log(self):
+        print(history_select)
+        return self
+
+    @api.multi
     def print_project_report_pdf(self):
         data = {
             'ids': self.ids,
