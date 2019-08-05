@@ -53,16 +53,16 @@ class ProjectReportParser(models.AbstractModel):
         vals = []
         for i in current_task:
             vals.append({
-                'name': i.name,
-                'partner_id': i.partner_id.name,
-                'stage_id': i.stage_id.name,
+                'name': i.partner_id.name,
+                'partner_id': i.partner_id,
+                'stage_id': i.stage_id,
             })
         return {
             'vals': vals,
-            'name': current_task[0].project_id.name,
-            'manager': current_task[0].project_id.partner_id.name,
-            'date_start': current_task[0].project_id.date_start,
-            'date_end': current_task[0].project_id.date,
+            'name': current_task[0]._id.nombre,
+            'manager': current_task[0].partner_id.name,
+            'date_start': current_task[0].fecha,
+            'date_end': current_task[0].fecha,
         }
 
 
