@@ -1,42 +1,17 @@
-# -*- coding: utf-8 -*-
-###################################################################################
-#
-#    Cybrosys Technologies Pvt. Ltd.
-#    Copyright (C) 2019-TODAY Cybrosys Technologies(<https://www.cybrosys.com>).
-#    Author: Akshay Babu(<https://www.cybrosys.com>)
-#
-#    This program is free software: you can modify
-#    it under the terms of the GNU Affero General Public License (AGPL) as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-###################################################################################
 from odoo import models, fields, api, _
 
 
 class ProjectReportButton(models.TransientModel):
     _name = 'wizard.project.report'
 
-
-    partner_select = fields.Many2one('res.partner', string='Asignado a:', domain=[('customer', '=', True)], required=True)
-    stage_select = fields.Many2one('historial.clinico', string="Historial" , required=True)
+    history_select = fields.Many2one('historial.clinico', string="Historial" , required=True)
 
     @api.multi
     def print_project_report_pdf(self):
-
-        record = stage_select.search([('partner_id.id','==',self.partner_select.id)])
         data = {
             'ids': self.ids,
             'model': self._name,
-            'record': record.id,
+            'record': history_select.id,
         }
         return self.env.ref('ofimatica_clinical_management.report_project_pdf').report_action(self, data=data)
 
