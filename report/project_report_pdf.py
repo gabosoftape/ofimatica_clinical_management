@@ -31,25 +31,23 @@ class ProjectReportParser(models.AbstractModel):
         name = data['record']
         wizard_record = request.env['wizard.project.report'].search([])[-1]
         task_obj = request.env['historial.clinico']
-        stages_selected = []
+        history_selected = []
+        current_task = task_obj.search([('stage_id', 'in', history_selected)])
+
         for elements in wizard_record.stage_select:
-            stages_selected.append(elements.id)
-        if wizard_record.stage_select:
-                current_task = task_obj.search([('partner_id', '=', name.partner_id)])                            )
-            else:
-                current_task = task_obj.search([('partner_id', '=', name.partner_id)])
-            
+            history_selected.append(elements.id)
+        
         vals = []
-        for i in current_task:
-            vals.append({
-                'name': i.nombre,
-                'partner_id': i.partner_id,
-                'diagnostic': i.diagnostico,
-            })
+        vals.append({
+                    'nombre': history_selected[0].partner_id.name,
+                    'id_document': history_selected[0].partner_id.id_document,
+                    'function': history_selected[0].partner_id.function,
+                })
+
         return {
             'vals': vals,
-            'name': current_task[0].partner_id.name,
-            'manager': current_task[0].partner_id.user_id.name,
+            'manager': current_task.partner_id.name,
+            'date_end': current_task.fecha,
         }
 
 
