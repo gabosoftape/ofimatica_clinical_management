@@ -8,15 +8,16 @@ class ProjectReportButton(models.TransientModel):
 
     @api.multi
     def test_log(self):
-        print(history_select[0])
+        print(self.history_select)
         return self
 
     @api.multi
     def print_project_report_pdf(self):
+        record = self.env['historial.clinico'].search(['id','=',self.history_selec.id])
         data = {
             'ids': self.ids,
             'model': self._name,
-            'record': history_select[0].id,
+            'record': self.history_select,
         }
         return self.env.ref('ofimatica_clinical_management.report_project_pdf').report_action(self, data=data)
 
