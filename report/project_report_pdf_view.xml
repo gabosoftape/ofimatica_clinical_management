@@ -9,9 +9,7 @@
                         <h1><center>CERTIFICADO</center></h1>
                     </div>
                     <div class="row">
-                        <t  t-foreach = "vals"  t-as = "doc" > 
-                        <p>_<t t-esc="doc['name']"/></p>
-                         </t>
+                        Nuestra empresa <t t-esc="vals"/> 
                     </div>    
                 </div>
             </t>
