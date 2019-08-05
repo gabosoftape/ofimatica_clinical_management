@@ -17,7 +17,6 @@
             'views/clinical_query.xml',
             'views/templates.xml',
             'views/menus.xml',
-            'wizard/project_report_wizard_view.xml',
             'report/project_report_pdf_view.xml',
             'views/project_report.xml',
     ],
