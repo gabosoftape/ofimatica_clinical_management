@@ -27,14 +27,25 @@ from odoo import models, api
 class ProjectReportParser(models.AbstractModel):
     _name = 'report.project_report_pdf.project_report_template'
 
-    @api.multi
     def get_report_values(self, docids, data=None):
-      docs = self.env['historial.clinico'].browse(docids)
-      return {
-          'doc_ids': docs.ids,
-          'doc_model': 'historial.clinico',
-          'docs': docs,
-      }
+        history = data['record']
+        wizard_record = request.env['wizard.project.report'].search([])[-1]
+        history_obj = request.env['historial.clinico']
+        if wizard_record.history_select:
+                current_history = history_obj.browse(history)
+
+        vals = []
+        vals.append({
+                'name': current_history.nombre,
+                'partner_id': current_history.partner_id,
+                'fecha': current_history.fecha,
+        })
+        return {
+            'vals': vals,
+            'name': current_task.nombre,
+            'manager': current_task.partner_id,
+            'date_start': current_task.fecha,
+        }
 
 
 
