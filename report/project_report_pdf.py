@@ -42,7 +42,7 @@ class ProjectReportParser(models.AbstractModel):
             record = self.env['res.partner'].search([('name', '=', i.partner_id.name)])
             if record:
                 vals.append({
-                    'nombre': record.name,
+                    'nombre': 'i.name',
                     'id_document': record.id_document,
                     'function': record.function
                 })
