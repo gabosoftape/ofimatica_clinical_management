@@ -18,4 +18,12 @@
                 <!-- Informes -->
                 <menuitem id="informes" parent="clinical_admin" name="Informes"  action="project_report_open_wizard" sequence="03"/>
 
+
+
+
+
+
+
+                
+
 </odoo>
