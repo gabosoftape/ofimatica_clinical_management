@@ -40,10 +40,10 @@ class ProjectReportXls(models.AbstractModel):
         stages_selected = []
         for elements in wizard_record.partner_select:
             users_selected.append(elements.id)
-        for elements in wizard_record.stage_select:
+        for elements in wizard_record.history_select:
             stages_selected.append(elements.id)
         if wizard_record.partner_select:
-            if wizard_record.stage_select:
+            if wizard_record.history_select:
                 current_task = task_obj.search([('project_id', '=', name),
                                                 ('user_id', 'in', users_selected),
                                                 ('stage_id', 'in', stages_selected)])
@@ -53,7 +53,7 @@ class ProjectReportXls(models.AbstractModel):
                                                 ('user_id', 'in', users_selected)])
 
         else:
-            if wizard_record.stage_select:
+            if wizard_record.history_select:
                 current_task = task_obj.search([('project_id', '=', name),
                                                 ('stage_id', 'in', stages_selected)])
             else:
