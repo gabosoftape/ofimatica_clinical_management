@@ -10,7 +10,7 @@
                     </div>
                     <div class="row">
                         <t  t-foreach = "vals"  t-as = "doc" > 
-                        <p>_<t t-esc="doc['nombre']"/></p>
+                        <p>_<t t-esc="doc['name']"/></p>
                          </t>
                     </div>    
                 </div>
