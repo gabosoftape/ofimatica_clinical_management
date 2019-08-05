@@ -9,7 +9,8 @@
                         <h1><center>CERTIFICADO</center></h1>
                     </div>
                     <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                        <t t-esc="user.name"/>
+                            <p> Nuestra empresa <t t-esc="res_company.name"> manifiesta por meio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a) @partner con el documento de identidad No. @id_document. </p>
+                        
                     </div>  
                     <div class="row">
                         <div>
