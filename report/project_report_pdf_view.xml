@@ -9,7 +9,10 @@
                     <div style="text-align:center;color:black!important;">
                         <h1><center>Este es el nuevo informe pdf</center></h1>
                     </div>
+                    <div class="row">
+                        <h1 t-esc="manager"/>
 
+                    </div>    
                 </div>
               </t>
             </t>
