@@ -36,9 +36,9 @@ class ProjectReportParser(models.AbstractModel):
 
         vals = []
         vals.append({
-                'name': current_history.nombre,
-                'partner_id': current_history.partner_id,
-                'fecha': current_history.fecha,
+                'name': history.nombre,
+                'partner_id': history.partner_id,
+                'fecha': history.fecha,
         })
         return {
             'docs': vals,
