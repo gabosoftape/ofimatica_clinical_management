@@ -33,7 +33,7 @@ class ProjectReportButton(models.TransientModel):
     def print_project_report_pdf(self):
 
         active_record = self._context['active_id']
-        record = self.env['project.project'].browse(active_record)
+        record = self.env['historial.clinico'].browse(active_record)
 
         data = {
             'ids': self.ids,
@@ -45,7 +45,7 @@ class ProjectReportButton(models.TransientModel):
     @api.multi
     def print_project_report_xls(self):
         active_record = self._context['active_id']
-        record = self.env['project.project'].browse(active_record)
+        record = self.env['historial.clinico'].browse(active_record)
 
         data = {
             'ids': self.ids,
