@@ -20,4 +20,4 @@
 #
 ###################################################################################
 from . import project_report_pdf
-from . import project_report_xls
+#from . import project_report_xls

@@ -30,8 +30,8 @@ class ProjectReportParser(models.AbstractModel):
     def get_report_values(self, docids, data=None):
         name = data['record']
         wizard_record = request.env['wizard.project.report'].search([])[-1]
-        task_obj = request.env['project.task']
-        users_selected = []
+        task_obj = request.env['historial.clinico']
+        partner_selected = []
         stages_selected = []
         for elements in wizard_record.partner_select:
             users_selected.append(elements.id)
@@ -39,31 +39,28 @@ class ProjectReportParser(models.AbstractModel):
             stages_selected.append(elements.id)
         if wizard_record.partner_select:
             if wizard_record.stage_select:
-                current_task = task_obj.search([('project_id', '=', name),
-                                                ('user_id', 'in', users_selected),
+                current_task = task_obj.search([('partner_id', 'in', partner_selected),
                                                 ('stage_id', 'in', stages_selected)])
 
             else:
-                current_task = task_obj.search([('project_id', '=', name),
-                                                ('user_id', 'in', users_selected)])
+                current_task = task_obj.search([('partner_id', 'in', partner_selected)])
 
         else:
             if wizard_record.stage_select:
-                current_task = task_obj.search([('project_id', '=', name),
-                                                ('stage_id', 'in', stages_selected)])
+                current_task = task_obj.search([('stage_id', 'in', stages_selected)])
             else:
-                current_task = task_obj.search([('project_id', '=', name)])
+                print("no hay datos brother.")
         vals = []
         for i in current_task:
             vals.append({
                 'name': i.name,
-                'user_id': i.user_id.name,
+                'partner_id': i.partner_id.name,
                 'stage_id': i.stage_id.name,
             })
         return {
             'vals': vals,
             'name': current_task[0].project_id.name,
-            'manager': current_task[0].project_id.user_id.name,
+            'manager': current_task[0].project_id.partner_id.name,
             'date_start': current_task[0].project_id.date_start,
             'date_end': current_task[0].project_id.date,
         }
