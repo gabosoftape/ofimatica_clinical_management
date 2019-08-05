@@ -2,7 +2,6 @@
 <odoo>
      <template id="project_report_template">
         <t t-call="web.html_container">
-            <t t-foreach="vals" t-as="o">
                 <t t-call="web.external_layout">
                     <div class="page" >
                         <br/>
@@ -10,7 +9,7 @@
                             <h1><center>CERTIFICADO</center></h1>
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                <p> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por meio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a) <t t-esc="o.name"/> con el documento de identidad No. @id_document. </p>
+                                <p> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por meio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a) <t t-esc="vals[0].name"/> con el documento de identidad No. @id_document. </p>
                             
                         </div>  
                         <div class="row">
@@ -20,7 +19,6 @@
                         </div>  
                     </div>
                 </t>
-            </t>
         </t>      
      </template>
 </odoo>
