@@ -1,6 +1,6 @@
 <odoo>
 <!-- Menu para odoo Menu Principal -->
-        <menuitem id="principal_optica" name="Optica" web_icon="eyes_management_clinic,static/description/icon.png"/>
+        <menuitem id="principal_optica" name="Optica" web_icon="ofimatica_clinical_management,static/description/icon.png"/>
 
         <!-- Categorias -->
                 <!-- Historias -->
