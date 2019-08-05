@@ -35,12 +35,23 @@ class ProjectReportParser(models.AbstractModel):
                 'name': history.nombre,
                 'partner_id': history.partner_id,
                 'fecha': history.fecha,
+                'rx_od': history.rx_od,
+                'rx_oi': history.rx_oi,
+                'rx_od_av': history.rx_od_av, 
+                'rx_oi_av' : history.rx_oi_av,
+                'rx_add': history.rx_add, 
+                'rx_dp': history.rx_dp,
+                'rx_dnp': history.rx_dnp,
+                'primas': history.primas,
+                'tipo_de_lente': history.tipo_de_lente,
+                'diagnostico': history.diagnostico,
+                'plan': history.plan,
         })
         return {
             'docs': vals,
             'name': history.nombre,
-            'manager': history.partner_id,
-            'date_start': history.fecha,
+            'manager': history.partner_id.name,
+            'fecha': history.fecha,
         }
 
 
