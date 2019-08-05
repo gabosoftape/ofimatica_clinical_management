@@ -30,10 +30,6 @@ class ProjectReportParser(models.AbstractModel):
     def get_report_values(self, docids, data=None):
         history = data['record']
         wizard_record = request.env['wizard.project.report'].search([])[-1]
-        history_obj = request.env['historial.clinico']
-        if wizard_record.history_select:
-                current_history = history_obj.browse(history)
-
         vals = []
         vals.append({
                 'name': history.nombre,
@@ -42,9 +38,9 @@ class ProjectReportParser(models.AbstractModel):
         })
         return {
             'docs': vals,
-            'name': self.current_history.nombre,
-            'manager': self.current_history.partner_id,
-            'date_start': self.current_history.fecha,
+            'name': history.nombre,
+            'manager': history.partner_id,
+            'date_start': history.fecha,
         }
 
 
