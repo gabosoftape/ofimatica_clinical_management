@@ -11,7 +11,7 @@
             menu = "False"
 
         />
-        <report
+        <!--<report
             id="project_xlsx"
             model="project.project"
             string="Project Excel Report"
@@ -20,6 +20,6 @@
             file="ofimatica_clinical_management.project_xlsx"
             attachment_use="True"
             menu = "False"
-        />
+        /> -->
     </data>
 </odoo>
