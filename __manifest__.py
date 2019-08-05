@@ -6,7 +6,7 @@
     'author': 'Gabriel Pabón',
     'category': 'Health',
     'website': 'https://github.com/gabosoftape/',
-    'depends': ['base', 'project','report_xlsx'],
+    'depends': ['base','report_xlsx'],
     'license': 'AGPL-3',
     'summary': 'Con este modulo podras controlar tu consultorio oftalmologico',
     'data': [
