@@ -26,7 +26,7 @@ class ProjectReportButton(models.TransientModel):
     _name = 'wizard.project.report'
 
 
-    partner_select = fields.Many2one('res.partner', string='Asignado a:', domain=[('company_type','==','person')], required=True)
+    partner_select = fields.Many2one('res.partner', string='Asignado a:', domain=[('customer', '=', True)], required=True)
     stage_select = fields.Many2one('historial.clinico', string="Historial" , required=True)
 
     @api.multi
