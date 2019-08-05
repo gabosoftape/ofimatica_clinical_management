@@ -41,10 +41,10 @@ class ProjectReportParser(models.AbstractModel):
                 'fecha': current_history.fecha,
         })
         return {
-            'vals': vals,
-            'name': current_task.nombre,
-            'manager': current_task.partner_id,
-            'date_start': current_task.fecha,
+            'docs': vals,
+            'name': self.current_task.nombre,
+            'manager': self.current_task.partner_id,
+            'date_start': self.current_task.fecha,
         }
 
 
