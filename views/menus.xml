@@ -16,6 +16,6 @@
                 <!-- convenios -->
                 <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="action_convenios" sequence="02"/>
                 <!-- Informes -->
-                <menuitem id="informes" parent="clinical_admin" name="Informes"  action="ofimatica_clinical_management.project_report_open_wizard" sequence="03"/>
+                <menuitem id="informes" parent="clinical_admin" name="Informes"  action="project_report_open_wizard" sequence="03"/>
 
 </odoo>
