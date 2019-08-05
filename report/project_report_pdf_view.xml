@@ -10,9 +10,7 @@
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                                 <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por meio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a) 
-                                <t t-foreach="docs" t-as="doc">
-                                        <t t-esc="doc.name"/>
-                                </t> con el documento de identidad No. @id_document. </h5>
+                                <span t-esc="name"/> con el documento de identidad No. @id_document. </h5>
                             
                         </div>  
                         <div class="row">
