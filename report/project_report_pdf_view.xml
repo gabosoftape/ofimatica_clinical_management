@@ -2,7 +2,6 @@
 <odoo>
      <template id="project_report_template">
         <t t-call="web.html_container">
-            <t  t-foreach = "vals"  t-as = "doc" > 
               <t t-call="web.external_layout">
                 <div class="page" >
                     <br/>
@@ -10,11 +9,12 @@
                         <h1><center>CERTIFICADO</center></h1>
                     </div>
                     <div class="row">
+                        <t  t-foreach = "vals"  t-as = "doc" > 
                         <p>_<t t-esc="doc['nombre']"/></p>
-
+                         </t>
                     </div>    
                 </div>
               </t>
-            </t>
+           
      </template>
 </odoo>
