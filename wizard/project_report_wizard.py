@@ -16,6 +16,14 @@ class ProjectReportButton(models.TransientModel):
             'documento': caption.id_document,
             'function': caption.function,
             'fecha': self.history_select.fecha,
+            'rx_od': self.history_select.rx_od,
+            'rx_oi': self.history_select.rx_oi,
+            'rx_od_av': self.history_select.rx_od_av,
+            'rx_oi_av': self.history_select.rx_oi_av,
+            'rx_add': self.history_select.rx_add,
+            'diagnostico_primario': self.history_select.diagnostico,
+            'oftalmoscopia': 'sin datos aun',
+            'conducta': self.history_select.plan,
         }
         #Datos
         print(data)

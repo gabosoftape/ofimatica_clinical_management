@@ -7,21 +7,24 @@
                         <br/>
                         <div style="text-align:center;color:black!important;">
                             <h1><center>CERTIFICADO</center></h1>
+                            <br/>
+                            <br/>
+                            <hr/>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div>
 
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
-                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
-                        </div>  
+                                <h4> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
+                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h4>
+                        </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
                                 <h3>Datos de Paciente </h3>
-
-
                             </div>
                             <div >
                                  Usuario: <strong><t t-esc="nombre"/></strong>
-
                             </div>
                             <div>
                                 Identificacion: <strong><t t-esc="documento"/></strong>
@@ -33,7 +36,72 @@
                                 Fecha de Consulta : <strong><t t-esc="fecha"/></strong>
                             </div>
 
-                        </div>  
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <div >
+                                <h3>Datos de Consulta</h3>
+                            </div>
+                            <div>
+                                 <table class="table table-condensed">
+                                     <thead>
+                                        <tr >
+                                            <th style="background-color:#9b9da0 !important;">OJO</th>
+                                            <th style="background-color:#9b9da0 !important;">ESF</th>
+                                            <th style="background-color:#9b9da0 !important;">CIL</th>
+                                            <th style="background-color:#9b9da0 !important;">EJE</th>
+                                            <th style="background-color:#9b9da0 !important;">ADD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                   DERECHO
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_od"/>
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_od_av"/>
+                                                </td>
+                                                <td>
+                                                   none
+                                                </td>
+                                                <td>
+                                                   <span t-att-style="style" t-esc="rx_add"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   IZQUIERDO
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_oi"/>
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_oi_av"/>
+                                                </td>
+                                                <td>
+                                                    none
+                                                </td>
+                                                <td>
+                                                   <span t-att-style="style" t-esc="rx_add"/>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <div >
+                                <h4>Diagnostico Primario: <strong><t t-esc="diagnostico_primario"/></strong></h4>
+                            </div>
+                            <div>
+                                <h4>Oftalmoscopia: <strong><t t-esc="oftalmoscopia"/></strong></h4>
+                            </div>
+                            <div >
+                                <h4>Conducta: <strong><t t-esc="conducta"/></strong></h4>
+                            </div>
+                        </div>
                     </div>
                 </t>
             </t>
