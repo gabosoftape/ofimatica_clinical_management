@@ -8,13 +8,17 @@ class ProjectReportButton(models.TransientModel):
 
     @api.multi
     def print_project_report_pdf(self):
+        nombre = self.history_select.nombre
+        caption = self.env['res.partner'].search([('name','like',nombre)])
         data = {
-            'ids': self.ids,
-            'model': self._name,
             'record': self.history_select,
-            'name': self.history_select.nombre,
-            'partner_id': self.history_select.partner_id,
+            'nombre': caption.name,
+            'documento': caption.id_document,
+            'function': caption.function,
+            'fecha': self.history_select.fecha,
         }
+        #Datos
+        print(data)
         return self.env.ref('ofimatica_clinical_management.report_project_pdf').report_action(self, data=data)
 
     @api.multi

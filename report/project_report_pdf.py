@@ -25,34 +25,11 @@ from odoo import models, api
 
 
 class ProjectReportParser(models.AbstractModel):
-    _name = 'report.project_report_pdf.project_report_template'
+    _name = 'report.ofimatica_clinical_management.history_report_template'
 
     def get_report_values(self, docids, data=None):
-        history = data['record']
-        wizard_record = request.env['wizard.project.report'].search([])[-1]
-        vals = []
-        vals.append({
-                'name': history.nombre,
-                'partner_id': history.partner_id,
-                'fecha': history.fecha,
-                'rx_od': history.rx_od,
-                'rx_oi': history.rx_oi,
-                'rx_od_av': history.rx_od_av, 
-                'rx_oi_av' : history.rx_oi_av,
-                'rx_add': history.rx_add, 
-                'rx_dp': history.rx_dp,
-                'rx_dnp': history.rx_dnp,
-                'primas': history.primas,
-                'tipo_de_lente': history.tipo_de_lente,
-                'diagnostico': history.diagnostico,
-                'plan': history.plan,
-        })
-        return {
-            'docs': vals,
-            'name': history.nombre,
-            'manager': history.partner_id.name,
-            'fecha': history.fecha,
-        }
+        return data
+
 
 
 
