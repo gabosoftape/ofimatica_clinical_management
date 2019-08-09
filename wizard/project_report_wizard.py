@@ -46,6 +46,7 @@ class ProjectReportButton(models.TransientModel):
             'diagnostico_primario': self.history_select.diagnostico,
             'oftalmoscopia': 'sin datos aun',
             'conducta': self.history_select.plan,
+            'is_remision' : self.history_select.is_remision,
         }
         #Datos
         print(data)

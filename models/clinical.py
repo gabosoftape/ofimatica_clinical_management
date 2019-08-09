@@ -24,30 +24,25 @@ class clinicalPartner(models.Model):
     id_type = fields.Selection(
         string=u'Tipo de Documento',
         selection=[
-            ('11', u'11 - Registro civil de nacimiento'),
-            ('12', u'12 - Tarjeta de identidad'),
-            ('13', u'13 - Cédula de ciudadanía'),
-            ('14',
-             u'14 - Certificado de la Registraduría para sucesiones ilíquidas de personas naturales que no tienen ningún documento de identificación.'),
-            ('15',
-             u'15 - Tipo de documento que identifica una sucesión ilíquida, expedido por la notaria o por un juzgado. '),
-            ('21', u'21 - Tarjeta de extranjería'),
-            ('22', u'22 - Cédula de extranjería'),
-            ('31', u'31 - NIT/RUT'),
-            ('33', u'33 - Identificación de extranjeros diferente al NIT asignado DIAN'),
-            ('41', u'41 - Pasaporte'),
-            ('42', u'42 - Documento de identificación extranjero'),
-            ('43', u'43 - Sin identificación del exterior o para uso definido por la DIAN'),
+            ('CC','CEDULA DE CIUDADANÍA'),
+            ('CE', 'CEDULA DE EXTRANJERÍA'),
+            ('PA', 'PASAPORTE'),
+            ('SC', 'SALVO CONDUCTO'),
+            ('RC',  'REGISTRO CIVIL '),
+            ('PE',  'PERMISO ESPECIAL DE PERMANENCIA'),
+            ('TI',  'TARJETA DE IDENTIDAD'),
+            ('AS',  'ADULTO SIN IDENTIFICAR'),
+            ('MS',  'MENOR SIN IDENTIFICAR'),
         ],
         required=False,
-        help=u'Identificacion del Cliente, segun los tipos definidos por la DIAN.',
+        help=u'Identificacion del Cliente',
     )
     id_document = fields.Integer(string='No. Documento', default=None)
     first_name = fields.Char(string='Primer Nombre')
     second_name = fields.Char(string='Segundo Nombre')
     last_name= fields.Char(string='Primer Apellido')
     second_last_name = fields.Char(string='Primer Apellido')
-    age = fields.Integer(string='Edad', default=None)
+    age = fields.Integer(string='Edad')
     age_udm = fields.Selection(
         string=u'Selecciona Unidad',
         selection=[
@@ -73,6 +68,7 @@ class clinicalPartner(models.Model):
     company_type = fields.Selection(string='Company Type',
                                     selection=[('person', 'Individual'), ('company', 'Company'), ('patient', 'Paciente')],
                                     compute='_compute_company_type', inverse='_write_company_type')
+    nombre = fields.Char(string="Nombre")
 
     @api.depends('is_company')
     def _compute_ofimatica_company_type(self):
@@ -100,6 +96,8 @@ class clinicalPartner(models.Model):
         if self.company_type == 'person':
             names = [name for name in [self.first_name, self.second_name, self.last_name, self.second_last_name] if name]
             self.name = u' '.join(names)
+            self.nombre = self.name
+            self.display_name = self.nombre
 
 
 class ConvenioCliente(models.Model):
@@ -175,9 +173,10 @@ class HistorialClinico(models.Model):
     partner_id = fields.Many2one('res.partner', 'Paciente', domain=[('customer', '=', True)], required=True)
     convenio_id = fields.Many2one('convenio.cliente', 'Convenio')
 
-    anamnesis = fields.Text('Anamnesis')
+    finalidad = fields.Selection([('8', ' 8 - Deteccion de Alteraciones de agudeza visual'), ('9', 'Otro') ], default='8')
+    tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1')
 
-    fecha = fields.Date('Fecha', default=fields.Date.today())
+    fecha = fields.Datetime('Fecha y Hora', default=fields.datetime.now())
 
     nombre = fields.Char('Nombre', related='partner_id.name')
 
@@ -251,7 +250,18 @@ class HistorialClinico(models.Model):
     formula_notas = fields.Text('Notas')
     optometra_id = fields.Many2one('res.partner', 'Optometra')
     folio = fields.Char('Folio', size=128)
-
+    sede = fields.Selection(string="Sede", selection=[
+        ('1', 'CHIPICHAPE'),
+        ('2', 'UNICENTRO'),
+        ('3', 'TECNIOPTICA 2142'),
+        ('4', 'TECNIOPTICA 1090'),
+        ('5', 'TECNIOPTICA 1195'),
+        ('6', 'TECNIOPTICA 1005'),
+        ('7', 'PRINCIPAL SAS'),
+        ('8', 'COMERCIAL 1189'),
+        ('9', 'COMERCIAL 1187'),
+    ])
+    is_remision = fields.Boolean('Generar remision', default=False)
     @api.multi
     def print_report(self):
     # Method to print sale order report
@@ -306,7 +316,8 @@ class HistorialClinico(models.Model):
 
     @api.model
     def create(self, vals):
-        vals['folio'] = self.env['ir.sequence'].next_by_code('historial.clinico') or _('Folio No.')
+        number = self.env['ir.sequence'].next_by_code('historial.clinicoo')
+        vals['folio'] = str(number)
         result = super(HistorialClinico, self).create(vals)
         return result
 

@@ -8,7 +8,8 @@
                 <attribute name='invisible'>1</attribute>
             </page>
             <field name="name" position="replace">
-                <field name="name" placeholder="Nombres y apellidos" attrs="{'invisible' : [('company_type', '=', 'person')]}"/>
+                <field name="name" attrs="{'invisible' : [('company_type', '=', 'person')]}" />
+                <field name="nombre" attrs="{'readonly' : [('company_type', '=', 'person')]}" />
             </field>
             <field name="vat" position="replace">
                 <field name="vat" invisible="1"/>
@@ -31,6 +32,12 @@
             <field name="category_id" position="replace">
                 <field name="category_id" invisible="1"/>
             </field>
+            <field name="mobile" position="replace">
+                <field name="mobile" invisible="1"/>
+            </field>
+            <field name="street2" position="replace">
+                <field name="street2" invisible="1"/>
+            </field>
             <field name="function" position="replace">
                 <label for="function" string="Profesion/ocupacion"/>
                             <div class="o_address">
@@ -38,36 +45,49 @@
                             </div>
             </field>
             <field name="type" position="before">
-                <label for="first_name" string="Nombres y apellidos"/>
+                <label for="first_name" string="Primer Nombre"/>
                             <div class="o_address_format">
                                 <field name="first_name" placeholder="Primer Nombre" attrs="{'required' : [('type', '=', 'contact')]}"/>
-                                <field name="second_name" placeholder="Segundo Nombre" attrs="{'required' : [('type', '=', 'contact')]}" />
+                            </div>
+                <label for="second_name" string="Segundo Nombre"/>
+                            <div class="o_address_format">
+                                  <field name="second_name" placeholder="Segundo Nombre" attrs="{'required' : [('type', '=', 'contact')]}" />
+                            </div>
+                <label for="last_name" string="Primer Apellido"/>
+                            <div class="o_address_format">
                                 <field name="last_name" placeholder="Primer Apellido" attrs="{'required' : [('type', '=', 'contact')]}"/>
+                            </div>
+                <label for="second_last_name" string="Segundo Apellido"/>
+                            <div class="o_address_format">
                                 <field name="second_last_name" placeholder="Segundo Apellido" attrs="{'required' : [('type', '=', 'contact')]}"/>
                             </div>
-                <label for="id_type" string="Identificacion"/>
+
+                <label for="id_type" string="Tipo de documento"/>
                             <div class="o_address_format">
                                 <field name="id_type" placeholder="Tipo de Documento"/>
-                                <field name="id_document" placeholder="No. Documento"/>
                             </div>
+                <label for="id_document" string="No. de Documento"/>
+                            <div class="o_address_format">
+                                <field name="id_document" placeholder="Tipo de Documento"/>
+                            </div>
+            </field>
+            <field name="email" position="after">
                 <label for="age" string="Edad"/>
                             <div class="o_address">
                                 <field name="age" string="Edad"/>
+                            </div>
+                <label for="age_udm" string="Medida Edad"/>
+                            <div class="o_address">
                                 <field name="age_udm" string="Unidad"/>
-
                             </div>
                 <label for="sex" string="Sexo"/>
                             <div class="o_address">
                                 <field name="sex" string="Sexo"/>
-
                             </div>
-                <label for="zone" string="zona de residencia"/>
+                <label for="zone" string="Zona de residencia"/>
                             <div class="o_address">
                                 <field name="zone" string="Zona Residencia"/>
-
                             </div>
-            </field>
-            <field name="email" position="after">
                 <label for="companion" string="Datos Acompañante" attrs="{'invisible': [('age','>', 17)]}"/>
                     <div class="o_address">
                         <field name="companion" attrs="{'invisible': [('age','>', 17)]}"/>
