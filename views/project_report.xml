@@ -21,6 +21,16 @@
             menu = "False"
 
         />
+        <report
+            id="report_formula_pdf"
+            string="Formula Clinica"
+            model="historial.clinico"
+            report_type="qweb-pdf"
+            file="ofimatica_clinical_management.formula_report_template"
+            name="ofimatica_clinical_management.formula_report_template"
+            menu = "False"
+
+        />
         <!--<report
             id="project_xlsx"
             model="project.project"

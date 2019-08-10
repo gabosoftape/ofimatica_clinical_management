@@ -36,6 +36,11 @@ class RemissionReportParser(models.AbstractModel):
     def get_report_values(self, docids, data=None):
         return data
 
+class FormulaReportParser(models.AbstractModel):
+    _name = 'report.ofimatica_clinical_management.formula_report_template'
+
+    def get_report_values(self, docids, data=None):
+        return data
 
 
 

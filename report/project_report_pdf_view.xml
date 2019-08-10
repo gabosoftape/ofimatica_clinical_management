@@ -204,4 +204,102 @@
                 </t>
             </t>
      </template>
+    <template id="formula_report_template">
+        <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page" >
+                        <br/>
+                        <div style="text-align:center;color:black!important;">
+                            <h1><center>Formula</center></h1>
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <div >
+                                <h4>Datos de Paciente </h4>
+                            </div>
+                            <div >
+                                 Usuario: <strong><t t-esc="nombre"/></strong>
+                            </div>
+                            <div>
+                                Identificacion: <strong><t t-esc="documento"/></strong>
+                            </div>
+                            <div >
+                                Profesion/Oficio: <strong><t t-esc="function"/></strong>
+                            </div>
+                            <div>
+                                Fecha de Consulta : <strong><t t-esc="fecha"/></strong>
+                            </div>
+
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <div >
+                                <h3>Datos de Consulta</h3>
+                            </div>
+                            <div>
+                                 <table class="table table-condensed">
+                                     <thead>
+                                        <tr >
+                                            <th style="background-color:#9b9da0 !important;">OJO</th>
+                                            <th style="background-color:#9b9da0 !important;">ESF</th>
+                                            <th style="background-color:#9b9da0 !important;">CIL</th>
+                                            <th style="background-color:#9b9da0 !important;">EJE</th>
+                                            <th style="background-color:#9b9da0 !important;">ADD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody> 
+                                            <tr>
+                                                <td>
+                                                   DERECHO
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_od"/>
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_od_av"/>
+                                                </td>
+                                                <td>
+                                                   none
+                                                </td>
+                                                <td>
+                                                   <span t-att-style="style" t-esc="rx_add"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   IZQUIERDO
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_oi"/>
+                                                </td>
+                                                <td>
+                                                    <span t-att-style="style" t-esc="rx_oi_av"/>
+                                                </td>
+                                                <td>
+                                                    none
+                                                </td>
+                                                <td>
+                                                   <span t-att-style="style" t-esc="rx_add"/>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <div >
+                                <h5>Diagnostico Primario: <strong><t t-esc="diagnostico_primario"/></strong></h5>
+                            </div>
+                            <div>
+                                <h5>Motivo de Remision: <strong><t t-esc="oftalmoscopia"/></strong></h5>
+                            </div>
+                            <div >
+                                <h5>Proxima cita: <strong>Un año</strong></h5>
+                            </div>
+                            <div>
+                                <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+     </template>
 </odoo>
