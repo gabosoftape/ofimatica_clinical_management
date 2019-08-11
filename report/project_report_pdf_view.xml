@@ -245,22 +245,22 @@
                                             <th style="background-color:#9b9da0 !important;">ADD</th>
                                         </tr>
                                     </thead>
-                                    <tbody> 
+                                    <tbody>
                                             <tr>
                                                 <td>
                                                    DERECHO
                                                 </td>
                                                 <td>
-                                                    <span t-att-style="style" t-esc="rx_od"/>
+                                                    dato1
                                                 </td>
                                                 <td>
-                                                    <span t-att-style="style" t-esc="rx_od_av"/>
+                                                    dato 2
                                                 </td>
                                                 <td>
                                                    none
                                                 </td>
                                                 <td>
-                                                   <span t-att-style="style" t-esc="rx_add"/>
+                                                   dato 3
                                                 </td>
                                             </tr>
                                             <tr>
@@ -268,16 +268,16 @@
                                                    IZQUIERDO
                                                 </td>
                                                 <td>
-                                                    <span t-att-style="style" t-esc="rx_oi"/>
+                                                    dato 4
                                                 </td>
                                                 <td>
-                                                    <span t-att-style="style" t-esc="rx_oi_av"/>
+                                                    dato 5
                                                 </td>
                                                 <td>
                                                     none
                                                 </td>
                                                 <td>
-                                                   <span t-att-style="style" t-esc="rx_add"/>
+                                                   dato 6
                                                 </td>
                                             </tr>
                                     </tbody>

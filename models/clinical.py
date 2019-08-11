@@ -41,7 +41,7 @@ class clinicalPartner(models.Model):
     first_name = fields.Char(string='Primer Nombre')
     second_name = fields.Char(string='Segundo Nombre')
     last_name= fields.Char(string='Primer Apellido')
-    second_last_name = fields.Char(string='Primer Apellido')
+    second_last_name = fields.Char(string='Segundo Apellido')
     age = fields.Integer(string='Edad')
     age_udm = fields.Selection(
         string=u'Selecciona Unidad',
