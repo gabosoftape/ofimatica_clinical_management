@@ -182,7 +182,19 @@ class HistorialClinico(models.Model):
 
     motivo = fields.Text('Motivo de Consulta')
 
-    antecedentes_familiares = fields.Text('Antecedentes Generales Familiares y Personales')
+    ## antecedentes_familiares = fields.Text('Antecedentes Generales Familiares y Personales') ##
+    is_licor = fields.Boolean('¿Consume licor constantemente?')
+    is_fumador = fields.Boolean('¿Fuma cigarrillo?')
+    is_lentes = fields.Boolean('¿Usa Lentes?')
+    lentes_desc = fields.Text('¡Que tipo de lentes?')
+    is_enfermedad_here = fields.Boolean('Enfermedad hereditaria')
+    enfermedad_here_desc = fields.Text('Describe qué enfermedades')
+    is_operaciones = fields.Boolean('Operaciones')
+    operaciones_desc = fields.Text('Describe Operaciones')
+    is_alergias = fields.Boolean('Alergias')
+    alergias_desc = fields.Text('Describe alergias')
+    is_medicacion = fields.Boolean('Medicamentos')
+    medicacion_desc = fields.Text('Describe que medicamentos')
 
     antecedentes_oculares = fields.Text('Antecedentes Oculares Familiares y Personales')
 
