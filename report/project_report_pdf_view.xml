@@ -254,22 +254,22 @@
                                                    DERECHO
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_esf"/>
+                                                    <p t-esc="rx_final_od_esf"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_cil"/>
+                                                    <p t-esc="rx_final_od_cil"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_eje"/>
+                                                    <p t-esc="rx_final_od_eje"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_add"/>
+                                                    <p t-esc="rx_final_od_add"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_dp"/>
+                                                    <p t-esc="rx_final_od_dp"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_dnp"/>
+                                                    <p t-esc="rx_final_od_dnp"/>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -277,22 +277,22 @@
                                                    IZQUIERDO
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_esf"/>
+                                                    <p t-esc="rx_final_oi_esf"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_cil"/>
+                                                    <p t-esc="rx_final_oi_cil"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_eje"/>
+                                                    <p t-esc="rx_final_oi_eje"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_add"/>
+                                                    <p t-esc="rx_final_oi_add"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_dp"/>
+                                                    <p t-esc="rx_final_oi_dp"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_dnp"/>
+                                                    <p t-esc="rx_final_oi_dnp"/>
                                                 </td>
                                             </tr>
                                     </tbody>
@@ -311,10 +311,10 @@
                                                    DERECHO
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_vp_esf"/>
+                                                    <p t-esc="rx_final_od_vp_esf"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_od_vp_cil"/>
+                                                    <p t-esc="rx_final_od_vp_cil"/>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -322,10 +322,10 @@
                                                    IZQUIERDO
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_vp_esf"/>
+                                                    <p t-esc="rx_final_oi_vp_esf"/>
                                                 </td>
                                                 <td>
-                                                    <field name="rx_final_oi_vp_cil"/>
+                                                    <p t-esc="rx_final_oi_vp_cil"/>
                                                 </td>
                                             </tr>
                                     </tbody>

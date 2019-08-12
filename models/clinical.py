@@ -666,7 +666,7 @@ class HistorialClinico(models.Model):
     uso = fields.Char('Uso', size=128)
     formula_plan = fields.Char('Plan de Manejo', size=256)
     formula_notas = fields.Text('Notas')
-    optometra_id = fields.Many2one('res.partner', 'Optometra')
+    optometra_id = fields.Many2one('res.users', 'Optometra', domain=[('active', '=', True)])
     folio = fields.Char('Folio', size=128)
     sede = fields.Selection(string="Sede", selection=[
         ('1', 'CHIPICHAPE'),
