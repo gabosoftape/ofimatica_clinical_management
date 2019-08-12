@@ -169,13 +169,17 @@ class HistorialClinico(models.Model):
 
     state = fields.Selection([('cancelada', 'Cancelada'), ('cita', 'Cita Agendada'), ('proceso', 'En Proceso'),
                               ('cerrada', 'Consulta Terminada')], 'Estado', default="cita")
+    history_type = fields.Selection([
+        ('Primaria', 'Patologia Primaria'),
+        ('Historia', 'Historia'),
+        ('Secundaria', 'Patologia Secundaria'),
+                              ], 'Estado', default="Historia", compute='_get_default_hs')
 
     partner_id = fields.Many2one('res.partner', 'Paciente', domain=[('customer', '=', True)], required=True)
     convenio_id = fields.Many2one('convenio.cliente', 'Convenio')
 
     finalidad = fields.Selection([('8', ' 8 - Deteccion de Alteraciones de agudeza visual'), ('9', 'Otro') ], default='8')
-    tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1')
-
+    #tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1')
     fecha = fields.Datetime('Fecha y Hora', default=fields.datetime.now())
 
     nombre = fields.Char('Nombre', related='partner_id.name')
@@ -750,48 +754,8 @@ class HistorialClinico(models.Model):
         result = super(HistorialClinico, self).create(vals)
         return result
 
-    @api.multi
-    def print_remission_pdf(self):
-        nombre = self.nombre
-        caption = self.env['res.partner'].search([('name', 'like', nombre)])
-        data = {
-            'nombre': caption.name,
-            'documento': caption.id_document,
-            'function': caption.function,
-            'fecha': self.fecha,
-            'motivo': self.motivo,
-            'rx_final_od_vp_esf': self.rx_final_od_vp_esf,
-            'rx_final_od_vp_cil': self.rx_final_od_vp_cil,
-            'rx_final_oi_vp_esf': self.rx_final_oi_vp_esf,
-            'rx_final_oi_vp_cil': self.rx_final_oi_vp_cil,
-            'rx_final_od_esf': self.rx_final_od_esf,
-            'rx_final_od_cil': self.rx_final_od_cil,
-            'rx_final_oi_esf': self.rx_final_oi_esf,
-            'rx_final_oi_cil': self.rx_final_oi_cil,
-            'rx_final_od_eje': self.rx_final_od_eje,
-            'rx_final_od_add': self.rx_final_od_add,
-            'rx_final_oi_eje': self.rx_final_oi_eje,
-            'rx_final_oi_add': self.rx_final_oi_add,
-            'rx_final_od_dp': self.rx_final_od_dp,
-            'rx_final_od_dnp': self.rx_final_od_dnp,
-            'rx_final_oi_dp': self.rx_final_oi_dp,
-            'rx_final_oi_dnp': self.rx_final_oi_dnp,
-            'queratometria_od': self.queratometria_od,
-            'queratometria_oi': self.queratometria_oi,
-            'refraccion_od': self.refraccion_od,
-            'refraccion_oi': self.refraccion_oi,
-            'dx_primario': self.dx_primario,
-            'dx_secundario': self.dx_secundario,
-            'dx_terciario': self.dx_terciario,
-            'oftalmoscopia': self.oftalmoscopia,
-            'conducta': self.plan,
-            'is_remision': self.is_remision,
-            'remision_desc': self.remision_desc,
-            'next_query': 'un año'
-        }
-        # Datos
-        print(data)
-        return self.env.ref('ofimatica_clinical_management.report_remission_pdf').report_action(self, data=data)
+
+
 
 
 

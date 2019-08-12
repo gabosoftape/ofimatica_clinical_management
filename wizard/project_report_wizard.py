@@ -9,7 +9,7 @@ class ProjectReportButton(models.TransientModel):
     @api.multi
     def print_project_report_pdf(self):
         nombre = self.history_select.nombre
-        caption = self.env['res.partner'].search([('name','like',nombre)])
+        caption = self.env['res.partner'].search([('name','like', nombre)])
         data = {
             'record': self.history_select,
             'nombre': caption.name,
