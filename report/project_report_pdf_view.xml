@@ -232,10 +232,10 @@
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
-                                <h3>Datos de Consulta</h3>
+                                <h3>RX FINAL</h3>
                             </div>
                             <div>
-                                 <table class="table table-condensed">
+                                <table class="table table-condensed">
                                      <thead>
                                         <tr >
                                             <th style="background-color:#9b9da0 !important;">OJO</th>
@@ -243,6 +243,9 @@
                                             <th style="background-color:#9b9da0 !important;">CIL</th>
                                             <th style="background-color:#9b9da0 !important;">EJE</th>
                                             <th style="background-color:#9b9da0 !important;">ADD</th>
+                                            <th style="background-color:#9b9da0 !important;">DP</th>
+                                            <th style="background-color:#9b9da0 !important;">DNP</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -251,16 +254,22 @@
                                                    DERECHO
                                                 </td>
                                                 <td>
-                                                    dato1
+                                                    <field name="rx_final_od_esf"/>
                                                 </td>
                                                 <td>
-                                                    dato 2
+                                                    <field name="rx_final_od_cil"/>
                                                 </td>
                                                 <td>
-                                                   none
+                                                    <field name="rx_final_od_eje"/>
                                                 </td>
                                                 <td>
-                                                   dato 3
+                                                    <field name="rx_final_od_add"/>
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_od_dp"/>
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_od_dnp"/>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -268,16 +277,55 @@
                                                    IZQUIERDO
                                                 </td>
                                                 <td>
-                                                    dato 4
+                                                    <field name="rx_final_oi_esf"/>
                                                 </td>
                                                 <td>
-                                                    dato 5
+                                                    <field name="rx_final_oi_cil"/>
                                                 </td>
                                                 <td>
-                                                    none
+                                                    <field name="rx_final_oi_eje"/>
                                                 </td>
                                                 <td>
-                                                   dato 6
+                                                    <field name="rx_final_oi_add"/>
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_oi_dp"/>
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_oi_dnp"/>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-condensed">
+                                     <thead>
+                                        <tr >
+                                            <th style="background-color:#9b9da0 !important;">VP</th>
+                                            <th style="background-color:#9b9da0 !important;">ESF</th>
+                                            <th style="background-color:#9b9da0 !important;">CIL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                   DERECHO
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_od_vp_esf"/>
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_od_vp_cil"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   IZQUIERDO
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_oi_vp_esf"/>
+                                                </td>
+                                                <td>
+                                                    <field name="rx_final_oi_vp_cil"/>
                                                 </td>
                                             </tr>
                                     </tbody>
@@ -286,16 +334,35 @@
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
-                                <h5>Diagnostico Primario: <strong><t t-esc="diagnostico_primario"/></strong></h5>
+                                <h5>Oftalmoscopia: <strong><t t-esc="oftalmoscopia"/></strong></h5>
                             </div>
-                            <div>
-                                <h5>Motivo de Remision: <strong><t t-esc="oftalmoscopia"/></strong></h5>
+                            <div >
+                                <h5>Diagnostico Primario: <strong><t t-esc="dx_primario"/></strong></h5>
+                            </div>
+                            <div >
+                                <h5>Diagnostico segundario: <strong><t t-esc="dx_secundario"/></strong></h5>
+                            </div>
+                            <div >
+                                <h5>Diagnostico terciario: <strong><t t-esc="dx_terciario"/></strong></h5>
                             </div>
                             <div >
                                 <h5>Proxima cita: <strong>Un año</strong></h5>
                             </div>
                             <div>
                                 <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <h1>Prescripcion</h1>
+                            <br/>
+                            <div >
+                                <h5>Tipo de lente: <strong><t t-esc="pres_tipo_lente"/></strong></h5>
+                            </div>
+                            <div >
+                                <h5>Material: <strong><t t-esc="pres_material"/></strong></h5>
+                            </div>
+                            <div >
+                                <h5>Filtro: <strong><t t-esc="pres_filtro"/></strong></h5>
                             </div>
                         </div>
                     </div>
