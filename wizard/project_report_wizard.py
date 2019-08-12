@@ -27,23 +27,43 @@ class ProjectReportButton(models.TransientModel):
     def print_remission_report_pdf(self):
         nombre = self.history_select.nombre
         caption = self.env['res.partner'].search([('name','like',nombre)])
+        hs = self.history_select
+        #Datos
         data = {
-            'record': self.history_select,
             'nombre': caption.name,
             'documento': caption.id_document,
             'function': caption.function,
-            'fecha': self.history_select.fecha,
-            'rx_od': self.history_select.rx_od,
-            'rx_oi': self.history_select.rx_oi,
-            'rx_od_av': self.history_select.rx_od_av,
-            'rx_oi_av': self.history_select.rx_oi_av,
-            'rx_add': self.history_select.rx_add,
-            'diagnostico_primario': self.history_select.diagnostico,
-            'oftalmoscopia': 'sin datos aun',
-            'conducta': self.history_select.plan,
-            'is_remision' : self.history_select.is_remision,
+            'fecha': hs.fecha,
+            'motivo': hs.motivo,
+            'rx_final_od_vp_esf': hs.rx_final_od_vp_esf,
+            'rx_final_od_vp_cil': hs.rx_final_od_vp_cil,
+            'rx_final_oi_vp_esf': hs.rx_final_oi_vp_esf,
+            'rx_final_oi_vp_cil': hs.rx_final_oi_vp_cil,
+            'rx_final_od_esf': hs.rx_final_od_esf,
+            'rx_final_od_cil': hs.rx_final_od_cil,
+            'rx_final_oi_esf': hs.rx_final_oi_esf,
+            'rx_final_oi_cil': hs.rx_final_oi_cil,
+            'rx_final_od_eje': hs.rx_final_od_eje,
+            'rx_final_od_add': hs.rx_final_od_add,
+            'rx_final_oi_eje': hs.rx_final_oi_eje,
+            'rx_final_oi_add': hs.rx_final_oi_add,
+            'rx_final_od_dp': hs.rx_final_od_dp,
+            'rx_final_od_dnp': hs.rx_final_od_dnp,
+            'rx_final_oi_dp': hs.rx_final_oi_dp,
+            'rx_final_oi_dnp': hs.rx_final_oi_dnp,
+            'queratometria_od': hs.queratometria_od,
+            'queratometria_oi': hs.queratometria_oi,
+            'refraccion_od': hs.refraccion_od,
+            'refraccion_oi': hs.refraccion_oi,
+            'dx_primario': hs.dx_primario,
+            'dx_secundario': hs.dx_secundario,
+            'dx_terciario': hs.dx_terciario,
+            'oftalmoscopia': hs.oftalmoscopia,
+            'conducta': hs.plan,
+            'is_remision': hs.is_remision,
+            'remision_desc': hs.remision_desc,
+            'next_query': 'un año'
         }
-        #Datos
         print(data)
         return self.env.ref('ofimatica_clinical_management.report_remission_pdf').report_action(self, data=data)
 

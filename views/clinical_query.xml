@@ -88,7 +88,7 @@ historial clinico
             <field name="arch" type="xml">
                 <form string="Consulta Clinica">
                     <header>
-                        <button name="%(ofimatica_clinical_management.project_report_open_wizard)d" type="action" string="Imprimir Certificado" class="oe_highlight" attrs="{'invisible':[('state','in',('cita','proceso'))]}"/>
+                        <button name="print_remission_pdf" type="action" string="Imprimir Remision" class="oe_highlight" attrs="{'invisible':[('is_remision','=',False)]}"/>
                         <button name="cita" states="cancelada" string="Cita" type="object" />
                         <button name="proceso" states="cita" string="En Proceso" type="object" />
                         <button name="cerrada" states="proceso" string="Finalizar Consulta" type="object" />
@@ -313,9 +313,9 @@ historial clinico
                                                     <th><field name="rx_final_od_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_eje"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_oi_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_oi_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_oi_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                                    <th><field name="rx_final_od_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                                    <th><field name="rx_final_od_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                                    <th><field name="rx_final_od_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
 
                                               </tr>
                                               <tr>
@@ -323,7 +323,7 @@ historial clinico
                                                     <th><field name="rx_final_oi_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_eje"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_od_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                                    <th><field name="rx_final_oi_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
 
@@ -371,6 +371,7 @@ historial clinico
                                 </group>
                                 <group>
                                 <field name="is_remision"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="remision_desc" attrs="{'invisible':[('is_remision','=',False)]}" />
                                 <field name="observaciones"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                 <field name="conducta"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                 </group>
