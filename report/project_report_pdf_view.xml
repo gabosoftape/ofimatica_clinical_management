@@ -206,7 +206,7 @@
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <h4>Refraccion</h4>
                             <center>
-                                <table id="rx_uso" class="table table-condensed" Prodstyle="width:90%">
+                                <table id="rx_uso" class="table table-condensed" style="width:90%">
                                     <tr>
                                         <td>OJO DERECHO</td>
                                         <th><p t-esc="refraccion_od"/></th>
@@ -399,4 +399,5 @@
                 </t>
             </t>
      </template>
+
 </odoo>
