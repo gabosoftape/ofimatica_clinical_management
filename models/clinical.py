@@ -179,7 +179,7 @@ class HistorialClinico(models.Model):
     convenio_id = fields.Many2one('convenio.cliente', 'Convenio')
 
     finalidad = fields.Selection([('8', ' 8 - Deteccion de Alteraciones de agudeza visual'), ('9', 'Otro') ], default='8')
-    #tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1')
+    tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1')
     fecha = fields.Datetime('Fecha y Hora', default=fields.datetime.now())
 
     nombre = fields.Char('Nombre', related='partner_id.name')
