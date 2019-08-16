@@ -74,7 +74,11 @@
             <field name="email" position="after">
                 <label for="age" string="Edad"/>
                             <div class="o_address">
-                                <field name="age" string="Edad"/> Años.
+                                <field name="age" string="Edad"/>
+                            </div>
+                <label for="age_udm" string="Medida Edad"/>
+                            <div class="o_address">
+                                <field name="age_udm" string="Unidad"/>
                             </div>
                 <label for="sex" string="Sexo"/>
                             <div class="o_address">

@@ -86,7 +86,7 @@ historial clinico
             <field name="name">historial.clinico.form</field>
             <field name="model">historial.clinico</field>
             <field name="arch" type="xml">
-                <form string="Consulta Clinica" attrs="{'readonly':[('state','=','cerrada')]}">
+                <form string="Consulta Clinica">
                     <header>
                         <button name="print_remission_pdf" type="action" string="Imprimir Remision" class="oe_highlight" attrs="{'invisible':[('is_remision','=',False)]}"/>
                         <button name="cita" states="cancelada" string="Cita" type="object" />
@@ -106,19 +106,19 @@ historial clinico
                         <group>
                             <group>
                                 <field name="fecha" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso'))]}"/>
-                                <field name="convenio_id" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso'))]}"/>
+                                <field name="convenio_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                             </group>
                             <group>
-                                <field name="optometra_id" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso'))]}" required="1"/>
-                                <field name="sede" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso'))]}" />
+                                <field name="optometra_id" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" required="1"/>
+                                <field name="sede" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" />
                             </group>
                         </group>
-                        <group attrs="{'invisible':[('state','==', 'proceso')]}">
+                        <group>
                             <field name="finalidad" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                             <field name="motivo" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                             <field name="tipo_servicio" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                         </group>
-                        <group string="Antecedentes" attrs="{'invisible':[('state','==', 'proceso')]}">
+                        <group string="Antecedentes">
                             <field name="is_licor" />
                             <field name="is_fumador"/>
                             <field name="is_lentes"/>
@@ -134,7 +134,7 @@ historial clinico
                         </group>
                         <notebook attrs="{'invisible':[('state','==', 'cita')]}">
                             <page string="EXAMEN">
-                                <group string="LENSOMETRIA">
+                                <group string="RX EN USO">
                                  </group>
                                     <center>
                                         <table id="rx_uso" style="width:90%">
@@ -146,23 +146,20 @@ historial clinico
                                                     <th>ADD</th>
                                               </tr>
                                               <tr>
-                                                    <th>OD</th>
+                                                    <th>OJO DERECHO</th>
                                                     <th><field name="rx_uso_od_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_uso_od_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_uso_od_eje"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_uso_oi_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                               </tr>
                                               <tr>
-                                                <th>OI</th>
+                                                <th>OJO IZQUIERDO</th>
                                                 <th><field name="rx_uso_oi_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                 <th><field name="rx_uso_oi_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                 <th><field name="rx_uso_oi_eje"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                 <th><field name="rx_uso_od_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                               </tr>
                                         </table>
-                                        <group string=" ">
-                                                <field name="rx_uso_observaciones"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}" />
-                                        </group>
                                     </center>
                                 <style>
                                     #rx_uso {
@@ -184,19 +181,53 @@ historial clinico
                                 <table id="rx_uso" style="width:90%">
                                       <tr>
                                             <th><center><strong>SIN CORRECCION</strong></center></th>
-                                            <th>VL</th>
                                             <th>VP</th>
+                                            <th>VL</th>
                                       </tr>
                                       <tr>
-                                            <th>OD</th>
-                                            <th><field name="av_sc_od_vl"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th>OJO DERECHO</th>
                                             <th><field name="av_sc_od_vp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th><field name="av_sc_od_vl"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                       </tr>
                                       <tr>
-                                            <th>OI</th>
-                                            <th><field name="av_sc_oi_vl"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th>OJO IZQUIERDO</th>
                                             <th><field name="av_sc_oi_vp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th><field name="av_sc_oi_vl"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                       </tr>
+                                </table>
+                                </center>
+                                <br/>
+                                <center>
+                                <table id="rx_uso" style="width:90%">
+                                      <tr>
+                                            <th><center><strong>CON CORRECCION</strong></center></th>
+                                            <th>VP</th>
+                                            <th>VL</th>
+                                      </tr>
+                                      <tr>
+                                            <th>OJO DERECHO</th>
+                                            <th><field name="av_cc_od_vp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th><field name="av_cc_od_vl"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                      </tr>
+                                      <tr>
+                                            <th>OJO IZQUIERDO</th>
+                                            <th><field name="av_cc_oi_vp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th><field name="av_cc_oi_vl"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                      </tr>
+                                </table>
+                                </center>
+                                <br/>
+                                <hr/>
+                                <group string="LENSOMETRÍA">
+                                 </group>
+                                <center>
+                                <table id="rx_uso" style="width:90%">
+                                    <tr>
+                                        <th>OJO DERECHO</th>
+                                        <td><field name="lensometria_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
+                                        <th>OJO IZQUIERDO</th>
+                                        <td><field name="lensometria_id"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
+                                    </tr>
                                 </table>
                                 </center>
                                 <br/>
@@ -207,7 +238,7 @@ historial clinico
                                 <group>
                                     <field name="examen_anterior"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                     <field name="examen_motor"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                    <field name="oftalmoscopia"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    <field name="examen_posterior"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                 </group>
                                 <group>
                                     <group>
@@ -258,9 +289,6 @@ historial clinico
                                         <td><field name="refraccion_bajo_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
                                     </tr>
                                 </table>
-                                    <group string=" ">
-                                          <field name="refraccion_bajo_observaciones" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                    </group>
                                 </center>
                                 <br/>
                                 <hr/>
@@ -277,48 +305,59 @@ historial clinico
                                                     <th>CIL</th>
                                                     <th>EJE</th>
                                                     <th>ADD</th>
-                                                    <th>AV</th>
                                                     <th>DP</th>
                                                     <th>DNP</th>
-                                                    <th>Prisma</th>
                                               </tr>
                                               <tr>
-                                                    <th>OD</th>
+                                                    <th>OJO DERECHO</th>
                                                     <th><field name="rx_final_od_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_eje"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_od_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_od_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_od_prisma"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+
                                               </tr>
                                               <tr>
-                                                    <th>OI</th>
+                                                    <th>OJO IZQUIERDO</th>
                                                     <th><field name="rx_final_oi_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_eje"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_add"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_oi_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_od_prisma"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+
                                               </tr>
                                         </table>
                                     </center>
                                     <br/>
+                                <center>
+                                <table id="rx_uso" style="width:90%">
+                                      <tr>
+                                            <th><center><strong>CON CORRECCION</strong></center></th>
+                                            <th>VP</th>
+                                            <th>VL</th>
+                                      </tr>
+                                      <tr>
+                                            <th>OJO DERECHO</th>
+                                            <th><field name="rx_final_od_vp_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th><field name="rx_final_od_vp_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                      </tr>
+                                      <tr>
+                                            <th>OJO IZQUIERDO</th>
+                                            <th><field name="rx_final_oi_vp_esf"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                            <th><field name="rx_final_oi_vp_cil"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                      </tr>
+                                </table>
+                                </center>
+
                                 <group>
                                     <group>
                                         <field name="tipo_de_lente"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                     </group>
-                                </group>
-                                <group>
-                                    <field name="seguimiento_ids" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}">
-                                        <tree string="Seguimientos" editable="bottom">
-                                            <field name="partner_id" required="1"/>
-                                            <field name="seguimiento_date" required="1"/>
-                                        </tree>
-                                    </field>
+                                    <group>
+                                        <field name="prismas"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="DIAGNOSTICO">
