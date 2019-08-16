@@ -43,15 +43,6 @@ class clinicalPartner(models.Model):
     last_name= fields.Char(string='Primer Apellido')
     second_last_name = fields.Char(string='Segundo Apellido')
     age = fields.Integer(string='Edad')
-    age_udm = fields.Selection(
-        string=u'Selecciona Unidad',
-        selection=[
-            ('1', u'Años'),
-            ('2', u'Meses'),
-            ('3', u'Dias')
-        ],
-        default='1',
-    )
     sex = fields.Selection(
         string=u'Sexo',
         selection=[
@@ -61,7 +52,7 @@ class clinicalPartner(models.Model):
     )
     zone = fields.Selection([('U','Urbana'),('R','Rural')])
     companion = fields.Many2one('res.partner', string="Acompañante")
-    companion_document = fields.Integer(string="No. Documento", readonly=1, default=None)
+    companion_document = fields.Integer(string="No. Documento", readonly=1, related='companion.id_document')
     companion_parentezco = fields.Char(string="Parentezco")
     companion_tel = fields.Char(string="Telefono de Contacto")
     # company_type is only an interface field, do not use it in business logic
@@ -193,12 +184,12 @@ class HistorialClinico(models.Model):
     lentes_desc = fields.Text('¡Que tipo de lentes?')
     is_enfermedad_here = fields.Boolean('Enfermedad hereditaria')
     enfermedad_here_desc = fields.Text('Describe qué enfermedades')
-    is_operaciones = fields.Boolean('Operaciones')
-    operaciones_desc = fields.Text('Describe Operaciones')
+    is_operaciones = fields.Boolean('Cirugias')
+    operaciones_desc = fields.Text('Descrpcion Cirugias')
     is_alergias = fields.Boolean('Alergias')
-    alergias_desc = fields.Text('Describe alergias')
+    alergias_desc = fields.Text('Descripcion alergias')
     is_medicacion = fields.Boolean('Medicamentos')
-    medicacion_desc = fields.Text('Describe que medicamentos')
+    medicacion_desc = fields.Text('Descripcion que medicamentos')
 
     antecedentes_oculares = fields.Text('Antecedentes Oculares Familiares y Personales')
 
@@ -216,7 +207,6 @@ class HistorialClinico(models.Model):
     ### Datos Historicos
     examen_anterior = fields.Char('Examen Segmento Anterior', size=128)
     examen_motor = fields.Char('Examen Motor', size=128)
-    examen_posterior = fields.Char('Examen Segmento Posterior', size=128)
     ishihara = fields.Char('Ishihara', size=128)
     estereopsis = fields.Char('Estereopsis', size=128)
 
@@ -267,7 +257,10 @@ class HistorialClinico(models.Model):
     rx_final_od_vp_cil = fields.Char('Rx final OI DNP')
     rx_final_oi_vp_esf = fields.Char('Rx final OI DNP')
     rx_final_oi_vp_cil = fields.Char('Rx final OI DNP')
-
+    rx_final_od_av = fields.Char('Rx final od av')
+    rx_final_oi_av = fields.Char('Rx final oi av')
+    rx_final_od_prisma = fields.Char('Prisma OD')
+    rx_final_oi_prisma = fields.Char('Prisma OI')
     ### RX FINAL ###
 
     prismas = fields.Char('Prismas', size=128)
@@ -276,7 +269,7 @@ class HistorialClinico(models.Model):
     plan = fields.Char('Plan de Manejo', size=256)
     ### DIAGNOSTICO ###
     oftalmoscopia = fields.Text()
-    dx_primario = fields.Selection(string='Dx primario', selection=[
+    dx_primario = fields.Char(string='Dx primario', selection=[
         ('HIPERMETROPIA', 'H520 - HIPERMETROPIA'),
         ('MIOPIA', 'H521 MIOPIA'),
         ('ASTIGMATISMO', 'H522 - ASTIGMATISMO'),
@@ -405,7 +398,7 @@ class HistorialClinico(models.Model):
          'H599 - TRASTORNO NO ESPECIFICADO DEL OJO Y SUS ANEXOS, CONSECUTIVO A PROCEDIMIENTOS'),
 
     ])
-    dx_secundario = fields.Selection(string='Dx Secundario', selection=[
+    dx_secundario = fields.Char(string='Dx Secundario', selection=[
         ('HIPERMETROPIA', 'H520 - HIPERMETROPIA'),
         ('MIOPIA', 'H521 MIOPIA'),
         ('ASTIGMATISMO', 'H522 - ASTIGMATISMO'),
@@ -534,7 +527,7 @@ class HistorialClinico(models.Model):
          'H599 - TRASTORNO NO ESPECIFICADO DEL OJO Y SUS ANEXOS, CONSECUTIVO A PROCEDIMIENTOS'),
 
     ])
-    dx_terciario = fields.Selection(string='Dx Terciario', selection=[
+    dx_terciario = fields.Char(string='Dx Terciario', selection=[
         ('HIPERMETROPIA', 'H520 - HIPERMETROPIA'),
         ('MIOPIA', 'H521 MIOPIA'),
         ('ASTIGMATISMO', 'H522 - ASTIGMATISMO'),
@@ -690,10 +683,16 @@ class HistorialClinico(models.Model):
     conducta = fields.Text()
 
     ### prescripcion y usoo ###
-    pres_tipo_lente = fields.Selection([('bifocal','Bifocal'),('ocupacional','Ocupacional'),('progresivo','Progresivo'),('sencillo','Visión sencilla')],'Tipo de lente')
+    pres_tipo_lente = fields.Char('Tipo de lente')
     pres_material = fields.Selection([('cr39','CR39'),('policarbonato','Policarbonato')],'Material')
-    pres_filtro = fields.Selection([('ar','AR'),('uv','UV')],'filtros')
+    pres_filtro = fields.Char('filtros')
     pres_uso = fields.Selection([('permanente','Permanente'),('ocacional','Ocacional'),('cerca','Cerca'),('lejos','Lejos')],'Modo de uso.')
+    pres_control = fields.Char('Control')
+    #Observaciones##
+    rx_uso_observaciones = fields.Text('Observaciones')
+    refraccion_bajo_observaciones = fields.Text('Observaciones')
+    seguimiento_ids = fields.Many2one('historial.clinico.seguimiento','partner_id', 'Seguimientos Clinicos')
+    is_seguimiento = fields.Boolean('Seguimientos')
 
     @api.multi
     def print_report(self):
@@ -755,8 +754,8 @@ class HistorialClinico(models.Model):
         return result
 
 
-
-
-
-
-
+class HistorialClinicoSeguimiento (models.Model):
+    _name = 'historial.clinico.seguimiento'
+    _description = 'Seguimiento'
+    partner_id = fields.Many2one('res.partner', 'Paciente', domain=[('customer', '=', True)], required=True)
+    seguimiento_date = fields.Datetime('Fecha y Hora', default=fields.datetime.now())
