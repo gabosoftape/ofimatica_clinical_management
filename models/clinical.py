@@ -174,6 +174,7 @@ class HistorialClinico(models.Model):
     fecha = fields.Datetime('Fecha y Hora', default=fields.datetime.now())
 
     nombre = fields.Char('Nombre', related='partner_id.name')
+    documento = fields.Char('Documento')
 
     motivo = fields.Text('Motivo de Consulta')
 
@@ -691,6 +692,8 @@ class HistorialClinico(models.Model):
     #Observaciones##
     rx_uso_observaciones = fields.Text('Observaciones')
     refraccion_bajo_observaciones = fields.Text('Observaciones')
+    seguimientos_id = fields.Many2one('historial.clinico.seguimiento', string="Seguimientos")
+    is_seguimiento = fields.Boolean('Seguimientos')
 
     @api.multi
     def print_report(self):
@@ -703,8 +706,10 @@ class HistorialClinico(models.Model):
     def onchange_partner_id(self):
         if self.partner_id and self.partner_id.convenio_id:
             self.convenio_id = self.partner_id.convenio_id.id
+            self.documento = self.partner_id.id_document
         if self.partner_id:
             self.nombre = self.partner_id.name
+            self.documento = self.partner_id.id_document
 
 
     @api.multi
@@ -753,7 +758,31 @@ class HistorialClinico(models.Model):
 
 
 
-
+class HistorialClinicoSeguimientos(models.Model):
+    _name = 'historial.clinico.seguimiento'
+    fecha_seguimiento = fields.Datetime('Fecha de Seguimiento', default=fields.datetime.now())
+    ### RX FINAL ###
+    rx_final_od_esf = fields.Char('Rx uso OD ESF')
+    rx_final_od_cil = fields.Char('Rx uso OD CIL')
+    rx_final_od_eje = fields.Char('Rx uso OD EJE')
+    rx_final_od_add = fields.Char('Rx uso OD ADD')
+    rx_final_oi_esf = fields.Char('Rx uso OI ESF')
+    rx_final_oi_cil = fields.Char('Rx uso OI CIL')
+    rx_final_oi_eje = fields.Char('Rx uso OI EJE')
+    rx_final_oi_add = fields.Char('Rx uso OI ADD')
+    rx_final_od_dp = fields.Char('Rx uso OD DP')
+    rx_final_od_dnp = fields.Char('Rx uso OD DNP')
+    rx_final_oi_dp = fields.Char('Rx uso OI DP')
+    rx_final_oi_dnp = fields.Char('Rx uso OI DNP')
+    rx_final_od_vp_esf = fields.Char('Rx final OI DNP')
+    rx_final_od_vp_cil = fields.Char('Rx final OI DNP')
+    rx_final_oi_vp_esf = fields.Char('Rx final OI DNP')
+    rx_final_oi_vp_cil = fields.Char('Rx final OI DNP')
+    rx_final_od_av = fields.Char('Rx final od av')
+    rx_final_oi_av = fields.Char('Rx final oi av')
+    rx_final_od_prisma = fields.Char('Prisma OD')
+    rx_final_oi_prisma = fields.Char('Prisma OI')
+    ### RX FINAL ###
 
 
 
