@@ -317,7 +317,7 @@ historial clinico
                                     </group>
                                 </group>
                                 <group>
-                                    <field name="seguimientos_id"
+                                    <field name="seguimientos_id"/>
                                 </group>
                             </page>
                             <page string="DIAGNOSTICO">
