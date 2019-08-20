@@ -225,9 +225,9 @@ historial clinico
                                 <center>
                                 <table id="rx_uso" style="width:90%">
                                     <tr>
-                                        <td>OJO DERECHO</td>
+                                        <td>OD</td>
                                         <th><field name="queratometria_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                        <td>OJO IZQUIERDO</td>
+                                        <td>OI</td>
                                         <th><field name="queratometria_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                     </tr>
                                 </table>
@@ -239,9 +239,9 @@ historial clinico
                                 <center>
                                 <table id="rx_uso" style="width:90%">
                                     <tr>
-                                        <th>OJO DERECHO</th>
+                                        <th>OD</th>
                                         <td><field name="refraccion_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
-                                        <th>OJO IZQUIERDO</th>
+                                        <th>OI</th>
                                         <td><field name="refraccion_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
                                     </tr>
                                 </table>
@@ -253,9 +253,9 @@ historial clinico
                                 <center>
                                 <table id="rx_uso" style="width:90%">
                                     <tr>
-                                        <th>OJO DERECHO</th>
+                                        <th>OD</th>
                                         <td><field name="refraccion_bajo_od"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
-                                        <th>OJO IZQUIERDO</th>
+                                        <th>OI</th>
                                         <td><field name="refraccion_bajo_oi"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></td>
                                     </tr>
                                 </table>
@@ -303,7 +303,7 @@ historial clinico
                                                     <th><field name="rx_final_oi_av"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_dp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                                     <th><field name="rx_final_oi_dnp"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
-                                                    <th><field name="rx_final_od_prisma"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
+                                                    <th><field name="rx_final_oi_prisma"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></th>
                                               </tr>
                                         </table>
                                     </center>
@@ -321,9 +321,6 @@ historial clinico
                                 </group>
                             </page>
                             <page string="DIAGNOSTICO">
-                                <group string="Oftalmoscopia">
-                                    <field name="oftalmoscopia"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                                </group>
                                 <group string="Dx">
                                     <field name="dx_primario"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                     <field name="dx_secundario"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
