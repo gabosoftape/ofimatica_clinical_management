@@ -130,8 +130,56 @@
 
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
-                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
+                            <div >
+                                <h3>Datos de Consulta</h3>
+                            </div>
+                            <div>
+                                 <table class="table table-condensed">
+                                     <thead>
+                                        <tr >
+                                            <th style="background-color:#9b9da0 !important;">...</th>
+                                            <th style="background-color:#9b9da0 !important;">ESF</th>
+                                            <th style="background-color:#9b9da0 !important;">CIL</th>
+                                            <th style="background-color:#9b9da0 !important;">EJE</th>
+                                            <th style="background-color:#9b9da0 !important;">ADD</th>
+                                            <th style="background-color:#9b9da0 !important;">PRI</th>
+                                            <th style="background-color:#9b9da0 !important;">AV</th>
+                                            <th style="background-color:#9b9da0 !important;">DP</th>
+                                            <th style="background-color:#9b9da0 !important;">DNP</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                   OD
+                                                </td>
+                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   OI
+                                                </td>
+                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <h4>Queratrometria</h4>
@@ -204,8 +252,56 @@
 
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
-                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
+                            <div >
+                                <h3>Datos de Consulta</h3>
+                            </div>
+                            <div>
+                                 <table class="table table-condensed">
+                                     <thead>
+                                        <tr >
+                                            <th style="background-color:#9b9da0 !important;">...</th>
+                                            <th style="background-color:#9b9da0 !important;">ESF</th>
+                                            <th style="background-color:#9b9da0 !important;">CIL</th>
+                                            <th style="background-color:#9b9da0 !important;">EJE</th>
+                                            <th style="background-color:#9b9da0 !important;">ADD</th>
+                                            <th style="background-color:#9b9da0 !important;">PRI</th>
+                                            <th style="background-color:#9b9da0 !important;">AV</th>
+                                            <th style="background-color:#9b9da0 !important;">DP</th>
+                                            <th style="background-color:#9b9da0 !important;">DNP</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                   OD
+                                                </td>
+                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   OI
+                                                </td>
+                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
@@ -254,8 +350,56 @@
                                 <t t-foreach="vals" t-as="hs">
                                     <h4>Folio No. <t t-esc="hs['folio']"/></h4>
                                     <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
-                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
+                            <div >
+                                <h3>Datos de Consulta</h3>
+                            </div>
+                            <div>
+                                 <table class="table table-condensed">
+                                     <thead>
+                                        <tr >
+                                            <th style="background-color:#9b9da0 !important;">...</th>
+                                            <th style="background-color:#9b9da0 !important;">ESF</th>
+                                            <th style="background-color:#9b9da0 !important;">CIL</th>
+                                            <th style="background-color:#9b9da0 !important;">EJE</th>
+                                            <th style="background-color:#9b9da0 !important;">ADD</th>
+                                            <th style="background-color:#9b9da0 !important;">PRI</th>
+                                            <th style="background-color:#9b9da0 !important;">AV</th>
+                                            <th style="background-color:#9b9da0 !important;">DP</th>
+                                            <th style="background-color:#9b9da0 !important;">DNP</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                   OD
+                                                </td>
+                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   OI
+                                                </td>
+                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                                     <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
