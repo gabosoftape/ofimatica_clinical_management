@@ -81,6 +81,16 @@ historial clinico
                 </tree>
             </field>
         </record>
+        <record id="seguimiento_clinico_list" model="ir.ui.view">
+            <field name="name">historial.clinico.seguimiento.tree</field>
+            <field name="model">historial.clinico.seguimiento</field>
+            <field name="arch" type="xml">
+                <tree string="Seguimientos">
+                    <field name="fecha_seguimiento"/>
+                    <field name="paciente"/>
+                </tree>
+            </field>
+        </record>
 
         <record id="historial_clinico_form" model="ir.ui.view">
             <field name="name">historial.clinico.form</field>
@@ -100,10 +110,10 @@ historial clinico
                             <h3>Documento No. <field name="documento" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso','cita'))]}"/></h3>
                             <h1>Folio: <field name="folio" readonly="1"/></h1>
                         </div>
-                         <div class="oe_title">
-                            <label class="oe_edit_only" for="partner_id" string="Paciente"/>
-                            <h1><field name="partner_id" options="{'no_create': False,'no_create_edit':False}" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></h1>
-                         </div>
+                             <div class="oe_title">
+                                <label class="oe_edit_only" for="partner_id" string="Paciente"/>
+                                <h1><field name="partner_id" options="{'no_create': False,'no_create_edit':False}" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/></h1>
+                             </div>
                         <group>
                             <group>
                                 <field name="fecha" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso'))]}"/>
@@ -348,6 +358,103 @@ historial clinico
                 </form>
             </field>
         </record>
+         <record id="historial_clinico_seguimiento_form" model="ir.ui.view">
+            <field name="name">historial.clinico.seguimiento.form</field>
+            <field name="model">historial.clinico.seguimiento</field>
+            <field name="arch" type="xml">
+                <form string="Seguimientos">
+                    <style>
+                            #rx_uso
+                             {
+                              font-family: arial, sans-serif;
+                              border-collapse: collapse;
+                              width: 100%;
+                             }
+
+                            #rx_uso td, th
+                             {
+                              border: 1px solid #dddddd;
+                              text-align: left;
+                              padding: 8px;
+                             }
+                         </style>
+                    <group>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="paciente" string="Paciente"/>
+                            <h1><field name="paciente"/></h1>
+                            <label clas="oe_edit_only" for="fecha_seguimiento" string="Fecha de Seguimiento"/>
+                            <field name="fecha_seguimiento"/>
+                         </div>
+                    </group>
+                    <group>
+                             <h2>RX FINAL</h2>
+                    </group>
+                     <group>
+                         <center>
+                        <table id="rx_uso" style="width:90%">
+                                              <tr>
+                                                    <th><center>...</center></th>
+                                                    <th>ESF</th>
+                                                    <th>CIL</th>
+                                                    <th>EJE</th>
+                                                    <th>ADD</th>
+                                                    <th>AV</th>
+                                                    <th>DP</th>
+                                                    <th>DNP</th>
+                                                    <th>Prisma</th>
+                                              </tr>
+                                              <tr>
+                                                    <th>OD</th>
+                                                    <th><field name="rx_final_od_esf" /></th>
+                                                    <th><field name="rx_final_od_cil" /></th>
+                                                    <th><field name="rx_final_od_eje" /></th>
+                                                    <th><field name="rx_final_od_add" /></th>
+                                                    <th><field name="rx_final_od_av" /></th>
+                                                    <th><field name="rx_final_od_dp" /></th>
+                                                    <th><field name="rx_final_od_dnp" /></th>
+                                                    <th><field name="rx_final_od_prisma"/></th>
+                                              </tr>
+                                              <tr>
+                                                    <th>OI</th>
+                                                    <th><field name="rx_final_oi_esf"  /></th>
+                                                    <th><field name="rx_final_oi_cil"  /></th>
+                                                    <th><field name="rx_final_oi_eje"  /></th>
+                                                    <th><field name="rx_final_oi_add"  /></th>
+                                                    <th><field name="rx_final_oi_av"  /></th>
+                                                    <th><field name="rx_final_oi_dp"  /></th>
+                                                    <th><field name="rx_final_oi_dnp"  /></th>
+                                                    <th><field name="rx_final_oi_prisma"/></th>
+                                              </tr>
+                                        </table>
+                    </center>
+                     </group>
+                    <group>
+                             <h2>DIAGNOSTICO</h2>
+                    </group>
+                    <group>
+                        <field name="oftalmoscopia" />
+                        <field name="dx_primario"/>
+                        <field name="dx_secundario"/>
+                        <field name="dx_terciario"/>
+                        <field name="is_remision"/>
+                        <field name="remision_desc"/>
+                        <field name="observaciones"/>
+                        <field name="conducta"/>
+                    </group>
+                    <group>
+                        <h2>PRESCRIPCIÓN</h2>
+                    </group>
+                    <group>
+                        <field name="tipo_lente"/>
+                        <field name="material"/>
+                        <field name="filtros"/>
+                        <field name="uso"/>
+                    </group>
+
+
+                </form>
+            </field>
+        </record>
 
 
         <record id="historial_clinico_search" model="ir.ui.view">
@@ -366,7 +473,20 @@ historial clinico
                     </group>
                 </search>
             </field>
-        </record>
+            </record>
+            <record id="seguimiento_clinico_search" model="ir.ui.view">
+                <field name="name">historial.clinico.seguimiento.serch</field>
+                <field name="model">historial.clinico.seguimiento</field>
+                <field name="arch" type="xml">
+                    <search string="Seguimientos">
+                        <field name="paciente" />
+                        <field name="fecha_seguimiento" string="Fecha..."/>
+                        <group expand="0" string="Agrupar...">
+                            <filter string="Paciente" domain="" context="{'group_by':'paciente'}"/>
+                        </group>
+                    </search>
+                </field>
+            </record>
 
         <record  id="calendar_clinic_historial" model="ir.ui.view">
             <field name="name">historial.clinico.calendar.lead</field>
@@ -389,6 +509,14 @@ historial clinico
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,calendar</field>
             <field name="view_id" ref="historial_clinico_list"/>
+        </record>
+    <record id="action_seguimiento_clinico" model="ir.actions.act_window">
+            <field name="name">Consulta Clinica</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">historial.clinico.seguimiento</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="seguimiento_clinico_list"/>
         </record>
 
     <record id="action_historial_clinico_agenda" model="ir.actions.act_window">

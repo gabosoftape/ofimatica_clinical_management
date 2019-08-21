@@ -5,19 +5,20 @@
         <!-- Categorias -->
                 <!-- Historias -->
                 <menuitem id="clinical_histories" parent="principal_optica" name="Historias Clinicas" sequence="02"/>
-                <menuitem id="consultas" parent="clinical_histories" name="Historial clinico" action="action_historial_clinico" sequence="01"/>
-                <menuitem id="agendar_citas" parent="clinical_histories" name="Agendar Citas" action="action_historial_clinico_agenda" sequence="01"/>
+                <menuitem id="consultas" parent="clinical_histories" name="Consultas" action="action_historial_clinico" sequence="01"/>
+                <menuitem id="seguimientos" parent="clinical_histories" name="Seguimientos" action="action_seguimiento_clinico" sequence="02"/>
+                <menuitem id="agendar_citas" parent="clinical_histories" name="Agendar Citas" action="action_historial_clinico_agenda" sequence="03"/>
 
            	    <!-- administracion -->
                 <menuitem id="clinical_admin" parent="principal_optica" name="Administracion" sequence="03"/>
-                <!-- Pacientes -->
-                <menuitem id="clientes" parent="clinical_admin" name="Directorio" sequence="01"/>
-                <menuitem id="directorio" parent="clientes" name="Pacientes" action="base.action_partner_customer_form" sequence="01"/>
-                <!-- convenios -->
+                                 <!-- Pacientes -->
+                <menuitem id="directorio" parent="clinical_admin" name="Pacientes" action="base.action_partner_customer_form" sequence="01"/>
+                                 <!-- convenios -->
                 <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="action_convenios" sequence="02"/>
+                                <!-- Informes -->
+                <menuitem id="TESTEO ACTION" parent="clinical_admin" name="Informes"  action="project_report_open_wizard" sequence="03"/>
                 <!-- Informes -->
-                <menuitem id="informes" parent="clinical_admin" name="Informes"  action="project_report_open_wizard" sequence="03"/>
-
+                <menuitem id="g_informes" parent="principal_optica" name="Informes" sequence="04"/>
 
 
 

@@ -4,12 +4,18 @@
 
     <!--Group for clinical manager -->
     <record id="group_clinical_manager" model="res.groups">
-        <field name="name">Clinical Management/ Manager</field>
+        <field name="name">Administrador</field>
     </record>
 
-    <!--Group for clinical user -->
-    <record id="group_clinical_user" model="res.groups">
-        <field name="name">Clinical Management / User</field>
+    <!--Group for clinical doctor -->
+    <record id="group_clinical_doctor" model="res.groups">
+        <field name="name">Optometra</field>
     </record>
+
+    <!--Group for clinical doctor -->
+    <record id="group_clinical_user" model="res.groups">
+        <field name="name">user</field>
+    </record>
+
 
 </odoo>
