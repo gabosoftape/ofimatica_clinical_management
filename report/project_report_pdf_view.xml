@@ -407,7 +407,107 @@
                                 <h3>Paciente: <t t-esc="paciente" /></h3>
                                 <h3>Documento No. <t t-esc="documento"/></h3>
                                 <t t-foreach="vals" t-as="hs">
-                                    <p>Folio No. <t t-esc="hs['folio']"/></p>
+                                    <h4>Folio No. <t t-esc="hs['folio']"/></h4>
+                                    <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                                         <h4>RX Final</h4>
+                                        <center>
+                                        <table id="rx_uso" class="table table-condensed" style="width:90%">
+                                              <tr>
+                                                    <th style="background-color:#9b9da0 !important;"><center>...</center></th>
+                                                     <th style="background-color:#9b9da0 !important;">ESF</th>
+                                                    <th style="background-color:#9b9da0 !important;">CIL</th>
+                                                    <th style="background-color:#9b9da0 !important;">EJE</th>
+                                                    <th style="background-color:#9b9da0 !important;">ADD</th>
+                                                    <th style="background-color:#9b9da0 !important;">DP</th>
+                                                    <th style="background-color:#9b9da0 !important;">DNP</th>
+                                              </tr>
+                                              <tr>
+                                                    <th>OJO DERECHO</th>
+                                                    <th><p t-esc="hs['rx_final_od_esf']"/></th>
+                                                    <th><p t-esc="hs['rx_final_od_cil']"/></th>
+                                                    <th><p t-esc="hs['rx_final_od_eje']"/></th>
+                                                    <th><p t-esc="hs['rx_final_od_add']"/></th>
+                                                    <th><p t-esc="hs['rx_final_od_dp']"/></th>
+                                                    <th><p t-esc="hs['rx_final_od_dnp']"/></th>
+
+                                              </tr>
+                                              <tr>
+                                                    <th>OJO IZQUIERDO</th>
+                                                    <th><p t-esc="hs['rx_final_oi_esf']"/></th>
+                                                    <th><p t-esc="hs['rx_final_oi_cil']"/></th>
+                                                    <th><p t-esc="hs['rx_final_oi_eje']"/></th>
+                                                    <th><p t-esc="hs['rx_final_oi_add']"/></th>
+                                                    <th><p t-esc="hs['rx_final_oi_dp']" /></th>
+                                                    <th><p t-esc="hs['rx_final_oi_dnp']"/></th>
+
+                                              </tr>
+                                        </table>
+                                    </center>
+                                    <br/>
+                                <center>
+                                <table id="rx_uso" class="table table-condensed" style="width:90%">
+                                      <tr>
+                                            <th><center><strong>CON CORRECCION</strong></center></th>
+                                            <th>VP</th>
+                                            <th>VL</th>
+                                      </tr>
+                                      <tr>
+                                            <th>OJO DERECHO</th>
+                                            <th><p t-esc="hs['rx_final_od_vp_esf']"/></th>
+                                            <th><p t-esc="hs['rx_final_od_vp_cil']"/></th>
+                                      </tr>
+                                      <tr>
+                                            <th>OJO IZQUIERDO</th>
+                                            <th><p t-esc="hs['rx_final_oi_vp_esf']"/></th>
+                                            <th><p t-esc="hs['rx_final_oi_vp_cil']"/></th>
+                                      </tr>
+                                </table>
+                                </center>
+
+                                    Tipo de lente:<p t-esc="hs['tipo_de_lente']"/>
+                                    Prismas: <p t-esc="hs['prismas']"/>
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <h4>Queratrometria</h4>
+                            <center>
+                                <table id="rx_uso" class="table table-condensed" style="width:90%">
+                                    <tr>
+                                        <td>OJO DERECHO</td>
+                                        <th><p t-esc="hs['queratometria_od']"/></th>
+                                        <td>OJO IZQUIERDO</td>
+                                        <th><p t-esc="hs['queratometria_oi']"/></th>
+                                    </tr>
+                                </table>
+                                </center>
+                        </div>
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <h4>Refraccion</h4>
+                            <center>
+                                <table id="rx_uso" class="table table-condensed" style="width:90%">
+                                    <tr>
+                                        <td>OJO DERECHO</td>
+                                        <th><p t-esc="hs['refraccion_od']"/></th>
+                                        <td>OJO IZQUIERDO</td>
+                                        <th><p t-esc="hs['refraccion_oi']"/></th>
+                                    </tr>
+                                </table>
+                                </center>
+                        </div>
+
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                            <div >
+                                <h5>Diagnostico Primario: <strong><t t-esc="hs['diagnostico_primario']"/></strong></h5>
+                            </div>
+                            <div>
+                                <h5>Motivo de Remision: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
+                            </div>
+                            <div >
+                                <h5>Proxima cita: <strong>Un año</strong></h5>
+                            </div>
+                            <div>
+                                <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
+                            </div>
+                        </div>
 
                                 </t>
                         </div>
