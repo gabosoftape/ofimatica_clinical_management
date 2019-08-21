@@ -42,6 +42,20 @@ class FormulaReportParser(models.AbstractModel):
     def get_report_values(self, docids, data=None):
         return data
 
+class HistoriaReportParser(models.AbstractModel):
+    _name = 'report.ofimatica_clinical_management.historial_report_template'
+
+    def get_report_values(self, docids, data=None):
+        historial_ids = data['history_ids']
+        paciente = data['paciente']
+        documento = data['documento']
+        return {
+            'vals': historial_ids,
+            'paciente': paciente,
+            'documento': documento,
+        }
+
+
 
 
 

@@ -399,5 +399,19 @@
                 </t>
             </t>
      </template>
+    <template id="historial_report_template">
+        <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                        <div class="page" >
+                                <h1>Historial Clinico</h1>
+                                <h3>Paciente: <t t-esc="paciente" /></h3>
+                                <h3>Documento No. <t t-esc="documento"/></h3>
+                                <t t-foreach="vals" t-as="hs">
+                                    <p>Folio No. <t t-esc="hs['folio']"/></p>
 
+                                </t>
+                        </div>
+                    </t>
+                </t>
+    </template>
 </odoo>

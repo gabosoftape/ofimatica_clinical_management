@@ -16,9 +16,10 @@
                                  <!-- convenios -->
                 <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="action_convenios" sequence="02"/>
                                 <!-- Informes -->
-                <menuitem id="TESTEO ACTION" parent="clinical_admin" name="Informes"  action="project_report_open_wizard" sequence="03"/>
+
                 <!-- Informes -->
                 <menuitem id="g_informes" parent="principal_optica" name="Informes" sequence="04"/>
+                <menuitem id="TESTEOACTION" parent="g_informes" name="Imprimir Todo"  action="project_report_open_wizard" sequence="03"/>
 
 
 

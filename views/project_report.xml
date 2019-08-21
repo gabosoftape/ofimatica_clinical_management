@@ -31,6 +31,16 @@
             menu = "False"
 
         />
+        <report
+            id="report_historial_pdf"
+            string="Historial Clinico"
+            model="historial.clinico"
+            report_type="qweb-pdf"
+            file="ofimatica_clinical_management.historial_report_template"
+            name="ofimatica_clinical_management.historial_report_template"
+            menu = "False"
+
+        />
         <!--<report
             id="project_xlsx"
             model="project.project"
