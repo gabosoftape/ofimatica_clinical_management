@@ -4,8 +4,11 @@
             <field name="model">wizard.project.report</field>
             <field name="arch" type="xml">
                 <form string="Imprimir Reporte">
-                        <field name="reporte"/>
-                        <h4>Selecciona el paciente.</h4>
+                        <h4>Selecciona tipo de reporte.</h4>
+                        <group>
+                            <field name="reporte"/>
+                        </group>
+
                         <group>
                             <group >
                                 <field name="history_select" attrs="{'invisible':[('reporte','=','history')]}" />
@@ -26,7 +29,7 @@
 
         <act_window
             id="project_report_open_wizard"
-            name="Project Report"
+            name="Imprimir Documento"
             res_model="wizard.project.report"
             view_mode="form"
             view_id="report_wizard_view_form"
