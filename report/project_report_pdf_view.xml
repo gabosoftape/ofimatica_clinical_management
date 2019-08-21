@@ -78,7 +78,7 @@
                                                 </td>
                                                 <td><p><t t-esc="rx_final_oi_esf"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_cil"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_add"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_av"/></p></td>
@@ -129,7 +129,7 @@
                             </div>
 
                         </div>
-                       <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
                                 <h3>Datos de Consulta</h3>
                             </div>
@@ -170,7 +170,7 @@
                                                 </td>
                                                 <td><p><t t-esc="rx_final_oi_esf"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_cil"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_add"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_av"/></p></td>
@@ -292,7 +292,7 @@
                                                 </td>
                                                 <td><p><t t-esc="rx_final_oi_esf"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_cil"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_add"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_av"/></p></td>
@@ -390,7 +390,7 @@
                                                 </td>
                                                 <td><p><t t-esc="rx_final_oi_esf"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_cil"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_add"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
                                                 <td><p><t t-esc="rx_final_oi_av"/></p></td>
