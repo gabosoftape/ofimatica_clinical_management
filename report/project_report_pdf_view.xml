@@ -62,28 +62,28 @@
                                                 <td>
                                                    OD
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_od_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_eje"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dnp"/></p></td>
 
                                             </tr>
                                             <tr>
                                                 <td>
                                                    OI
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_oi_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dnp"/></p></td>
                                             </tr>
                                     </tbody>
                                 </table>
@@ -129,7 +129,7 @@
                             </div>
 
                         </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                       <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
                                 <h3>Datos de Consulta</h3>
                             </div>
@@ -154,28 +154,28 @@
                                                 <td>
                                                    OD
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_od_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_eje"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dnp"/></p></td>
 
                                             </tr>
                                             <tr>
                                                 <td>
                                                    OI
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_oi_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dnp"/></p></td>
                                             </tr>
                                     </tbody>
                                 </table>
@@ -276,28 +276,28 @@
                                                 <td>
                                                    OD
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_od_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_eje"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dnp"/></p></td>
 
                                             </tr>
                                             <tr>
                                                 <td>
                                                    OI
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_oi_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dnp"/></p></td>
                                             </tr>
                                     </tbody>
                                 </table>
@@ -374,28 +374,28 @@
                                                 <td>
                                                    OD
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_od_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_eje"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_od_dnp"/></p></td>
 
                                             </tr>
                                             <tr>
                                                 <td>
                                                    OI
                                                 </td>
-                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
-                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
+                                                <td><p><t t-esc="rx_final_oi_esf"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_cil"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_eje"/></></td>
+                                                <td><p><t t-esc="rx_final_oi_add"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_av"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dp"/></p></td>
+                                                <td><p><t t-esc="rx_final_oi_dnp"/></p></td>
                                             </tr>
                                     </tbody>
                                 </table>
