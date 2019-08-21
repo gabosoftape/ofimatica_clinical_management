@@ -4,8 +4,8 @@ from odoo import models, fields, api, _
 class ProjectReportButton(models.TransientModel):
     _name = 'wizard.project.report'
     reporte = fields.Selection([('formula', 'Formula'), ('remission', 'Remision'), ('certificado', 'Certificado'),
-                              ('history', 'Historia Clinica')], string='Tipo de reporte', default="cita")
-    history_select = fields.Many2one('historial.clinico', string="Historial" , required=True)
+                              ('history', 'Historia Clinica')], string='Tipo de reporte')
+    history_select = fields.Many2one('historial.clinico', string="Historial" )
     partner_id = fields.Many2one('res.partner', string="Paciente")
 
     @api.multi
