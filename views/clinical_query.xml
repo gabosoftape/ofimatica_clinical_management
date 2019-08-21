@@ -3,20 +3,21 @@
             <field name="name">report_wizard_view_form.form</field>
             <field name="model">wizard.project.report</field>
             <field name="arch" type="xml">
-                <form string="Selecciona un paciente">
+                <form string="Imprimir Reporte">
+                        <field name="reporte"/>
                         <h4>Selecciona el paciente.</h4>
                         <group>
                             <group >
-                                <field name="history_select"/>
-                                <field name="partner_id"/>
+                                <field name="history_select" attrs="{'invisible':[('reporte','=','history')]}" />
+                                <field name="partner_id" attrs="{'invisible':[('reporte','!=','history')]}"/>
                             </group>
                         </group>
 
                     <footer>
-                        <button name="print_project_report_pdf" type="object" string="Imprimir Certificado" class="oe_highlight"/>
-                        <button name="print_remission_report_pdf" type="object" string="Imprimir Remision" class="oe_highlight"/>
-                        <button name="print_formula_report_pdf" type="object" string="Imprimir Formula" class="oe_highlight"/>
-                        <button name="print_historial_report_pdf" type="object" string="Imprimir Historial" class="oe_highlight"/>
+                        <button name="print_project_report_pdf" type="object" string="Imprimir Certificado" class="oe_highlight" attrs="{'invisible':[('reporte','!=','certificado')]}"/>
+                        <button name="print_remission_report_pdf" type="object" string="Imprimir Remision" class="oe_highlight" attrs="{'invisible':[('reporte','!=','remission')]}"/>
+                        <button name="print_formula_report_pdf" type="object" string="Imprimir Formula" class="oe_highlight" attrs="{'invisible':[('reporte','!=','formula')]}"/>
+                        <button name="print_historial_report_pdf" type="object" string="Imprimir Historial" class="oe_highlight" attrs="{'invisible':[('reporte','!=','history')]}"/>
                         <button special="cancel" string="Cancel"/>
                     </footer>
                 </form>
