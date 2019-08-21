@@ -190,32 +190,6 @@
                                     Tipo de lente:<p t-esc="tipo_de_lente"/>
                                     Prismas: <p t-esc="prismas"/>
                         </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <h4>Queratrometria</h4>
-                            <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                    <tr>
-                                        <td>OJO DERECHO</td>
-                                        <th><p t-esc="queratometria_od"/></th>
-                                        <td>OJO IZQUIERDO</td>
-                                        <th><p t-esc="queratometria_oi"/></th>
-                                    </tr>
-                                </table>
-                                </center>
-                        </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <h4>Refraccion</h4>
-                            <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                    <tr>
-                                        <td>OJO DERECHO</td>
-                                        <th><p t-esc="refraccion_od"/></th>
-                                        <td>OJO IZQUIERDO</td>
-                                        <th><p t-esc="refraccion_oi"/></th>
-                                    </tr>
-                                </table>
-                                </center>
-                        </div>
 
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
