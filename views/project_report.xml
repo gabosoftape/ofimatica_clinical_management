@@ -33,7 +33,7 @@
         />
         <report
             id="report_historial_pdf"
-            string="Historial Clinico"
+            string="Historia Clinica"
             model="historial.clinico"
             report_type="qweb-pdf"
             file="ofimatica_clinical_management.historial_report_template"

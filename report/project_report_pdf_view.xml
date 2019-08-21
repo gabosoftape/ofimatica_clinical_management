@@ -45,47 +45,45 @@
                                  <table class="table table-condensed">
                                      <thead>
                                         <tr >
-                                            <th style="background-color:#9b9da0 !important;">OJO</th>
+                                            <th style="background-color:#9b9da0 !important;">...</th>
                                             <th style="background-color:#9b9da0 !important;">ESF</th>
                                             <th style="background-color:#9b9da0 !important;">CIL</th>
                                             <th style="background-color:#9b9da0 !important;">EJE</th>
                                             <th style="background-color:#9b9da0 !important;">ADD</th>
+                                            <th style="background-color:#9b9da0 !important;">PRI</th>
+                                            <th style="background-color:#9b9da0 !important;">AV</th>
+                                            <th style="background-color:#9b9da0 !important;">DP</th>
+                                            <th style="background-color:#9b9da0 !important;">DNP</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                             <tr>
                                                 <td>
-                                                   DERECHO
+                                                   OD
                                                 </td>
-                                                <td>
-                                                    <span t-att-style="style" t-esc="rx_od"/>
-                                                </td>
-                                                <td>
-                                                    <span t-att-style="style" t-esc="rx_od_av"/>
-                                                </td>
-                                                <td>
-                                                   none
-                                                </td>
-                                                <td>
-                                                   <span t-att-style="style" t-esc="rx_add"/>
-                                                </td>
+                                                <td><h4><t t-esc="rx_final_od_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_od_dnp"/></h4></td>
+
                                             </tr>
                                             <tr>
                                                 <td>
-                                                   IZQUIERDO
+                                                   OI
                                                 </td>
-                                                <td>
-                                                    <span t-att-style="style" t-esc="rx_oi"/>
-                                                </td>
-                                                <td>
-                                                    <span t-att-style="style" t-esc="rx_oi_av"/>
-                                                </td>
-                                                <td>
-                                                    none
-                                                </td>
-                                                <td>
-                                                   <span t-att-style="style" t-esc="rx_add"/>
-                                                </td>
+                                                <td><h4><t t-esc="rx_final_oi_esf"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_cil"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_eje"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_add"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_prisma"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_av"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dp"/></h4></td>
+                                                <td><h4><t t-esc="rx_final_oi_dnp"/></h4></td>
                                             </tr>
                                     </tbody>
                                 </table>
@@ -93,7 +91,7 @@
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
-                                <h5>Diagnostico Primario: <strong><t t-esc="diagnostico_primario"/></strong></h5>
+                                <h5>Diagnostico Primario: <strong><t t-esc="dx_primario"/></strong></h5>
                             </div>
                             <div>
                                 <h5>Oftalmoscopia: <strong><t t-esc="oftalmoscopia"/></strong></h5>
@@ -132,72 +130,17 @@
 
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <h4>RX Final</h4>
-                                <center>
-                                        <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                              <tr>
-                                                    <th style="background-color:#9b9da0 !important;"><center>...</center></th>
-                                                    <th style="background-color:#9b9da0 !important;">ESF</th>
-                                                    <th style="background-color:#9b9da0 !important;">CIL</th>
-                                                    <th style="background-color:#9b9da0 !important;">EJE</th>
-                                                    <th style="background-color:#9b9da0 !important;">ADD</th>
-                                                    <th style="background-color:#9b9da0 !important;">DP</th>
-                                                    <th style="background-color:#9b9da0 !important;">DNP</th>
-                                              </tr>
-                                              <tr>
-                                                    <th>OJO DERECHO</th>
-                                                    <th><p t-esc="rx_final_od_esf"/></th>
-                                                    <th><p t-esc="rx_final_od_cil"/></th>
-                                                    <th><p t-esc="rx_final_od_eje"/></th>
-                                                    <th><p t-esc="rx_final_od_add"/></th>
-                                                    <th><p t-esc="rx_final_od_dp"/></th>
-                                                    <th><p t-esc="rx_final_od_dnp"/></th>
-
-                                              </tr>
-                                              <tr>
-                                                    <th>OJO IZQUIERDO</th>
-                                                    <th><p t-esc="rx_final_oi_esf"/></th>
-                                                    <th><p t-esc="rx_final_oi_cil"/></th>
-                                                    <th><p t-esc="rx_final_oi_eje"/></th>
-                                                    <th><p t-esc="rx_final_oi_add"/></th>
-                                                    <th><p t-esc="rx_final_oi_dp" /></th>
-                                                    <th><p t-esc="rx_final_oi_dnp"/></th>
-
-                                              </tr>
-                                        </table>
-                                    </center>
-                                    <br/>
-                                <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                      <tr>
-                                            <th><center><strong>CON CORRECCION</strong></center></th>
-                                            <th>VP</th>
-                                            <th>VL</th>
-                                      </tr>
-                                      <tr>
-                                            <th>OJO DERECHO</th>
-                                            <th><p t-esc="rx_final_od_vp_esf"/></th>
-                                            <th><p t-esc="rx_final_od_vp_cil"/></th>
-                                      </tr>
-                                      <tr>
-                                            <th>OJO IZQUIERDO</th>
-                                            <th><p t-esc="rx_final_oi_vp_esf"/></th>
-                                            <th><p t-esc="rx_final_oi_vp_cil"/></th>
-                                      </tr>
-                                </table>
-                                </center>
-
-                                    Tipo de lente:<p t-esc="tipo_de_lente"/>
-                                    Prismas: <p t-esc="prismas"/>
+                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
+                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <h4>Queratrometria</h4>
                             <center>
                                 <table id="rx_uso" class="table table-condensed" style="width:90%">
                                     <tr>
-                                        <td>OJO DERECHO</td>
+                                        <td>OD</td>
                                         <th><p t-esc="queratometria_od"/></th>
-                                        <td>OJO IZQUIERDO</td>
+                                        <td>OI</td>
                                         <th><p t-esc="queratometria_oi"/></th>
                                     </tr>
                                 </table>
@@ -261,106 +204,8 @@
 
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <div >
-                                <h3>RX FINAL</h3>
-                            </div>
-                            <div>
-                                <table class="table table-condensed">
-                                     <thead>
-                                        <tr >
-                                            <th style="background-color:#9b9da0 !important;">OJO</th>
-                                            <th style="background-color:#9b9da0 !important;">ESF</th>
-                                            <th style="background-color:#9b9da0 !important;">CIL</th>
-                                            <th style="background-color:#9b9da0 !important;">EJE</th>
-                                            <th style="background-color:#9b9da0 !important;">ADD</th>
-                                            <th style="background-color:#9b9da0 !important;">DP</th>
-                                            <th style="background-color:#9b9da0 !important;">DNP</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                            <tr>
-                                                <td>
-                                                   DERECHO
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_esf"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_cil"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_eje"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_add"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_dp"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_dnp"/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                   IZQUIERDO
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_esf"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_cil"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_eje"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_add"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_dp"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_dnp"/>
-                                                </td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                                <table class="table table-condensed">
-                                     <thead>
-                                        <tr >
-                                            <th style="background-color:#9b9da0 !important;">VP</th>
-                                            <th style="background-color:#9b9da0 !important;">ESF</th>
-                                            <th style="background-color:#9b9da0 !important;">CIL</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                            <tr>
-                                                <td>
-                                                   DERECHO
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_vp_esf"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_od_vp_cil"/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                   IZQUIERDO
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_vp_esf"/>
-                                                </td>
-                                                <td>
-                                                    <p t-esc="rx_final_oi_vp_cil"/>
-                                                </td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
+                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
@@ -409,65 +254,10 @@
                                 <t t-foreach="vals" t-as="hs">
                                     <h4>Folio No. <t t-esc="hs['folio']"/></h4>
                                     <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                         <h4>RX Final</h4>
-                                        <center>
-                                        <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                              <tr>
-                                                    <th style="background-color:#9b9da0 !important;"><center>...</center></th>
-                                                     <th style="background-color:#9b9da0 !important;">ESF</th>
-                                                    <th style="background-color:#9b9da0 !important;">CIL</th>
-                                                    <th style="background-color:#9b9da0 !important;">EJE</th>
-                                                    <th style="background-color:#9b9da0 !important;">ADD</th>
-                                                    <th style="background-color:#9b9da0 !important;">DP</th>
-                                                    <th style="background-color:#9b9da0 !important;">DNP</th>
-                                              </tr>
-                                              <tr>
-                                                    <th>OJO DERECHO</th>
-                                                    <th><p t-esc="hs['rx_final_od_esf']"/></th>
-                                                    <th><p t-esc="hs['rx_final_od_cil']"/></th>
-                                                    <th><p t-esc="hs['rx_final_od_eje']"/></th>
-                                                    <th><p t-esc="hs['rx_final_od_add']"/></th>
-                                                    <th><p t-esc="hs['rx_final_od_dp']"/></th>
-                                                    <th><p t-esc="hs['rx_final_od_dnp']"/></th>
-
-                                              </tr>
-                                              <tr>
-                                                    <th>OJO IZQUIERDO</th>
-                                                    <th><p t-esc="hs['rx_final_oi_esf']"/></th>
-                                                    <th><p t-esc="hs['rx_final_oi_cil']"/></th>
-                                                    <th><p t-esc="hs['rx_final_oi_eje']"/></th>
-                                                    <th><p t-esc="hs['rx_final_oi_add']"/></th>
-                                                    <th><p t-esc="hs['rx_final_oi_dp']" /></th>
-                                                    <th><p t-esc="hs['rx_final_oi_dnp']"/></th>
-
-                                              </tr>
-                                        </table>
-                                    </center>
-                                    <br/>
-                                <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                      <tr>
-                                            <th><center><strong>CON CORRECCION</strong></center></th>
-                                            <th>VP</th>
-                                            <th>VL</th>
-                                      </tr>
-                                      <tr>
-                                            <th>OJO DERECHO</th>
-                                            <th><p t-esc="hs['rx_final_od_vp_esf']"/></th>
-                                            <th><p t-esc="hs['rx_final_od_vp_cil']"/></th>
-                                      </tr>
-                                      <tr>
-                                            <th>OJO IZQUIERDO</th>
-                                            <th><p t-esc="hs['rx_final_oi_vp_esf']"/></th>
-                                            <th><p t-esc="hs['rx_final_oi_vp_cil']"/></th>
-                                      </tr>
-                                </table>
-                                </center>
-
-                                    Tipo de lente:<p t-esc="hs['tipo_de_lente']"/>
-                                    Prismas: <p t-esc="hs['prismas']"/>
+                                <h5> Nuestra empresa <strong><t t-esc="res_company.name"/></strong> manifiesta por medio de este documento privado y que el uso de este, es con el fin de certificar el esttado visual del usuario Señor(a)
+                                <strong><t t-esc="nombre"/></strong> con el documento de identidad No.<strong><t t-esc="documento"/></strong>.</h5>
                         </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                                    <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
                                 <h5>Diagnostico : <strong><t t-esc="hs['dx_primario']"/></strong></h5>
                                 <h5>Diagnostico : <strong><t t-esc="hs['dx_secundario']"/></strong></h5>
@@ -483,7 +273,6 @@
                                 <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
                             </div>
                         </div>
-
                                 </t>
                         </div>
                     </t>

@@ -4,8 +4,9 @@
             <field name="model">wizard.project.report</field>
             <field name="arch" type="xml">
                 <form string="Imprimir Reporte">
-                        <h4>Selecciona tipo de reporte.</h4>
+
                         <group>
+                            <h4>Selecciona tipo de reporte.</h4>
                             <field name="reporte"/>
                         </group>
 

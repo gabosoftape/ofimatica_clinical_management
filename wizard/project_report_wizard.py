@@ -12,15 +12,32 @@ class ProjectReportButton(models.TransientModel):
     def print_project_report_pdf(self):
         nombre = self.history_select.nombre
         caption = self.env['res.partner'].search([('name','like', nombre)])
+        hs = self.history_select
         data = {
             'record': self.history_select,
             'nombre': caption.name,
             'documento': caption.id_document,
             'function': caption.function,
             'fecha': self.history_select.fecha,
-            'diagnostico_primario': self.history_select.diagnostico,
-            'oftalmoscopia': 'sin datos aun',
+            'dx_primario': hs.dx_primario,
+            'oftalmoscopia': hs.oftalmoscopia,
             'conducta': self.history_select.plan,
+            'rx_final_od_vp_esf': hs.rx_final_od_vp_esf,
+            'rx_final_od_vp_cil': hs.rx_final_od_vp_cil,
+            'rx_final_oi_vp_esf': hs.rx_final_oi_vp_esf,
+            'rx_final_oi_vp_cil': hs.rx_final_oi_vp_cil,
+            'rx_final_od_esf': hs.rx_final_od_esf,
+            'rx_final_od_cil': hs.rx_final_od_cil,
+            'rx_final_oi_esf': hs.rx_final_oi_esf,
+            'rx_final_oi_cil': hs.rx_final_oi_cil,
+            'rx_final_od_eje': hs.rx_final_od_eje,
+            'rx_final_od_add': hs.rx_final_od_add,
+            'rx_final_oi_eje': hs.rx_final_oi_eje,
+            'rx_final_oi_add': hs.rx_final_oi_add,
+            'rx_final_od_dp': hs.rx_final_od_dp,
+            'rx_final_od_dnp': hs.rx_final_od_dnp,
+            'rx_final_oi_dp': hs.rx_final_oi_dp,
+            'rx_final_oi_dnp': hs.rx_final_oi_dnp,
         }
         #Datos
         print(data)
