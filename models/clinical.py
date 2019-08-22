@@ -599,6 +599,7 @@ class HistorialClinico(models.Model):
     @api.multi
     def cerrada(self):
         self.state = 'cerrada'
+        self.documento = self.partner_id.id_document
 
     @api.onchange('load_default', 'partner_id')
     def onchange_load_defaults(self):
