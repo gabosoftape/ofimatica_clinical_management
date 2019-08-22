@@ -5,12 +5,10 @@
             <field name="arch" type="xml">
                 <form string="Imprimir Reporte">
 
-                        <group>
-                            <h4>Selecciona tipo de reporte.</h4>
+                       <group string="Selecciona el tipo de reporte...">
+                            <group>
                             <field name="reporte"/>
-                        </group>
-
-                        <group>
+                            </group>
                             <group >
                                 <field name="history_select" attrs="{'invisible':[('reporte','=','history')]}" />
                                 <field name="partner_id" attrs="{'invisible':[('reporte','!=','history')]}"/>
