@@ -112,7 +112,7 @@ historial clinico
                     </header>
                     <sheet>
                         <div class="oe_title">
-                            <h3>Documento No. <field name="documento" attrs="{'readonly':[('state','in',('cancelada','cerrada','proceso','cita'))]}"/></h3>
+                            <h3>Documento No. <field name="documento" readonly="1"/></h3>
                             <h1>Folio: <field name="folio" readonly="1"/></h1>
                         </div>
                              <div class="oe_title">

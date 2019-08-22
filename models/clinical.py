@@ -573,6 +573,10 @@ class HistorialClinico(models.Model):
         if self.partner_id:
             self.nombre = self.partner_id.name
 
+    @api.onchange('optometra_id')
+    def triggerOptometra(self):
+        if self.partner_id:
+            self.documento = self.partner_id.id_document
 
     @api.multi
     def cita(self):
@@ -613,7 +617,6 @@ class HistorialClinico(models.Model):
 
     @api.model
     def create(self, vals):
-        self.documento = self.partner_id.id_document
         number = self.env['ir.sequence'].next_by_code('historial.clinicoo')
         vals['folio'] = str(number)
         result = super(HistorialClinico, self).create(vals)
