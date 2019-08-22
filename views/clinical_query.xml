@@ -441,8 +441,8 @@ historial clinico
                         <field name="dx_primario"/>
                         <field name="dx_secundario"/>
                         <field name="dx_terciario"/>
-                        <field name="is_remision"/>
-                        <field name="remision_desc"/>
+                        <field name="is_remision" />
+                        <field name="remision_desc" attrs="{'invisible':[('is_remision','=',False)]}" />
                         <field name="observaciones"/>
                         <field name="conducta"/>
                     </group>
