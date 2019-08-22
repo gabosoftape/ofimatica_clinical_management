@@ -38,7 +38,7 @@ class HistorialClinico(models.Model):
     partner_id = fields.Many2one('res.partner', 'Paciente', domain=[('customer', '=', True)], required=True)
     convenio_id = fields.Many2one('convenio.cliente', 'Convenio')
     finalidad = fields.Selection([('8', ' 8 - Deteccion de Alteraciones de agudeza visual'), ('9', 'Otro') ], default='8')
-    tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1')
+    tipo_servicio = fields.Selection([('1', 'Primera Vez'), ('2', 'Control')], default='1', readonly=True)
     fecha = fields.Datetime('Fecha y Hora', default=fields.datetime.now())
 
     nombre = fields.Char('Nombre', related='partner_id.name')
@@ -568,6 +568,12 @@ class HistorialClinico(models.Model):
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
+        paciente = self.partner_id
+        historial_check = self.env['historial.clinico'].search([('partner_id', 'like', paciente.id)])
+        if historial_check:
+            self.tipo_servicio = '2'
+        else:
+            self.tipo_servicio = '1'
         if self.partner_id and self.partner_id.convenio_id:
             self.convenio_id = self.partner_id.convenio_id.id
         if self.partner_id:
