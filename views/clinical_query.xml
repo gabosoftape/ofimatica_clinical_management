@@ -132,7 +132,7 @@ historial clinico
                         <group>
                             <field name="finalidad" attrs="{'readonly':[('state','in',('cancelada','cerrada', 'proceso','cita'))]}"/>
                             <field name="motivo" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
-                            <field name="tipo_servicio" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                            <field name="tipo_servicio" readonly="1"/>
                         </group>
                         <group string="Antecedentes" attrs="{'invisible':[('state','==', 'proceso')]}">
                             <field name="is_licor" />
