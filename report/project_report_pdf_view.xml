@@ -371,6 +371,36 @@
                                     </p>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <h2>Datos de prestador de servicio</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Datos Personales</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Datos Ocupacionales</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Antecedentes Medicos</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Diagnosticos y seguimientos anteriores</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Diagnosticos y seguimientos actuales</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Notas y observaciones</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Medicamentos</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Concepto</h2>
+                                </div>
+                                <div class="row">
+                                    <h2>Footer</h2>
+                                </div>
                                <div>
                                     <h4>Paciente: <t t-esc="paciente" /></h4>
                                     <h4>Documento No. <t t-esc="documento"/></h4>
