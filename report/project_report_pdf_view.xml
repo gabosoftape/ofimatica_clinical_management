@@ -347,7 +347,9 @@
                                 <div class="row">
                                     <center>
                                         <div class="col-xs-4">
-                                            <h2>Historia Clinica</h2>
+                                            <strong>
+                                                 <h2>Historia Clinica</h2>
+                                            </strong>
                                         </div>
                                         <div class="col-xs-4">
                                             <h4>SEDE</h4>
@@ -359,7 +361,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <p>
+                                        <p style="text-align: justify;">
                                         El marco Normativo Legal en Colombia, indica que la Historia Clínica se soporta sobre; Documento técnico Sentencia T - 182 de 2009/Decreto Ley 019 de 2012. Artículo
                                         110/Ley 23 de 1981. Artículos 34 - 36/Ley 528 de 1999. Artículos 44, 45/Ley 911 de 2004. Artículos 35 – 38/Ley 1438 de 2011. Artículo 16.7/Resolución 1995 de 1999. Para
                                         solicitar, una HCE, se debe solicitar, fotocopia de la cédula de la persona que la solicita y validarla con la original. La fotocopia, ingresa a archivo junto con el formato de
