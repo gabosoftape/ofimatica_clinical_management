@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xml>
 <odoo noupdate="1">
-
     <!--Group for clinical manager -->
     <record id="group_clinical_manager" model="res.groups">
         <field name="name">Administrador</field>
@@ -16,6 +15,4 @@
     <record id="group_clinical_user" model="res.groups">
         <field name="name">user</field>
     </record>
-
-
 </odoo>
