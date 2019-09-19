@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-     <template id="history_report_template">
+    <template id="history_report_template">
         <t t-call="web.html_container">
                 <t t-call="web.external_layout">
                     <div class="page" >
@@ -104,7 +104,7 @@
                 </t>
             </t>
      </template>
-     <template id="remission_report_template">
+    <template id="remission_report_template">
         <t t-call="web.html_container">
                 <t t-call="web.external_layout">
                         <br/>
@@ -345,9 +345,9 @@
                 <t t-call="web.external_layout">
                         <div class="page" >
                                <div>
-                                  <h4>Historial Clinico</h4>
-                                <h4>Paciente: <t t-esc="paciente" /></h4>
-                                <h4>Documento No. <t t-esc="documento"/></h4>
+                                    <h4>Historial Clinico</h4>
+                                    <h4>Paciente: <t t-esc="paciente" /></h4>
+                                    <h4>Documento No. <t t-esc="documento"/></h4>
                                </div>
                                 <t t-foreach="vals" t-as="hs">
                                     <h3>Folio No. <t t-esc="hs['folio']"/></h3>
