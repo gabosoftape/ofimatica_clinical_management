@@ -2,11 +2,11 @@
 
 {
     'name': 'Administracion Consultorio Oftalmologico',
-    'version': '11.0',
+    'version': '11.0.1',
     'author': 'Gabriel Pabón',
     'category': 'Health',
     'website': 'https://github.com/gabosoftape/',
-    'depends': ['base','report_xlsx'],
+    'depends': ['base','stock'],
     'license': 'AGPL-3',
     'summary': 'Con este modulo podras controlar tu consultorio oftalmologico',
     'data': [
