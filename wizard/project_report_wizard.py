@@ -148,7 +148,8 @@ class ProjectReportButton(models.TransientModel):
 
     @api.multi
     def print_historial_report_pdf(self):
-        paciente = self.partner_id
+        partner = self.partner_id
+        paciente = self.env['res.partner'].search([('name', 'like', partner)])
         historial_ids = self.env['historial.clinico'].search([('partner_id','like',paciente.id)])
         history = []
         for historia in historial_ids:
