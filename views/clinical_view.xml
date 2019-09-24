@@ -34,6 +34,8 @@
             </field>
             <field name="mobile" position="replace">
                 <field name="mobile" invisible="1"/>
+            </field>
+            <field name="street" position="before">
                 <field name="us_type"/>
                 <field name="afil_type"/>
                 <field name="estado_civil"/>
