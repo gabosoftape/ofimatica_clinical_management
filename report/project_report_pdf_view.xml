@@ -418,7 +418,7 @@
                                     <div class="col-xs-4">
                                         <p>Tipo de ID: <strong><t t-esc="tipo_documento"/></strong></p>
                                         <p>No. ID: <strong><t t-esc="documento"/></strong></p>
-                                        <p>Celular: <strong><t t-esc="celular"/></strong></p>
+                                        <p>Celular: <strong><t t-esc="telefono"/></strong></p>
                                         <p>Estado Civil: <strong><t t-esc="estado_civil"/></strong></p>
                                         <p>EPS: <strong><t t-esc="eps"/></strong></p>
                                         <p>Sexo: <strong><t t-esc="sexo"/></strong></p>
@@ -432,27 +432,35 @@
                                     </center>
                                 </div>
                                 <div class="row">
+                                    <t t-foreach="vals" t-as="hs">
                                     <div class="col-xs-12">
                                         <center>
                                             <h2>Antecedentes Medicos</h2>
                                         </center>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Empresa: <strong><t t-esc="res_company.name"/></strong></p>
-                                        <p>NIT: <strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Hab No: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        <p>Licor : <strong>
+                                                        <t t-if="hs['licor']">
+                                                            <p>SI</p>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <p>NO</p>
+                                                        </t>
+                                                    </strong>
+                                        </p>
+                                        <p>Fumador: <strong><t t-esc="res_company.nit"/></strong></p>
+                                        <p>Lentes: <strong><t t-esc="res_company.hab_no"/></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Direccion: <strong><t t-esc="res_company.street"/></strong></p>
-                                        <p>COD EAD: <strong><t t-esc="res_company.cod_ead"/></strong></p>
-                                        <p>PBX/FAX: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
+                                        <p>Enfermedades hereditarias: <strong><t t-esc="res_company.street"/></strong></p>
+                                        <p>Operaciones: <strong><t t-esc="res_company.cod_ead"/></strong></p>
+                                        <p>Alergias: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Ciudad: <strong><t t-esc="res_company.city"/></strong></p>
-                                        <p>Representante Legal: <strong><t t-esc="res_company.rte_legal"/></strong></p>
-                                        <p>Sede Principal: <strong><t t-esc="res_company.sede_principal"/></strong></p>
+                                        <p>Medicacion: <strong><t t-esc="res_company.city"/></strong></p>
+                                        <p>Antecedentes oculares: <strong><t t-esc="res_company.rte_legal"/></strong></p>
                                     </div>
-
+                                    </t>
                                 </div>
                                 <div class="row">
                                     <h2>Diagnosticos y seguimientos anteriores</h2>

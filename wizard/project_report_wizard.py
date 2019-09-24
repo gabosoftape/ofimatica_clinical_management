@@ -211,7 +211,6 @@ class ProjectReportButton(models.TransientModel):
             'documento': paciente.id_document,
             'direccion': paciente.street,
             'telefono': paciente.phone,
-            'celular': paciente.movil,
             'edad': paciente.age,
             'estado_civil': paciente.estado_civil,
             'profesion': paciente.function,
