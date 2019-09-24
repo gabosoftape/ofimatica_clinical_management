@@ -8,7 +8,7 @@ class clinicalCompany(models.Model):
     cod_ead = fields.Char('Cod EAD')
     pbx_fax = fields.Char('PBX/FAX')
     rte_legal = fields.Char('Representante Legal')
-    sede_principal = fields.Selection(string="Sede", selection=[
+    sede_principal = fields.Selection(string="Sede Principal", selection=[
         ('1', 'CHIPICHAPE'),
         ('2', 'UNICENTRO'),
         ('3', 'TECNIOPTICA 2142'),
