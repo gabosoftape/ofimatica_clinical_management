@@ -19,6 +19,7 @@
             'views/menus.xml',
             'report/project_report_pdf_view.xml',
             'views/project_report.xml',
+            'views/clinical_company.xml',
     ],
     'css': ['static/src/css/clinical.css'],
     'images': ['static/description/icon.png'],

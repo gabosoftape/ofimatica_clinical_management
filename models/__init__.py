@@ -3,3 +3,4 @@
 from . import clinical
 from . import seguimientos
 from . import res_partner
+from . import res_company
