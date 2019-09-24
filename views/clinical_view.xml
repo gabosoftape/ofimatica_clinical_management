@@ -36,11 +36,16 @@
                 <field name="mobile" invisible="1"/>
             </field>
             <field name="street" position="before">
-                <field name="us_type"/>
-                <field name="afil_type"/>
-                <field name="estado_civil"/>
-                <field name="eps"/>
-                <field name="pat_repot"/>
+                <label for="us_type" string="Tipo Us"/>
+                    <field name="us_type"/>
+                <label for="afil_type" string="Tipo Afil"/>
+                    <field name="afil_type"/>
+                <label for="estado_civil" string="Estado Civil"/>
+                    <field name="estado_civil"/>
+                <label for="eps" string="EPS"/>
+                    <field name="eps"/>
+                <label for="pat_repot" string="Pat Repot"/>
+                    <field name="pat_repot"/>
             </field>
             <field name="street2" position="replace">
                 <field name="street2" invisible="1"/>
