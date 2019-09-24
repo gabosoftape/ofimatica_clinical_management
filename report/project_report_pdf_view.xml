@@ -401,7 +401,7 @@
                                     </div>
                                     <div class="col-xs-4">
                                         <p>Nombres: <strong><t t-esc="nombres"/></strong></p>
-                                        <p>Direccion: <strong><t t-esc="direcccion"/></strong></p>
+                                        <p>Direccion: <strong><t t-esc="direccion"/></strong></p>
                                         <p>Profesion: <strong><t t-esc="profesion"/></strong></p>
                                         <p>Tipo Afil: <strong><t t-esc="tipo_afil"/></strong></p>
                                         <p>Email: <strong><t t-esc="email"/></strong></p>

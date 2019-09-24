@@ -75,14 +75,14 @@ class HistoriaReportParser(models.AbstractModel):
             'vals': historial_ids,
             'paciente': paciente,
             'documento': documento,
-            'nombres' : nombres,
-            'apellidos' : apellidos,
-            'tipo_documento' : tipo_documento,
-            'direccion' : direccion,
-            'telefono' : telefono,
-            'edad' : edad,
-            'estado_civil' : estado_civil,
-            'profesion' : profesion,
+            'nombres': nombres,
+            'apellidos': apellidos,
+            'tipo_documento': tipo_documento,
+            'direccion': direccion,
+            'telefono': telefono,
+            'edad': edad,
+            'estado_civil': estado_civil,
+            'profesion': profesion,
             'eps': eps,
             'tipo_afil': tipo_afil,
             'tipo_us': tipo_us,
@@ -97,8 +97,3 @@ class HistoriaReportParser(models.AbstractModel):
             'companion_parentezco': companion_parentezco,
             'companion_tel': companion_tel,
         }
-
-
-
-
-
