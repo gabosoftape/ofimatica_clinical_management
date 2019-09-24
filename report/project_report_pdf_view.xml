@@ -400,29 +400,29 @@
                                         </center>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Nombres: <strong><t t-esc="res_company.name"/></strong></p>
-                                        <p>Direccion: <strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Profesion: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Tipo Afil: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Email: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Zona: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        <p>Nombres: <strong><t t-esc="nombres"/></strong></p>
+                                        <p>Direccion: <strong><t t-esc="direcccion"/></strong></p>
+                                        <p>Profesion: <strong><t t-esc="profesion"/></strong></p>
+                                        <p>Tipo Afil: <strong><t t-esc="tipo_afil"/></strong></p>
+                                        <p>Email: <strong><t t-esc="email"/></strong></p>
+                                        <p>Zona: <strong><t t-esc="zona"/></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Apellidos: <strong><t t-esc="res_company.name"/></strong></p>
-                                        <p>Telefono: <strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Edad: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Tipo Us: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Ciudad: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Departamento: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        <p>Apellidos: <strong><t t-esc="apellidos"/></strong></p>
+                                        <p>Telefono: <strong><t t-esc="telefono"/></strong></p>
+                                        <p>Edad: <strong><t t-esc="edad"/></strong></p>
+                                        <p>Tipo Us: <strong><t t-esc="tipo_us"/></strong></p>
+                                        <p>Ciudad: <strong><t t-esc="ciudad"/></strong></p>
+                                        <p>Departamento: <strong><t t-esc="departamento"/></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Tipo de ID: <strong><t t-esc="res_company.name"/></strong></p>
-                                        <p>No. ID: <strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Celular: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Estado Civil: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>EPS: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Sexo: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                        <p>Pat Repot: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        <p>Tipo de ID: <strong><t t-esc="tipo_documento"/></strong></p>
+                                        <p>No. ID: <strong><t t-esc="documento"/></strong></p>
+                                        <p>Celular: <strong><t t-esc="celular"/></strong></p>
+                                        <p>Estado Civil: <strong><t t-esc="estado_civil"/></strong></p>
+                                        <p>EPS: <strong><t t-esc="eps"/></strong></p>
+                                        <p>Sexo: <strong><t t-esc="sexo"/></strong></p>
+                                        <p>Pat Repot: <strong><t t-esc="pat_repot"/></strong></p>
                                     </div>
 
                                 </div>
