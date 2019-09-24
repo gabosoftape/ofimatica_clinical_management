@@ -6,14 +6,16 @@
         <field name="inherit_id" ref="base.view_company_form" />
         <field name="type">form</field>
         <field name="arch" type="xml">
-               <field name="email" position="after">
+               <field name="vat" position="replace">
                    <field name="nit"/>
                    <field name="hab_no"/>
                    <field name="cod_ead"/>
-                   <field name="pbx_fax"/>
-                   <field name="rte_legal"/>
-                   <field name="sede_principal"/>
-               </field>
+                </field>
+                <field name="company_registry" position="replace">
+                    <field name="pbx_fax"/>
+                    <field name="rte_legal"/>
+                    <field name="sede_principal"/>
+                </field>
         </field>
     </record>
 </odoo>
