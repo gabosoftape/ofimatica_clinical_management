@@ -378,10 +378,24 @@
                                     <h2>Datos Personales</h2>
                                 </div>
                                 <div class="row">
-                                    <h2>Datos Ocupacionales</h2>
+                                    <h2>Datos Ocupacionales?</h2>
                                 </div>
                                 <div class="row">
                                     <h2>Antecedentes Medicos</h2>
+                                    <p>ultimo cont
+                                    motivo consulta
+                                    discapacidad
+                                    visitas
+                                    rh
+                                    enfermedades hereditarias
+                                    cirujias
+                                    lico
+                                    fumador
+                                    lentes_contacto
+                                    time_lentes_contacto
+                                    alergias?
+                                    info_alergias
+                                    </p>
                                 </div>
                                 <div class="row">
                                     <h2>Diagnosticos y seguimientos anteriores</h2>
