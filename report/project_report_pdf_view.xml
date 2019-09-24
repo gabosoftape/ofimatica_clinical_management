@@ -427,24 +427,32 @@
 
                                 </div>
                                 <div class="row">
-                                    <h2>Datos Ocupacionales?</h2>
+                                    <center>
+                                        <h2>Datos Ocupacionales?</h2>
+                                    </center>
                                 </div>
                                 <div class="row">
-                                    <h2>Antecedentes Medicos</h2>
-                                    <p>ultimo cont
-                                    motivo consulta
-                                    discapacidad
-                                    visitas
-                                    rh
-                                    enfermedades hereditarias
-                                    cirujias
-                                    lico
-                                    fumador
-                                    lentes_contacto
-                                    time_lentes_contacto
-                                    alergias?
-                                    info_alergias
-                                    </p>
+                                    <div class="col-xs-12">
+                                        <center>
+                                            <h2>Antecedentes Medicos</h2>
+                                        </center>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>Empresa: <strong><t t-esc="res_company.name"/></strong></p>
+                                        <p>NIT: <strong><t t-esc="res_company.nit"/></strong></p>
+                                        <p>Hab No: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>Direccion: <strong><t t-esc="res_company.street"/></strong></p>
+                                        <p>COD EAD: <strong><t t-esc="res_company.cod_ead"/></strong></p>
+                                        <p>PBX/FAX: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <p>Ciudad: <strong><t t-esc="res_company.city"/></strong></p>
+                                        <p>Representante Legal: <strong><t t-esc="res_company.rte_legal"/></strong></p>
+                                        <p>Sede Principal: <strong><t t-esc="res_company.sede_principal"/></strong></p>
+                                    </div>
+
                                 </div>
                                 <div class="row">
                                     <h2>Diagnosticos y seguimientos anteriores</h2>

@@ -134,7 +134,7 @@ historial clinico
                             <field name="motivo" attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                             <field name="tipo_servicio" readonly="1"/>
                         </group>
-                        <group string="Antecedentes" attrs="{'invisible':[('state','==', 'proceso')]}">
+                        <group string="Antecedentes" attrs="{'invisible':[('state','==', 'cita')]}">
                             <field name="is_licor" />
                             <field name="is_fumador"/>
                             <field name="is_lentes"/>
