@@ -49,10 +49,53 @@ class HistoriaReportParser(models.AbstractModel):
         historial_ids = data['history_ids']
         paciente = data['paciente']
         documento = data['documento']
+        nombres = data['nombres']
+        apellidos = data['apellidos']
+        tipo_documento= data['tipo_documento']
+        direccion = data['direccion']
+        telefono = data['telefono']
+        edad = data['edad']
+        estado_civil = data['estado_civil']
+        profesion = data['profesion']
+        eps = data['eps']
+        tipo_afil = data['tipo_afil']
+        tipo_us = data['tipo_us']
+        sexo = data['sexo']
+        email= data['email']
+        ciudad = data['ciudad']
+        pat_repot = data['pat_repot']
+        zona = data['zona']
+        departamento = data['departamento']
+        companion_name = data['companion_name']
+        companion_documento = data['companion_document']
+        companion_parentezco = data['companion_parentezco']
+        companion_tel = data['companion_tel']
+
         return {
             'vals': historial_ids,
             'paciente': paciente,
             'documento': documento,
+            'nombres' : nombres,
+            'apellidos' : apellidos,
+            'tipo_documento' : tipo_documento,
+            'direccion' : direccion,
+            'telefono' : telefono,
+            'edad' : edad,
+            'estado_civil' : estado_civil,
+            'profesion' : profesion,
+            'eps': eps,
+            'tipo_afil': tipo_afil,
+            'tipo_us': tipo_us,
+            'sexo': sexo,
+            'email': email,
+            'ciudad': ciudad,
+            'pat_repot': pat_repot,
+            'zona': zona,
+            'departamento': departamento,
+            'companion_name': companion_name,
+            'companion_documento': companion_documento,
+            'companion_parentezco': companion_parentezco,
+            'companion_tel': companion_tel,
         }
 
 
