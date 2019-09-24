@@ -439,26 +439,18 @@
                                         </center>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Licor : <strong>
-                                                        <t t-if="hs['licor']">
-                                                            <p>SI</p>
-                                                        </t>
-                                                        <t t-else="">
-                                                            <p>NO</p>
-                                                        </t>
-                                                    </strong>
-                                        </p>
-                                        <p>Fumador: <strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Lentes: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        <p>Licor :<strong><t t-if="hs['licor']"><p>SI</p></t><t t-else=""><p>NO</p></t></strong></p>
+                                        <p>Fumador: <strong><t t-if="hs['fumador']"><p>SI</p></t><t t-else=""><p>NO</p></t></strong></p>
+                                        <p>Lentes: <strong><t t-if="hs['lentes']"><p><t t-esc="hs['lentes_desc']"/></p></t><t t-else=""><p>NO</p></t></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Enfermedades hereditarias: <strong><t t-esc="res_company.street"/></strong></p>
-                                        <p>Operaciones: <strong><t t-esc="res_company.cod_ead"/></strong></p>
-                                        <p>Alergias: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
+                                        <p>Enfermedades hereditarias: <strong><t t-if="hs['enfermedades_here']"><p><t t-esc="hs['enfermedades_here_desc']"/></p></t><t t-else=""><p>NO</p></t></strong></p>
+                                        <p>Operaciones: <strong><t t-if="hs['operaciones']"><p><t t-esc="hs['operaciones_desc']"/></p></t><t t-else=""><p>NO</p></t></strong></p>
+                                        <p>Alergias: <strong><t t-if="hs['alergias']"><p><t t-esc="hs['alergias_desc']"/></p></t><t t-else=""><p>NO</p></t></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Medicacion: <strong><t t-esc="res_company.city"/></strong></p>
-                                        <p>Antecedentes oculares: <strong><t t-esc="res_company.rte_legal"/></strong></p>
+                                        <p>Medicacion: <strong><t t-if="hs['medicacion']"><p><t t-esc="hs['medicacion_desc']"/></p></t><t t-else=""><p>NO</p></t></strong></p>
+                                        <p>Antecedentes oculares: <strong><t t-if="hs['antecedentes_oculares']"><p><t t-esc="hs['antecedentes_oculares']"/></p></t><t t-else=""><p>NO</p></t></strong></p>
                                     </div>
                                     </t>
                                 </div>
