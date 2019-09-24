@@ -91,7 +91,7 @@ class HistoriaReportParser(models.AbstractModel):
             'ciudad': ciudad,
             'pat_repot': pat_repot,
             'zona': zona,
-            'departamento': departamento.name,
+            'departamento': departamento,
             'companion_name': companion_name,
             'companion_documento': companion_documento,
             'companion_parentezco': companion_parentezco,

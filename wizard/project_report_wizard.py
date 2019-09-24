@@ -223,7 +223,7 @@ class ProjectReportButton(models.TransientModel):
             'ciudad': paciente.city,
             'pat_repot': paciente.pat_repot,
             'zona': paciente.zone,
-            'departamento': paciente.state_id,
+            'departamento': paciente.state_id.name,
             'companion_name': paciente.companion.name,
             'companion_document': paciente.companion_document,
             'companion_parentezco': paciente.companion_parentezco,
