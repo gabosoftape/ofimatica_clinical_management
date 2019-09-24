@@ -378,19 +378,19 @@
                                         </center>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Empresa<strong><t t-esc="res_company.name"/></strong></p>
-                                        <p>NIT<strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Hab No.<strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        <p>Empresa: <strong><t t-esc="res_company.name"/></strong></p>
+                                        <p>NIT: <strong><t t-esc="res_company.nit"/></strong></p>
+                                        <p>Hab No: <strong><t t-esc="res_company.hab_no"/></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Direccion<strong><t t-esc="res_company.street"/></strong></p>
-                                        <p>COD EAD.<strong><t t-esc="res_company.cod_ead"/></strong></p>
-                                        <p>PBX/FAX<strong><t t-esc="res_company.pbx_fax"/></strong></p>
+                                        <p>Direccion: <strong><t t-esc="res_company.street"/></strong></p>
+                                        <p>COD EAD: <strong><t t-esc="res_company.cod_ead"/></strong></p>
+                                        <p>PBX/FAX: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
                                     </div>
                                     <div class="col-xs-4">
-                                        <p>Ciudad<strong><t t-esc="res_company.city"/></strong></p>
-                                        <p>Representante Legal<strong><t t-esc="res_company.rte_legal"/></strong></p>
-                                        <p>Sede Principal<strong><t t-esc="res_company.sede_principal"/></strong></p>
+                                        <p>Ciudad: <strong><t t-esc="res_company.city"/></strong></p>
+                                        <p>Representante Legal: <strong><t t-esc="res_company.rte_legal"/></strong></p>
+                                        <p>Sede Principal: <strong><t t-esc="res_company.sede_principal"/></strong></p>
                                     </div>
                                 </div>
                                 <div class="row">
