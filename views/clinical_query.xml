@@ -135,18 +135,22 @@ historial clinico
                             <field name="tipo_servicio" readonly="1"/>
                         </group>
                         <group string="Antecedentes" attrs="{'invisible':[('state','==', 'cita')]}">
-                            <field name="is_licor" />
-                            <field name="is_fumador"/>
-                            <field name="is_lentes"/>
-                            <field name="lentes_desc" attrs="{'invisible':[('is_lentes','=',False)]}"/>
-                            <field name="is_enfermedad_here"/>
-                            <field name="enfermedad_here_desc" attrs="{'invisible':[('is_enfermedad_here','=',False)]}"/>
-                            <field name="is_operaciones"/>
-                            <field name="operaciones_desc" attrs="{'invisible':[('is_operaciones','=',False)]}"/>
-                            <field name="is_alergias"/>
-                            <field name="alergias_desc" attrs="{'invisible':[('is_alergias','=',False)]}"/>
-                            <field name="is_medicacion"/>
-                            <field name="medicacion_desc" attrs="{'invisible':[('is_medicacion','=',False)]}"/>
+                            <group>
+                                <field name="is_licor"  />
+                                <field name="is_fumador"/>
+                                <field name="is_lentes"/>
+                                <field name="lentes_desc" attrs="{'invisible':[('is_lentes','=',False)]}"/>
+                                <field name="is_enfermedad_here"/>
+                                <field name="enfermedad_here_desc" attrs="{'invisible':[('is_enfermedad_here','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="is_operaciones"/>
+                                <field name="operaciones_desc" attrs="{'invisible':[('is_operaciones','=',False)]}"/>
+                                <field name="is_alergias"/>
+                                <field name="alergias_desc" attrs="{'invisible':[('is_alergias','=',False)]}"/>
+                                <field name="is_medicacion"/>
+                                <field name="medicacion_desc" attrs="{'invisible':[('is_medicacion','=',False)]}"/>
+                            </group>
                         </group>
                         <notebook attrs="{'invisible':[('state','==', 'cita')]}">
                             <page string="EXAMEN">

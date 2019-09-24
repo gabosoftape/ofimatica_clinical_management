@@ -206,7 +206,7 @@ class ProjectReportButton(models.TransientModel):
         data = {
             'paciente': paciente.name,
             'nombres': paciente.first_name + paciente.second_name,
-            'apellidos': paciente.first_last_name + paciente.second_last_name,
+            'apellidos': paciente.last_name + paciente.second_last_name,
             'tipo_documento': paciente.id_type,
             'documento': paciente.id_document,
             'direccion': paciente.street,
