@@ -11,13 +11,13 @@ class ProjectReportButton(models.TransientModel):
     @api.multi
     def print_project_report_pdf(self):
         nombre = self.history_select.nombre
-        caption = self.env['res.partner'].search([('name','like', nombre)])
+        paciente = self.env['res.partner'].search([('name','like', nombre)])
         hs = self.history_select
         data = {
             'record': self.history_select,
-            'nombre': caption.name,
-            'documento': caption.id_document,
-            'function': caption.function,
+            'nombre': paciente.name,
+            'documento': paciente.id_document,
+            'function': paciente.function,
             'fecha': self.history_select.fecha,
             'dx_primario': hs.dx_primario,
             'oftalmoscopia': hs.oftalmoscopia,
@@ -49,13 +49,13 @@ class ProjectReportButton(models.TransientModel):
     @api.multi
     def print_remission_report_pdf(self):
         nombre = self.history_select.nombre
-        caption = self.env['res.partner'].search([('name','like',nombre)])
+        paciente = self.env['res.partner'].search([('name','like',nombre)])
         hs = self.history_select
         #Datos
         data = {
-            'nombre': caption.name,
-            'documento': caption.id_document,
-            'function': caption.function,
+            'nombre': paciente.name,
+            'documento': paciente.id_document,
+            'function': paciente.function,
             'fecha': hs.fecha,
             'motivo': hs.motivo,
             'rx_final_od_vp_esf': hs.rx_final_od_vp_esf,
@@ -98,13 +98,13 @@ class ProjectReportButton(models.TransientModel):
     @api.multi
     def print_formula_report_pdf(self):
         nombre = self.history_select.nombre
-        caption = self.env['res.partner'].search([('name', 'like', nombre)])
+        paciente = self.env['res.partner'].search([('name', 'like', nombre)])
         hs = self.history_select
         data = {
             'record': hs,
-            'nombre': caption.name,
-            'documento': caption.id_document,
-            'function': caption.function,
+            'nombre': paciente.name,
+            'documento': paciente.id_document,
+            'function': paciente.function,
             'fecha': hs.fecha,
             'diagnostico_primario': hs.diagnostico,
             'oftalmoscopia': 'sin datos aun',
@@ -192,7 +192,29 @@ class ProjectReportButton(models.TransientModel):
             })
         data = {
             'paciente': paciente.name,
+            'nombres': paciente.first_name + paciente.second_name,
+            'apellidos': paciente.first_last_name + paciente.second_last_name,
+            'tipo_documento': paciente.id_type,
             'documento': paciente.id_document,
+            'direccion': paciente.street,
+            'telefono': paciente.phone,
+            'celular': paciente.movil,
+            'edad': paciente.age,
+            'estado_civil': 'falta añadir',
+            'profesion': paciente.function,
+            'eps': 'falta añadir',
+            'tipo_afil': 'falta añadir',
+            'tipo_us': 'falta añadir',
+            'sexo': paciente.sex,
+            'email': paciente.email,
+            'ciudad': paciente.city,
+            'pat_repot': 'Falta añadir',
+            'zona': paciente.zone,
+            'departamento': paciente.state_id,
+            'companion_name': paciente.companion.name,
+            'companion_document': paciente.companion_document,
+            'companion_parentezco': paciente.companion_parentezco,
+            'companion_tel': paciente.companion_tel,
             'history_ids': history,
         }
         # Datos

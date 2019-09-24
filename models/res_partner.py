@@ -56,6 +56,11 @@ class clinicalPartner(models.Model):
                                     selection=[('person', 'Individual'), ('company', 'Company'), ('patient', 'Paciente')],
                                     compute='_compute_company_type', inverse='_write_company_type')
     nombre = fields.Char(string="Nombre")
+    estado_civil = fields.Char('Estado Civil')
+    eps = fields.Char('EPS')
+    afil_type = fields.Char('Tipo de Afiliacion')
+    us_type = fields.Char('Tipo Us')
+    pat_repot = fields.Char('Pat Repot')
 
     @api.depends('is_company')
     def _compute_ofimatica_company_type(self):
