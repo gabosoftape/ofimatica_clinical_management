@@ -92,6 +92,7 @@ historial clinico
             <field name="arch" type="xml">
                 <tree string="Seguimientos">
                     <field name="fecha_seguimiento"/>
+                    <field name="historia_id"/>
                     <field name="paciente"/>
                 </tree>
             </field>

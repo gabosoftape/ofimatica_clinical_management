@@ -14,7 +14,7 @@ class HistorialClinico(models.Model):
     _name = 'historial.clinico'
     _description = 'Historial Clinico'
 
-    _rec_name = 'nombre'
+    _rec_name = 'folio'
 
     @api.model
     def default_get(self, fields):
@@ -172,7 +172,7 @@ class HistorialClinico(models.Model):
     #Observaciones##
     rx_uso_observaciones = fields.Text('Observaciones')
     refraccion_bajo_observaciones = fields.Text('Observaciones')
-    seguimientos_id = fields.Many2one('historial.clinico.seguimiento', string="Seguimientos")
+    seguimientos_id = fields.One2many('historial.clinico.seguimiento','historia_id', string="Seguimientos")
     is_seguimiento = fields.Boolean('Seguimientos')
 
     @api.multi

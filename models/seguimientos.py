@@ -6,6 +6,7 @@ class HistorialClinicoSeguimientos(models.Model):
     _description = 'Seguimientos Clinicos'
     _rec_name = 'fecha_seguimiento'
     fecha_seguimiento = fields.Datetime('Fecha de Seguimiento', default=fields.datetime.now())
+    historia_id = fields.Many2one('historial.clinico')
     paciente = fields.Many2one('res.partner', 'Paciente', domain=[('customer', '=', True)], required=True)
     ### RX FINAL ###
     rx_final_od_esf = fields.Char('OD ESF')
