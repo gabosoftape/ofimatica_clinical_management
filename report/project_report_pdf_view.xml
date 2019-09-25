@@ -521,9 +521,9 @@
                                         </div>
                                         </t>
                                     </div>
-
+                                <t t-foreach="vals" t-as="hs">
                                 <div class="row">
-                                    <t t-foreach="vals" t-as="hs">
+
                                         <div class="col-xs-12">
                                             <center>
                                                 <h2>Seguimientos</h2>
@@ -616,10 +616,19 @@
                                                 </div>
                                             </div>
                                         </t>
-                                    </t>
                                 </div>
+
                                 <div class="row">
-                                    <h2>Notas y observaciones</h2>
+                                    <div class="col-xs-12"><h2>Notas y observaciones</h2></div>
+                                    <div class="col-xs-12">
+                                        <p><t t-if="hs['observaciones'] != False" t-esc="hs['observaciones']"/></p><br/>
+                                        <p><t t-if="hs['rx_uso_observaciones'] != False" t-esc="hs['rx_uso_observaciones']"/></p><br/>
+                                        <p><t t-if="hs['notas_queratometria'] != False" t-esc="hs['notas_queratometria']"/></p><br/>
+                                        <p><t t-if="hs['formula_notas'] != False" t-esc="hs['formula_notas']"/></p><br/>
+                                    </div>
+                                </t>
+
+
                                 </div>
                                 <div class="row">
                                     <h2>Medicamentos</h2>
