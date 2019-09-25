@@ -250,7 +250,7 @@ class ProjectReportButton(models.TransientModel):
                 'seguimientos': seguimientos,
                 'observaciones': historia.observaciones,
                 'rx_uso_observaciones': historia.rx_uso_observaciones,
-                'notas_queratometria': historia.notas_queratometria,
+                'notas_queratometria': historia.notas_queratometria_refraccion,
                 'formula_notas': historia.formula_notas,
             })
         data = {
