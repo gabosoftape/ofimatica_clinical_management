@@ -507,9 +507,9 @@
                                                         </table>
                                                 <div class="row">
                                                     <div class="col-xs-6">
-                                                        <div class="col-xs-12"><h5>Dx Primario: <strong><t t-esc="hs['dx_primario']"/></strong></h5></div>
-                                                        <div class="col-xs-12"><h5>Dx Secundario: <strong><t t-esc="hs['dx_secundario']"/></strong></h5></div>
-                                                        <div class="col-xs-12"><h5>Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></h5></div>
+                                                        <div class="col-xs-12">Dx Primario: <strong><t t-esc="hs['dx_primario']"/></strong></div>
+                                                        <div class="col-xs-12">Dx Secundario: <strong><t t-esc="hs['dx_secundario']"/></strong></div>
+                                                        <div class="col-xs-12">Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></div>
                                                     </div>
                                                     <div class="col-xs-6">
                                                         <div class="col-xs-12"><h5>Oftalmoscopia: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5></div>
