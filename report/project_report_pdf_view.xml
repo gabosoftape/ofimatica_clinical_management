@@ -523,7 +523,27 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-6">
-
+                                                <div class="col-xs-12">
+                                                    <strong>Fecha: </strong> <t t-esc="seg['fecha_seguimiento']"/>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <strong>Oftalmoscopia: </strong> <t t-esc="seg['oftalmoscopia']"/>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <strong>Dx Primario: </strong> <t t-esc="seg['dx_primario']"/>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <strong>Dx Secundario: </strong> <t t-esc="seg['dx_secundario']"/>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <strong>Dx Terciario: </strong> <t t-esc="seg['dx_terciario']"/>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <strong>Observaciones: </strong> <t t-esc="seg['Observaciones']"/>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <strong>Conducta: </strong> <t t-esc="seg['conducta']"/>
+                                                </div>
                                             </div>
                                         </t>
                                     </t>
