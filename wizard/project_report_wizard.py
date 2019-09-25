@@ -248,6 +248,10 @@ class ProjectReportButton(models.TransientModel):
                 'pres_filtro': historia.pres_filtro,
                 'is_seguimiento': historia.is_seguimiento,
                 'seguimientos': seguimientos,
+                'observaciones': historia.observaciones,
+                'rx_uso_observaciones': historia.rx_uso_observaciones,
+                'notas_queratometria': historia.notas_queratometria,
+                'formula_notas': historia.formula_notas,
             })
         data = {
             'paciente': paciente.name,
