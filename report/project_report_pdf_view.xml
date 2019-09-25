@@ -626,10 +626,8 @@
                                         <p><t t-if="hs['notas_queratometria'] != False" t-esc="hs['notas_queratometria']"/></p><br/>
                                         <p><t t-if="hs['formula_notas'] != False" t-esc="hs['formula_notas']"/></p><br/>
                                     </div>
-                                </t>
-
-
                                 </div>
+                                </t>
                                 <div class="row">
                                     <h2>Medicamentos</h2>
                                 </div>
