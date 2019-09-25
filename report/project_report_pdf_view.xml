@@ -514,12 +514,12 @@
                                                     </table>
                                                 </div>
                                                 <div class="col-xs-6">
-                                                    <strong>DxP: </strong> <t t-esc="seg['dx_primario']"/>
-                                                    <strong>DxS: </strong> <t t-esc="seg['dx_secundario']"/>
+                                                    <div class="col-xs-12"><strong>DxP: </strong> <t t-esc="seg['dx_primario']"/></div>
+                                                    <div class="col-xs-12"><strong>DxS: </strong> <t t-esc="seg['dx_secundario']"/></div>
                                                 </div>
                                                 <div class="col-xs-6">
-                                                    <strong>OFTAL: </strong> <t t-esc="seg['oftalmoscopia']"/>
-                                                    <strong>COND: </strong> <t t-esc="seg['conducta']"/>
+                                                    <div class="col-xs-12"><strong>OFTAL: </strong> <t t-esc="seg['oftalmoscopia']"/></div>
+                                                    <div class="col-xs-12"><strong>COND: </strong> <t t-esc="seg['conducta']"/></div>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6">
