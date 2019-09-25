@@ -539,7 +539,7 @@
                                                     <strong>Dx Terciario: </strong> <t t-esc="seg['dx_terciario']"/>
                                                 </div>
                                                 <div class="col-xs-12">
-                                                    <strong>Observaciones: </strong> <t t-esc="seg['Observaciones']"/>
+                                                    <strong>Observaciones: </strong> <t t-esc="seg['observaciones']"/>
                                                 </div>
                                                 <div class="col-xs-12">
                                                     <strong>Conducta: </strong> <t t-esc="seg['conducta']"/>
