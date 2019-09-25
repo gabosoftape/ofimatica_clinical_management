@@ -454,6 +454,82 @@
                                     <t t-foreach="vals" t-as="hs">
                                         <div class="col-xs-12">
                                             <center>
+                                                <h2>Datos de consulta</h2>
+                                            </center>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <t t-foreach="vals" t-as="hs">
+                                                <h3>Folio No. <t t-esc="hs['folio']"/></h3>
+                                                <table class="table table-condensed">
+                                                             <thead>
+                                                                <tr >
+                                                                    <th style="background-color:#9b9da0 !important;">...</th>
+                                                                    <th style="background-color:#9b9da0 !important;">ESF</th>
+                                                                    <th style="background-color:#9b9da0 !important;">CIL</th>
+                                                                    <th style="background-color:#9b9da0 !important;">EJE</th>
+                                                                    <th style="background-color:#9b9da0 !important;">ADD</th>
+                                                                    <th style="background-color:#9b9da0 !important;">PRI</th>
+                                                                    <th style="background-color:#9b9da0 !important;">AV</th>
+                                                                    <th style="background-color:#9b9da0 !important;">DP</th>
+                                                                    <th style="background-color:#9b9da0 !important;">DNP</th>
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                           OD
+                                                                        </td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_esf']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_cil']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_eje']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_add']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_prisma']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_av']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_dp']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_od_dnp']"/></p></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                           OI
+                                                                        </td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_esf']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_cil']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_eje']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_add']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_prisma']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_av']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_dp']"/></p></td>
+                                                                        <td><p><t t-esc="hs['rx_final_oi_dnp']"/></p></td>
+                                                                    </tr>
+                                                            </tbody>
+                                                        </table>
+                                                <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                                                    <div >
+                                                        <h5>Diagnostico : <strong><t t-esc="hs['dx_primario']"/></strong></h5>
+                                                        <h5>Diagnostico : <strong><t t-esc="hs['dx_secundario']"/></strong></h5>
+                                                        <h5>Diagnostico : <strong><t t-esc="hs['dx_terciario']"/></strong></h5>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Motivo de Remision: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
+                                                    </div>
+                                                    <div >
+                                                        <h5>Proxima cita: <strong>Un año</strong></h5>
+                                                    </div>
+                                                    <div>
+                                                        <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                        </t>
+                                    </div>
+
+                                <div class="row">
+                                    <t t-foreach="vals" t-as="hs">
+                                        <div class="col-xs-12">
+                                            <center>
                                                 <h2>Seguimientos</h2>
                                             </center>
                                         </div>
@@ -562,77 +638,7 @@
                                     <h4>Paciente: <t t-esc="paciente" /></h4>
                                     <h4>Documento No. <t t-esc="documento"/></h4>
                                </div>
-                                <t t-foreach="vals" t-as="hs">
-                                    <h3>Folio No. <t t-esc="hs['folio']"/></h3>
-                                    <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                    <div >
-                                        <h3>Datos de Consulta</h3>
-                                    </div>
-                                        <div>
-                                             <table class="table table-condensed">
-                                                 <thead>
-                                                    <tr >
-                                                        <th style="background-color:#9b9da0 !important;">...</th>
-                                                        <th style="background-color:#9b9da0 !important;">ESF</th>
-                                                        <th style="background-color:#9b9da0 !important;">CIL</th>
-                                                        <th style="background-color:#9b9da0 !important;">EJE</th>
-                                                        <th style="background-color:#9b9da0 !important;">ADD</th>
-                                                        <th style="background-color:#9b9da0 !important;">PRI</th>
-                                                        <th style="background-color:#9b9da0 !important;">AV</th>
-                                                        <th style="background-color:#9b9da0 !important;">DP</th>
-                                                        <th style="background-color:#9b9da0 !important;">DNP</th>
 
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                        <tr>
-                                                            <td>
-                                                               OD
-                                                            </td>
-                                                            <td><p><t t-esc="hs['rx_final_od_esf']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_cil']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_eje']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_add']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_prisma']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_av']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_dp']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_od_dnp']"/></p></td>
-
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                               OI
-                                                            </td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_esf']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_cil']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_eje']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_add']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_prisma']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_av']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_dp']"/></p></td>
-                                                            <td><p><t t-esc="hs['rx_final_oi_dnp']"/></p></td>
-                                                        </tr>
-                                                </tbody>
-                                            </table>
-                                    </div>
-                                    </div>
-                                    <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <div >
-                                <h5>Diagnostico : <strong><t t-esc="hs['dx_primario']"/></strong></h5>
-                                <h5>Diagnostico : <strong><t t-esc="hs['dx_secundario']"/></strong></h5>
-                                <h5>Diagnostico : <strong><t t-esc="hs['dx_terciario']"/></strong></h5>
-                            </div>
-                            <div>
-                                <h5>Motivo de Remision: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
-                            </div>
-                            <div >
-                                <h5>Proxima cita: <strong>Un año</strong></h5>
-                            </div>
-                            <div>
-                                <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
-                            </div>
-                        </div>
-                                </t>
                         </div>
                     </t>
                 </t>
