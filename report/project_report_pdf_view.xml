@@ -431,11 +431,6 @@
 
                                 </div>
                                 <div class="row">
-                                    <center>
-                                        <h2>Datos Ocupacionales?</h2>
-                                    </center>
-                                </div>
-                                <div class="row">
                                     <t t-foreach="vals" t-as="hs">
                                     <div class="col-xs-12">
                                         <center>
@@ -634,20 +629,38 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <h2>Medicamentos</h2>
+                                    <div class="col-xs-12">
+                                         <h2>Medicamentos</h2>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <h5>No Factura:</h5>
+                                        <h5>Autoriz No:</h5>
+                                        <h5>Forma Farm:</h5>
+                                        <h5>Vr Unit Med:</h5>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <h5>Registro No:</h5>
+                                        <h5>Codigo Medic:</h5>
+                                        <h5>Concentrac:</h5>
+                                        <h5>Vr Total Med:</h5>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <h5>Tipo Id</h5>
+                                        <h5>Tipo M</h5>
+                                        <h5>No. Unid:</h5>
+                                        <h5>Posologia</h5>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <h5>Documento No:</h5>
+                                        <h5>Nombre Gener</h5>
+                                        <h5>Dosif:</h5>
+                                    </div>
+
                                 </div>
                                 <div class="row">
                                     <h2>Concepto</h2>
                                 </div>
-                                <div class="row">
-                                    <h2>Footer</h2>
-                                </div>
                                 </t>
-                               <div>
-                                    <h4>Paciente: <t t-esc="paciente" /></h4>
-                                    <h4>Documento No. <t t-esc="documento"/></h4>
-                               </div>
-
                         </div>
                     </t>
                 </t>
