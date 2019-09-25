@@ -198,6 +198,7 @@ class ProjectReportButton(models.TransientModel):
 
             history.append({
                 'folio': historia.folio,
+                'sede': historia.sede,
                 'fecha': historia.fecha,
                 'licor': historia.is_licor,
                 'fumador': historia.is_fumador,

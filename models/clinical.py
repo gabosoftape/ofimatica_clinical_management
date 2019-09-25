@@ -147,15 +147,15 @@ class HistorialClinico(models.Model):
     optometra_id = fields.Many2one('res.users', 'Optometra', domain=[('active', '=', True)])
     folio = fields.Char('Folio', size=128)
     sede = fields.Selection(string="Sede", selection=[
-        ('1', 'CHIPICHAPE'),
-        ('2', 'UNICENTRO'),
-        ('3', 'TECNIOPTICA 2142'),
-        ('4', 'TECNIOPTICA 1090'),
-        ('5', 'TECNIOPTICA 1195'),
-        ('6', 'TECNIOPTICA 1005'),
-        ('7', 'PRINCIPAL SAS'),
-        ('8', 'COMERCIAL 1189'),
-        ('9', 'COMERCIAL 1187'),
+        ('CHIPICHAPE', 'CHIPICHAPE'),
+        ('UNICENTRO', 'UNICENTRO'),
+        ('TECNIOPTICA 2142', 'TECNIOPTICA 2142'),
+        ('TECNIOPTICA 1090', 'TECNIOPTICA 1090'),
+        ('TECNIOPTICA 1195', 'TECNIOPTICA 1195'),
+        ('TECNIOPTICA 1005', 'TECNIOPTICA 1005'),
+        ('PRINCIPAL SAS', 'PRINCIPAL SAS'),
+        ('COMERCIAL 1189', 'COMERCIAL 1189'),
+        ('COMERCIAL 1187', 'COMERCIAL 1187'),
     ])
     is_remision = fields.Boolean('	Remitido a especialista ', default=False)
     remision_desc = fields.Text('Motivo de remision')

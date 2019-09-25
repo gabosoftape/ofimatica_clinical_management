@@ -344,6 +344,7 @@
         <t t-call="web.html_container">
                 <t t-call="web.external_layout">
                         <div class="page" >
+                                <t t-foreach="vals" t-as="hs">
                                 <div class="row">
                                     <center>
                                         <div class="col-xs-4">
@@ -521,7 +522,7 @@
                                         </div>
                                         </t>
                                     </div>
-                                <t t-foreach="vals" t-as="hs">
+
                                 <div class="row">
 
                                         <div class="col-xs-12">
@@ -631,7 +632,6 @@
                                         <p t-if="hs['formula_notas'] == False">Sin notas de formula</p>
                                     </div>
                                 </div>
-                                </t>
                                 <div class="row">
                                     <h2>Medicamentos</h2>
                                 </div>
@@ -641,6 +641,7 @@
                                 <div class="row">
                                     <h2>Footer</h2>
                                 </div>
+                                </t>
                                <div>
                                     <h4>Paciente: <t t-esc="paciente" /></h4>
                                     <h4>Documento No. <t t-esc="documento"/></h4>
