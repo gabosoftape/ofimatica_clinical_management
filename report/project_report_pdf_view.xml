@@ -625,10 +625,10 @@
                                         <p><t t-if="hs['rx_uso_observaciones'] != False" t-esc="hs['rx_uso_observaciones']"/></p><br/>
                                         <p><t t-if="hs['notas_queratometria'] != False" t-esc="hs['notas_queratometria']"/></p><br/>
                                         <p><t t-if="hs['formula_notas'] != False" t-esc="hs['formula_notas']"/></p><br/>
-                                        <p><t t-if="hs['observaciones'] == False" t-esc="Sin Observaciones Generales"/></p><br/>
-                                        <p><t t-if="hs['rx_uso_observaciones'] == False" t-esc="Sin observaciones Rx Uso"/></p><br/>
-                                        <p><t t-if="hs['notas_queratometria'] != False" t-esc="Sin Notas de Queratometria"/></p><br/>
-                                        <p><t t-if="hs['formula_notas'] != False" t-esc="Sin notas de formula"/></p><br/>
+                                        <p t-if="hs['observaciones'] == False">Sin Observaciones Generales</p><br/>
+                                        <p t-if="hs['rx_uso_observaciones'] == False">Sin observaciones Rx Uso</p><br/>
+                                        <p t-if="hs['notas_queratometria'] != False" >Sin Notas de Queratometria</p><br/>
+                                        <p t-if="hs['formula_notas'] != False">Sin notas de formula</p><br/>
                                     </div>
                                 </div>
                                 </t>
