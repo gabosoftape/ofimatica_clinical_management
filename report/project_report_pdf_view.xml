@@ -463,7 +463,9 @@
                                         </div>
                                         <t t-foreach="hs['seguimientos']" t-as="seg">
                                             <div class="col-xs-12">
-                                                <strong>Fecha: <t t-esc="seg['fecha_seguimiento']"/></strong>
+                                                <center>
+                                                    <strong><h3>Seguimiento <t t-esc="seg['fecha_seguimiento']"/></h3></strong>
+                                                </center>
                                             </div>
                                             <div class="col-xs-6">
                                                 <div class="col-xs-12">
