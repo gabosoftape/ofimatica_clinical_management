@@ -455,7 +455,7 @@
                                     </t>
                                 </div>
                                 <div class="row">
-                                    <t t-foreach="vals" t-as="hs">
+
                                         <div class="col-xs-12">
                                             <center>
                                                 <h2>Datos de consulta</h2>
@@ -464,7 +464,7 @@
                                         <div class="col-xs-12">
                                             <t t-foreach="vals" t-as="hs">
                                                 <h3>Folio No. <t t-esc="hs['folio']"/></h3>
-                                                <table class="table table-condensed">
+                                                <table class="table">
                                                              <thead>
                                                                 <tr >
                                                                     <th style="background-color:#9b9da0 !important;">...</th>
@@ -481,7 +481,7 @@
                                                             </thead>
                                                             <tbody>
                                                                     <tr>
-                                                                        <td>
+                                                                        <td style="background-color:#9b9da0 !important;">
                                                                            OD
                                                                         </td>
                                                                         <td><p><t t-esc="hs['rx_final_od_esf']"/></p></td>
@@ -495,7 +495,7 @@
 
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>
+                                                                        <td style="background-color:#9b9da0 !important;">
                                                                            OI
                                                                         </td>
                                                                         <td><p><t t-esc="hs['rx_final_oi_esf']"/></p></td>
@@ -523,7 +523,6 @@
                                                 </div>
                                             </t>
                                         </div>
-                                        </t>
                                     </div>
 
                                 <div class="row">
