@@ -512,10 +512,10 @@
                                                         <h5>Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></h5>
                                                     </div>
                                                     <div>
-                                                        <h5>Motivo de Remision: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
+                                                        <h5>Oftalmoscopia: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
                                                     </div>
                                                     <div >
-                                                        <h5>Proxima cita: <strong>Un año</strong></h5>
+                                                        <h5>Proxima cita: <strong>1 año</strong></h5>
                                                     </div>
                                                     <div>
                                                         <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
