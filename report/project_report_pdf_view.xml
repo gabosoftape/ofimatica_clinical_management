@@ -353,10 +353,10 @@
                                             </strong>
                                         </div>
                                         <div class="col-xs-4">
-                                            <h4>SEDE</h4>
+                                            <h4>SEDE: <t t-esc="hs['sede']"/> </h4>
                                         </div>
                                         <div class="col-xs-4">
-                                            <h5>DR</h5>
+                                            <h5>OPTOMETRA: <t t-esc="hs['optometra']"/> </h5>
                                         </div>
                                     </center>
                                 </div>
