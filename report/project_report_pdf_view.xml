@@ -512,9 +512,9 @@
                                                         <div class="col-xs-12">Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></div>
                                                     </div>
                                                     <div class="col-xs-6">
-                                                        <div class="col-xs-12"><h5>Oftalmoscopia: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5></div>
-                                                        <div class="col-xs-12"><h5>Proxima cita: <strong>1 año</strong></h5></div>
-                                                        <div class="col-xs-12"><h5>Medico: <strong><t t-esc="user.name"/></strong></h5></div>
+                                                        <div class="col-xs-12">Oftalmoscopia: <strong><t t-esc="hs['oftalmoscopia']"/></strong></div>
+                                                        <div class="col-xs-12">Proxima cita: <strong>1 año</strong></div>
+                                                        <div class="col-xs-12">Medico: <strong><t t-esc="user.name"/></strong></div>
                                                     </div>
                                                 </div>
                                             </t>
@@ -627,8 +627,8 @@
                                         <p><t t-if="hs['formula_notas'] != False" t-esc="hs['formula_notas']"/></p><br/>
                                         <p t-if="hs['observaciones'] == False">Sin Observaciones Generales</p><br/>
                                         <p t-if="hs['rx_uso_observaciones'] == False">Sin observaciones Rx Uso</p><br/>
-                                        <p t-if="hs['notas_queratometria'] != False" >Sin Notas de Queratometria</p><br/>
-                                        <p t-if="hs['formula_notas'] != False">Sin notas de formula</p><br/>
+                                        <p t-if="hs['notas_queratometria'] == False" >Sin Notas de Queratometria</p><br/>
+                                        <p t-if="hs['formula_notas'] == False">Sin notas de formula</p><br/>
                                     </div>
                                 </div>
                                 </t>
