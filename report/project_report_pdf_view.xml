@@ -363,7 +363,7 @@
                                         <h3>Folio: <t t-esc="hs['folio']"/></h3>
                                     </div>
                                 </div>
-                                <div class="row" style="border: 1px solid #000;" >
+                                <div class="row" >
                                     <div class="col-xs-12">
                                         <p style="text-align: justify;">
                                         El marco Normativo Legal en Colombia, indica que la Historia Clínica se soporta sobre; Documento técnico Sentencia T - 182 de 2009/Decreto Ley 019 de 2012. Artículo
@@ -375,60 +375,63 @@
                                     </p>
                                     </div>
                                 </div>
-                                <div class="row" style="border: 1px solid #000;">
+                                <div class="row" >
                                     <div class="col-xs-12">
                                         <center>
                                             <h2>Datos de prestador de servicio</h2>
                                         </center>
                                     </div>
-                                    <div class="col-xs-4">
-                                        <p>Empresa: <strong><t t-esc="res_company.name"/></strong></p>
-                                        <p>NIT: <strong><t t-esc="res_company.nit"/></strong></p>
-                                        <p>Hab No: <strong><t t-esc="res_company.hab_no"/></strong></p>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <p>Direccion: <strong><t t-esc="res_company.street"/></strong></p>
-                                        <p>COD EAD: <strong><t t-esc="res_company.cod_ead"/></strong></p>
-                                        <p>PBX/FAX: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <p>Ciudad: <strong><t t-esc="res_company.city"/></strong></p>
-                                        <p>Representante Legal: <strong><t t-esc="res_company.rte_legal"/></strong></p>
-                                        <p>Sede Principal: <strong><t t-esc="res_company.sede_principal"/></strong></p>
+                                    <div class="col-xs-12" style="border: 1px solid #000;">
+                                        <div class="col-xs-4">
+                                            <p>Empresa: <strong><t t-esc="res_company.name"/></strong></p>
+                                            <p>NIT: <strong><t t-esc="res_company.nit"/></strong></p>
+                                            <p>Hab No: <strong><t t-esc="res_company.hab_no"/></strong></p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>Direccion: <strong><t t-esc="res_company.street"/></strong></p>
+                                            <p>COD EAD: <strong><t t-esc="res_company.cod_ead"/></strong></p>
+                                            <p>PBX/FAX: <strong><t t-esc="res_company.pbx_fax"/></strong></p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>Ciudad: <strong><t t-esc="res_company.city"/></strong></p>
+                                            <p>Representante Legal: <strong><t t-esc="res_company.rte_legal"/></strong></p>
+                                            <p>Sede Principal: <strong><t t-esc="res_company.sede_principal"/></strong></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row" style="border: 1px solid #000;">
+                                <div class="row">
                                     <div class="col-xs-12">
                                         <center>
                                             <h2>Datos Personales</h2>
                                         </center>
                                     </div>
-                                    <div class="col-xs-4">
-                                        <p>Nombres: <strong><t t-esc="nombres"/></strong></p>
-                                        <p>Direccion: <strong><t t-esc="direccion"/></strong></p>
-                                        <p>Profesion: <strong><t t-esc="profesion"/></strong></p>
-                                        <p>Tipo Afil: <strong><t t-esc="tipo_afil"/></strong></p>
-                                        <p>Email: <strong><t t-esc="email"/></strong></p>
-                                        <p>Zona: <strong><t t-esc="zona"/></strong></p>
+                                    <div class="col-xs-12" style="border: 1px solid #000;">
+                                        <div class="col-xs-4">
+                                            <p>Apellidos: <strong><t t-esc="apellidos"/></strong></p>
+                                            <p>Telefono: <strong><t t-esc="telefono"/></strong></p>
+                                            <p>Edad: <strong><t t-esc="edad"/></strong></p>
+                                            <p>Tipo Us: <strong><t t-esc="tipo_us"/></strong></p>
+                                            <p>Ciudad: <strong><t t-esc="ciudad"/></strong></p>
+                                            <p>Departamento: <strong><t t-esc="departamento"/></strong></p>
+                                        </div>
+                                            <div class="col-xs-4">
+                                            <p>Tipo de ID: <strong><t t-esc="tipo_documento"/></strong></p>
+                                            <p>No. ID: <strong><t t-esc="documento"/></strong></p>
+                                            <p>Celular: <strong><t t-esc="telefono"/></strong></p>
+                                            <p>Estado Civil: <strong><t t-esc="estado_civil"/></strong></p>
+                                            <p>EPS: <strong><t t-esc="eps"/></strong></p>
+                                            <p>Sexo: <strong><t t-esc="sexo"/></strong></p>
+                                            <p>Pat Repot: <strong><t t-esc="pat_repot"/></strong></p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>Nombres: <strong><t t-esc="nombres"/></strong></p>
+                                            <p>Direccion: <strong><t t-esc="direccion"/></strong></p>
+                                            <p>Profesion: <strong><t t-esc="profesion"/></strong></p>
+                                            <p>Tipo Afil: <strong><t t-esc="tipo_afil"/></strong></p>
+                                            <p>Email: <strong><t t-esc="email"/></strong></p>
+                                            <p>Zona: <strong><t t-esc="zona"/></strong></p>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-4">
-                                        <p>Apellidos: <strong><t t-esc="apellidos"/></strong></p>
-                                        <p>Telefono: <strong><t t-esc="telefono"/></strong></p>
-                                        <p>Edad: <strong><t t-esc="edad"/></strong></p>
-                                        <p>Tipo Us: <strong><t t-esc="tipo_us"/></strong></p>
-                                        <p>Ciudad: <strong><t t-esc="ciudad"/></strong></p>
-                                        <p>Departamento: <strong><t t-esc="departamento"/></strong></p>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <p>Tipo de ID: <strong><t t-esc="tipo_documento"/></strong></p>
-                                        <p>No. ID: <strong><t t-esc="documento"/></strong></p>
-                                        <p>Celular: <strong><t t-esc="telefono"/></strong></p>
-                                        <p>Estado Civil: <strong><t t-esc="estado_civil"/></strong></p>
-                                        <p>EPS: <strong><t t-esc="eps"/></strong></p>
-                                        <p>Sexo: <strong><t t-esc="sexo"/></strong></p>
-                                        <p>Pat Repot: <strong><t t-esc="pat_repot"/></strong></p>
-                                    </div>
-
                                 </div>
                                 <div class="row" >
                                     <t t-foreach="vals" t-as="hs">
@@ -527,12 +530,12 @@
                                             </center>
                                         </div>
                                         <t t-foreach="hs['seguimientos']" t-as="seg">
+                                            <div class="col-xs-12">
+                                                <center>
+                                                    <strong><h3>Seguimiento <t t-esc="seg['fecha_seguimiento']"/></h3></strong>
+                                                </center>
+                                            </div>
                                             <div class="col-xs-12" style="border: 1px solid #000;">
-                                                <div class="col-xs-12">
-                                                    <center>
-                                                        <strong><h3>Seguimiento <t t-esc="seg['fecha_seguimiento']"/></h3></strong>
-                                                    </center>
-                                                </div>
                                                 <div class="col-xs-6" style="border: 1px solid #000;">
                                                     <div class="col-xs-12">
                                                         <table class="table table-condensed">
@@ -621,7 +624,7 @@
                                     <div class="col-xs-12">
                                         <center><h2>Notas y observaciones</h2></center>
                                     </div>
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-12" style="border: 1px solid #000;">
                                         <p t-if="hs['observaciones'] != False"><t t-esc="hs['observaciones']"/></p>
                                         <p t-if="hs['observaciones'] == False">Sin observaciones Generales</p>
                                         <p t-if="hs['rx_uso_observaciones'] != False" ><t t-esc="hs['rx_uso_observaciones']"/></p>
@@ -633,10 +636,12 @@
                                     </div>
                                 </div>
                                 <div class="row" >
+                                    <div class="col-xs-12">
+                                        <center>
+                                            <h2>Medicamentos</h2>
+                                        </center>
+                                    </div>
                                     <div class="col-xs-12" style="border: 1px solid #000;">
-                                        <div class="col-xs-12">
-                                            <center><h2>Medicamentos</h2></center>
-                                        </div>
                                         <div class="col-xs-3">
                                             <h5>No Factura:</h5>
                                             <h5>Autoriz No:</h5>
@@ -661,8 +666,6 @@
                                             <h5>Dosif:</h5>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
                                     <img src="/ofimatica_clinical_management/static/src/img/pseudo_footer_tecnioptica_hce.png"/>
                                     <center><img src="/ofimatica_clinical_management/static/src/img/footer_tecnioptica.png"/></center>
                                 </div>
