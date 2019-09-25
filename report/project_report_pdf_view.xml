@@ -658,7 +658,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <img src='/ofimatica_clincal_management/static/src/description/pseudo_footer_tecnioptica_hce.png'/>
+                                    <img src='/ofimatica_clincal_management/static/src/description/pseudo_footer_tecnioptica_hce.png' style="width:90%;"/>
                                 </div>
                                 </t>
                         </div>
