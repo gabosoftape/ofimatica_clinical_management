@@ -363,7 +363,7 @@
                                         <h3>Folio: <t t-esc="hs['folio']"/></h3>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;" >
                                     <div class="col-xs-12">
                                         <p style="text-align: justify;">
                                         El marco Normativo Legal en Colombia, indica que la Historia Clínica se soporta sobre; Documento técnico Sentencia T - 182 de 2009/Decreto Ley 019 de 2012. Artículo
@@ -375,7 +375,7 @@
                                     </p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
                                     <div class="col-xs-12">
                                         <center>
                                             <h2>Datos de prestador de servicio</h2>
@@ -397,7 +397,7 @@
                                         <p>Sede Principal: <strong><t t-esc="res_company.sede_principal"/></strong></p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
                                     <div class="col-xs-12">
                                         <center>
                                             <h2>Datos Personales</h2>
@@ -430,7 +430,7 @@
                                     </div>
 
                                 </div>
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
                                     <t t-foreach="vals" t-as="hs">
                                     <div class="col-xs-12">
                                         <center>
@@ -449,7 +449,7 @@
                                     </div>
                                     </t>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
 
                                         <div class="col-xs-12">
                                             <center>
@@ -519,7 +519,7 @@
                                         </div>
                                     </div>
 
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
 
                                         <div class="col-xs-12">
                                             <center>
@@ -615,7 +615,7 @@
                                         </t>
                                 </div>
 
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
                                     <div class="col-xs-12"><h2>Notas y observaciones</h2></div>
                                     <div class="col-xs-12">
                                         <p t-if="hs['observaciones'] != False"><t t-esc="hs['observaciones']"/></p>
@@ -628,7 +628,7 @@
                                         <p t-if="hs['formula_notas'] == False">Sin notas de formula</p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="border: 1px solid #000;">
                                     <div class="col-xs-12">
                                          <h2>Medicamentos</h2>
                                     </div>
