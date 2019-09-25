@@ -515,16 +515,16 @@
                                                         </tbody>
                                                     </table>
                                                 </div>
-                                                <div class="col-xs-6">
+                                                <div class="col-xs-6" style="border: 1px solid #000;">
                                                     <div class="col-xs-12"><strong>DxP: </strong> <t t-esc="seg['dx_primario']"/></div>
                                                     <div class="col-xs-12"><strong>DxS: </strong> <t t-esc="seg['dx_secundario']"/></div>
                                                 </div>
-                                                <div class="col-xs-6">
+                                                <div class="col-xs-6" style="border: 1px solid #000;">
                                                     <div class="col-xs-12"><strong>OFTAL: </strong> <t t-esc="seg['oftalmoscopia']"/></div>
                                                     <div class="col-xs-12"><strong>COND: </strong> <t t-esc="seg['conducta']"/></div>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-6" style="border: 1px solid #000;">
                                                 <div class="col-xs-12">
                                                     <strong>Fecha: </strong> <t t-esc="seg['fecha_seguimiento']"/>
                                                 </div>
