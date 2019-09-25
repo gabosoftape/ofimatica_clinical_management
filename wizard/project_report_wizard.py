@@ -151,8 +151,51 @@ class ProjectReportButton(models.TransientModel):
         partner = self.partner_id
         paciente = self.env['res.partner'].search([('id', '=', partner.id)])
         historial_ids = self.env['historial.clinico'].search([('partner_id','like',partner.id)])
+        seguimientos_ids = self.env['historial.clinico.seguimiento'].search([('paciente','like',partner.id)])
         history = []
         for historia in historial_ids:
+            if historia.is_seguimiento:
+                seguimientos = []
+                for seguimiento in seguimientos_ids:
+                    if seguimiento.historia_id.folio == historia.folio:
+                        seguimientos.append({
+                            'fecha_seguimiento': seguimiento.fecha_seguimiento,
+                            'historia': seguimiento.historia_id.folio,
+                            'paciente': seguimiento.paciente.name,
+                            'rx_final_od_esf': seguimiento.rx_final_od_esf,
+                            'rx_final_od_cil': seguimiento.rx_final_od_cil,
+                            'rx_final_od_eje': seguimiento.rx_final_od_eje,
+                            'rx_final_od_add': seguimiento.rx_final_od_add,
+                            'rx_final_od_dp': seguimiento.rx_final_od_dp,
+                            'rx_final_od_dnp': seguimiento.rx_final_od_dnp,
+                            'rx_final_od_vp_esf': seguimiento.rx_final_od_vp_esf,
+                            'rx_final_od_vp_cil': seguimiento.rx_final_od_vp_cil,
+                            'rx_final_od_av': seguimiento.rx_final_od_av,
+                            'rx_final_od_prisma': seguimiento.rx_final_od_prisma,
+                            'rx_final_oi_esf': seguimiento.rx_final_oi_esf,
+                            'rx_final_oi_cil': seguimiento.rx_final_oi_cil,
+                            'rx_final_oi_eje': seguimiento.rx_final_oi_eje,
+                            'rx_final_oi_add': seguimiento.rx_final_oi_add,
+                            'rx_final_oi_dp': seguimiento.rx_final_oi_dp,
+                            'rx_final_oi_dnp': seguimiento.rx_final_oi_dnp,
+                            'rx_final_oi_vp_esf': seguimiento.rx_final_oi_vp_esf,
+                            'rx_final_oi_vp_cil': seguimiento.rx_final_oi_vp_cil,
+                            'rx_final_oi_av': seguimiento.rx_final_oi_av,
+                            'rx_final_oi_prisma': seguimiento.rx_final_oi_prisma,
+                            'oftalmoscopia': seguimiento.oftalmoscopia,
+                            'dx_primario': seguimiento.dx_primario,
+                            'dx_secundario':seguimiento.dx_secundario,
+                            'dx_terciario':seguimiento.dx_terciario,
+                            'is_remision':seguimiento.is_remision,
+                            'remision_desc':seguimiento.remision_desc,
+                            'observaciones': seguimiento.observaciones,
+                            'conducta': seguimiento.conducta,
+                            'tipo_lente': seguimiento.tipo_lente,
+                            'material': seguimiento.material,
+                            'filtros': seguimiento.filtros,
+                            'uso': seguimiento.uso,
+                        })
+
             history.append({
                 'folio': historia.folio,
                 'fecha': historia.fecha,
@@ -203,6 +246,8 @@ class ProjectReportButton(models.TransientModel):
                 'pres_tipo_lente': historia.pres_tipo_lente,
                 'pres_material': historia.pres_material,
                 'pres_filtro': historia.pres_filtro,
+                'is_seguimiento': historia.is_seguimiento,
+                'seguimientos': seguimientos,
             })
         data = {
             'paciente': paciente.name,
