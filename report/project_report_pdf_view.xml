@@ -507,9 +507,9 @@
                                                         </table>
                                                 <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                                                     <div >
-                                                        <h5>Diagnostico : <strong><t t-esc="hs['dx_primario']"/></strong></h5>
-                                                        <h5>Diagnostico : <strong><t t-esc="hs['dx_secundario']"/></strong></h5>
-                                                        <h5>Diagnostico : <strong><t t-esc="hs['dx_terciario']"/></strong></h5>
+                                                        <h5>Dx Primario: <strong><t t-esc="hs['dx_primario']"/></strong></h5>
+                                                        <h5>Dx Secundario: <strong><t t-esc="hs['dx_secundario']"/></strong></h5>
+                                                        <h5>Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></h5>
                                                     </div>
                                                     <div>
                                                         <h5>Motivo de Remision: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
