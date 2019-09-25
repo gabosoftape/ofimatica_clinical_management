@@ -506,19 +506,15 @@
                                                             </tbody>
                                                         </table>
                                                 <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                                                    <div >
-                                                        <h5>Dx Primario: <strong><t t-esc="hs['dx_primario']"/></strong></h5>
-                                                        <h5>Dx Secundario: <strong><t t-esc="hs['dx_secundario']"/></strong></h5>
-                                                        <h5>Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></h5>
+                                                    <div class="col-xs-6">
+                                                        <div class="col-xs-12"><h5>Dx Primario: <strong><t t-esc="hs['dx_primario']"/></strong></h5></div>
+                                                        <div class="col-xs-12"><h5>Dx Secundario: <strong><t t-esc="hs['dx_secundario']"/></strong></h5></div>
+                                                        <div class="col-xs-12"><h5>Dx Terciario: <strong><t t-esc="hs['dx_terciario']"/></strong></h5></div>
                                                     </div>
-                                                    <div>
-                                                        <h5>Oftalmoscopia: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5>
-                                                    </div>
-                                                    <div >
-                                                        <h5>Proxima cita: <strong>1 año</strong></h5>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
+                                                    <div class="col-xs-6">
+                                                        <div class="col-xs-12"><h5>Oftalmoscopia: <strong><t t-esc="hs['oftalmoscopia']"/></strong></h5></div>
+                                                        <div class="col-xs-12"><h5>Proxima cita: <strong>1 año</strong></h5></div>
+                                                        <div class="col-xs-12"><h5>Medico: <strong><t t-esc="user.name"/> </strong></h5></div>
                                                     </div>
                                                 </div>
                                             </t>
