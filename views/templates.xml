@@ -26,6 +26,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
                 <t t-raw="0" />
             </div>
         </template>
