@@ -105,8 +105,6 @@
             </t>
      </template>
     <template id="remission_report_template">
-        <t t-call="web.html_container">
-                <t t-call="web.external_layout">
                         <br/>
                         <div style="text-align:center;color:black!important;">
                             <h1><center>REMISION A ESPECIALISTA</center></h1>
@@ -222,8 +220,6 @@
                                 <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
                             </div>
                         </div>
-                </t>
-            </t>
      </template>
     <template id="formula_report_template">
         <t t-call="web.html_container">
