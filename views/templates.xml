@@ -6,10 +6,8 @@
              </xpath>
         </template>
         <template id="remision_layout_standard">
-            <div class="header" >
-                <div class="article">
-                    <t t-raw="0" />
-                </div>
+            <div class="article" style="position: fixed; top: 1px;">
+                <t t-raw="0" />
             </div>
         </template>
 </odoo>
