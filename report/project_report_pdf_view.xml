@@ -124,7 +124,7 @@
                             </div>
                         </div>
                         <div class="row" style="border: 1px solid #000;" >
-                            <div class="col-xs-12">
+                            <div class="col-xs-12" style="border: 1px solid #000;">
                                 <table class="table table-condensed">
                                      <thead>
                                         <tr >
@@ -171,8 +171,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-xs-12">
-                                <div class="col-xs-4">
+                            <div class="col-xs-12" >
+                                <div class="col-xs-4" style="border: 1px solid #000;">
                                     <div class="col-xs-2" style="text-orientation: mixed;">Cerca</div>
                                     <div class="col-xs-10"><table class="table table-condensed">
                                      <thead>
@@ -201,16 +201,16 @@
                                 </table></div>
 
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-xs-4" style="border: 1px solid #000;">
                                     <p>DxP: <t t-esc="dx_primario"/></p>
                                     <p>DxS: <t t-esc="dx_segundario"/></p>
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-xs-4" style="border: 1px solid #000;">
                                     <p>Oftal: <t t-esc="oftalmoscopia"/></p>
                                     <p>Cond: <t t-esc="conducta"/></p>
                                 </div>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12" style="border: 1px solid #000;">
                                 <div class="col-xs-6">
                                     <p>Queratometria OD: <t t-esc="queratometria_od"/></p>
                                     <p>Queratometria OI: <t t-esc="queratometria_oi"/></p>
