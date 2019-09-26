@@ -105,8 +105,7 @@
             </t>
      </template>
     <template id="remission_report_template">
-        <t t-call="web.html_container">
-                <t t-call="ofimatica_clinical_management.remision_layout_standard">
+        <t t-call="ofimatica_clinical_management.remision_layout_standard">
                         <div class="row">
                             <div class="col-xs-4">
                                     <img src='/web/binary/company_logo' style="width:100%"/>
@@ -252,8 +251,7 @@
                         </div>
 
                 </t>
-            </t>
-     </template>
+    </template>
     <template id="formula_report_template">
         <t t-call="web.html_container">
                 <t t-call="web.external_layout">
