@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" style="border: 1px solid #000; margin-top: 1px;">
+                        <div class="row" style="border: 1px solid #000;">
                             <div class="col-xs-4">
                                 <p>Nombres y apellidos :<strong><t t-esc="nombre"/></strong></p>
                                 <p>identificacion :<strong><t t-esc="documento"/></strong></p>
@@ -219,7 +219,6 @@
                                             </tbody>
                                         </table>
                                     </div>
-
                                 </div>
                                 <div class="col-xs-4" style="border: 1px solid #000; border-radius: 20px;">
                                     <p>DxP: <t t-esc="dx_primario"/></p>
@@ -239,6 +238,8 @@
                                     <p>Refraccion OD: <t t-esc="refraccion_od"/></p>
                                     <p>Refraccion OI: <t t-esc="refraccion_oi"/></p>
                                 </div>
+                            </div>
+                            <div class="col-xs-12">
                                 <div class="col-xs-8">
                                     <p>Motivo de remision: <t t-esc="remision_desc"/></p>
                                 </div>
@@ -246,11 +247,11 @@
                                     <p>Optometra: <t t-esc="optometra"/></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <center>
-                                <img src="/ofimatica_clinical_management/static/src/img/footer_tecnioptica.png"/>
-                            </center>
+                            <div class="col-xs-12">
+                                <center>
+                                    <img src="/ofimatica_clinical_management/static/src/img/footer_tecnioptica.png"/>
+                                </center>
+                            </div>
                         </div>
 
                 </t>
