@@ -109,18 +109,18 @@
                 <t t-call="ofimatica_clinical_management.remision_layout_standard">
                         <div class="row">
                             <div class="col-xs-4">
-                                Nombres y apellidos :<strong><t t-esc="nombre"/></strong>
-                                identificacion :<strong><t t-esc="documento"/></strong>
-                                telefono :<strong><t t-esc="telefono"/></strong>
+                                <p>Nombres y apellidos :<strong><t t-esc="nombre"/></strong></p>
+                                <p>identificacion :<strong><t t-esc="documento"/></strong></p>
+                                <p>telefono :<strong><t t-esc="telefono"/></strong></p>
                             </div>
                             <div class="col-xs-4">
-                                eps :<strong><t t-esc="eps"/></strong>
-                                edad :<strong><t t-esc="edad"/></strong>
-                                sexo :<strong><t t-esc="sexo"/></strong>
+                                <p>eps :<strong><t t-esc="eps"/></strong></p>
+                                <p>edad :<strong><t t-esc="edad"/></strong></p>
+                                <p>sexo :<strong><t t-esc="sexo"/></strong></p>
                             </div>
                             <div class="col-xs-4">
-                                motivo_consulta:<strong><t t-esc="motivo"/></strong>
-                                remitido a: <strong><t t-esc="remitido_a"/></strong>
+                                <p>motivo_consulta:<strong><t t-esc="motivo"/></strong></p>
+                                <p>remitido a: <strong><t t-esc="remitido_a"/></strong></p>
                             </div>
 
 
