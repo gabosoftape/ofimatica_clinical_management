@@ -6,7 +6,7 @@
              </xpath>
         </template>
         <template id="remision_layout_standard">
-            <div class="header" style="position: absolute; z-index: 1;">
+            <div class="header" style="margin-bottom: 1rem; padding-bottom: 1rem;">
                 <div class="row">
                             <div class="col-xs-4">
                                     <img src='/web/binary/company_logo' style="width:100%"/>
@@ -25,7 +25,7 @@
                                     <p>Autorizacion: </p>
                                 </div>
                             </div>
-                        </div>
+                </div>
             </div>
             <div class="article" style="position: absolute; top: -9rem; z-index:99;">
                 <t t-raw="0" />
