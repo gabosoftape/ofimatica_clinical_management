@@ -6,7 +6,7 @@
              </xpath>
         </template>
         <template id="remision_layout_standard">
-            <div class="article" style="margin-top: 1px !important; padding-top: 1px !important;">
+            <div class="article o_report_layout_clean">
                 <t t-raw="0" />
             </div>
         </template>
