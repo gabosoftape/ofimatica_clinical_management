@@ -60,6 +60,7 @@ class ProjectReportButton(models.TransientModel):
             'eps': paciente.eps,
             'edad': paciente.age,
             'sexo': paciente.sex,
+            'optometra': hs.optometra_id.name,
             'remitido_a': hs.especialista_id.name,
             'fecha': hs.fecha,
             'motivo': hs.motivo,
