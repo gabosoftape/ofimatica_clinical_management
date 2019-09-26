@@ -348,6 +348,7 @@ historial clinico
                                 </group>
                                 <group>
                                 <field name="is_remision"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
+                                <field name="especialista_id" attrs="{'invisible':[('is_remision','=',False)]}"/>
                                 <field name="remision_desc" attrs="{'invisible':[('is_remision','=',False)]}" />
                                 <field name="observaciones"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>
                                 <field name="conducta"  attrs="{'readonly':[('state','in',('cancelada','cerrada'))]}"/>

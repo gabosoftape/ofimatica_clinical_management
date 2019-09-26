@@ -119,8 +119,8 @@
                                 <p>sexo :<strong><t t-esc="sexo"/></strong></p>
                             </div>
                             <div class="col-xs-4">
-                                <p>motivo_consulta:<strong><t t-esc="motivo"/></strong></p>
-                                <p>remitido a: <strong><t t-esc="remitido_a"/></strong></p>
+                                <p>Motivo consulta:<strong><t t-esc="motivo"/></strong></p>
+                                <p>Remitido a: <strong><t t-esc="remitido_a"/></strong></p>
                             </div>
 
 
