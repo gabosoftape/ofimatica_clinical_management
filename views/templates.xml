@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article" style="padding-top: 1px !important;">
+            <div class="article">
                 <t t-raw="0" />
             </div>
         </template>
