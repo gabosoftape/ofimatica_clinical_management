@@ -15,11 +15,15 @@
                         <center><h2>Remision Especialista</h2></center>
                     </div>
                     <div class="col-xs-4">
-                        <p>Fecha:</p>
-                        <p>Caja:</p>
-                        <p>Registro:</p>
-                        <p>Factura:</p>
-                        <p>Autorizacion: </p>
+                        <div class="col-xs-6">
+                            <p>Fecha:</p>
+                            <p>Caja:</p>
+                            <p>Registro:</p>
+                        </div>
+                        <div class="col-xs-6">
+                           <p>Factura:</p>
+                            <p>Autorizacion: </p>
+                        </div>
                     </div>
                 </div>
             </div>
