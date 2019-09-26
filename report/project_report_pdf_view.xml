@@ -173,10 +173,10 @@
                             </div>
                             <div class="col-xs-12">
                                 <div class="col-xs-4">
-                                    <table class="table table-condensed">
+                                    <div class="col-xs-2" style="text-orientation: upright;">Cerca</div>
+                                    <div class="col-xs-10"><table class="table table-condensed">
                                      <thead>
                                         <tr >
-                                            <th><p style="text-orientation: upright;">CERCA</p></th>
                                             <th style="background-color:#9b9da0 !important;">...</th>
                                             <th style="background-color:#9b9da0 !important;">ESF</th>
                                             <th style="background-color:#9b9da0 !important;">CIL</th>
@@ -198,7 +198,8 @@
                                                 <td><p><t t-esc="rx_uso_oi_cil"/></p></td>
                                             </tr>
                                     </tbody>
-                                </table>
+                                </table></div>
+
                                 </div>
                                 <div class="col-xs-4">
                                     DxP
