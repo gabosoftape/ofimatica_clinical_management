@@ -105,121 +105,121 @@
             </t>
      </template>
     <template id="remission_report_template">
-                        <br/>
-                        <div style="text-align:center;color:black!important;">
-                            <h1><center>REMISION A ESPECIALISTA</center></h1>
-                        </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <div >
-                                <h4>Datos de Paciente </h4>
-                            </div>
-                            <div >
-                                 Usuario: <strong><t t-esc="nombre"/></strong>
-                            </div>
-                            <div>
-                                Identificacion: <strong><t t-esc="documento"/></strong>
-                            </div>
-                            <div >
-                                Profesion/Oficio: <strong><t t-esc="function"/></strong>
-                            </div>
-                            <div>
-                                Fecha de Consulta : <strong><t t-esc="fecha"/></strong>
-                            </div>
+        <t t-call="web.html_container">
+            <div style="text-align:center;color:black!important;">
+                <h1><center>REMISION A ESPECIALISTA</center></h1>
+            </div>
+            <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                <div >
+                    <h4>Datos de Paciente </h4>
+                </div>
+                <div >
+                     Usuario: <strong><t t-esc="nombre"/></strong>
+                </div>
+                <div>
+                    Identificacion: <strong><t t-esc="documento"/></strong>
+                </div>
+                <div >
+                    Profesion/Oficio: <strong><t t-esc="function"/></strong>
+                </div>
+                <div>
+                    Fecha de Consulta : <strong><t t-esc="fecha"/></strong>
+                </div>
 
-                        </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <div >
-                                <h3>Datos de Consulta</h3>
-                            </div>
-                            <div>
-                                 <table class="table table-condensed">
-                                     <thead>
-                                        <tr >
-                                            <th style="background-color:#9b9da0 !important;">...</th>
-                                            <th style="background-color:#9b9da0 !important;">ESF</th>
-                                            <th style="background-color:#9b9da0 !important;">CIL</th>
-                                            <th style="background-color:#9b9da0 !important;">EJE</th>
-                                            <th style="background-color:#9b9da0 !important;">ADD</th>
-                                            <th style="background-color:#9b9da0 !important;">PRI</th>
-                                            <th style="background-color:#9b9da0 !important;">AV</th>
-                                            <th style="background-color:#9b9da0 !important;">DP</th>
-                                            <th style="background-color:#9b9da0 !important;">DNP</th>
+            </div>
+            <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                <div >
+                    <h3>Datos de Consulta</h3>
+                </div>
+                <div>
+                     <table class="table table-condensed">
+                         <thead>
+                            <tr >
+                                <th style="background-color:#9b9da0 !important;">...</th>
+                                <th style="background-color:#9b9da0 !important;">ESF</th>
+                                <th style="background-color:#9b9da0 !important;">CIL</th>
+                                <th style="background-color:#9b9da0 !important;">EJE</th>
+                                <th style="background-color:#9b9da0 !important;">ADD</th>
+                                <th style="background-color:#9b9da0 !important;">PRI</th>
+                                <th style="background-color:#9b9da0 !important;">AV</th>
+                                <th style="background-color:#9b9da0 !important;">DP</th>
+                                <th style="background-color:#9b9da0 !important;">DNP</th>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                            <tr>
-                                                <td>
-                                                   OD
-                                                </td>
-                                                <td><p><t t-esc="rx_final_od_esf"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_cil"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_eje"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_add"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_prisma"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_av"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_dp"/></p></td>
-                                                <td><p><t t-esc="rx_final_od_dnp"/></p></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>
+                                       OD
+                                    </td>
+                                    <td><p><t t-esc="rx_final_od_esf"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_cil"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_eje"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_add"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_prisma"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_av"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_dp"/></p></td>
+                                    <td><p><t t-esc="rx_final_od_dnp"/></p></td>
 
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                   OI
-                                                </td>
-                                                <td><p><t t-esc="rx_final_oi_esf"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_cil"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_eje"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_add"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_av"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_dp"/></p></td>
-                                                <td><p><t t-esc="rx_final_oi_dnp"/></p></td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <h4>Queratrometria</h4>
-                            <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                    <tr>
-                                        <td>OD</td>
-                                        <th><p t-esc="queratometria_od"/></th>
-                                        <td>OI</td>
-                                        <th><p t-esc="queratometria_oi"/></th>
-                                    </tr>
-                                </table>
-                                </center>
-                        </div>
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <h4>Refraccion</h4>
-                            <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                    <tr>
-                                        <td>OJO DERECHO</td>
-                                        <th><p t-esc="refraccion_od"/></th>
-                                        <td>OJO IZQUIERDO</td>
-                                        <th><p t-esc="refraccion_oi"/></th>
-                                    </tr>
-                                </table>
-                                </center>
-                        </div>
-
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <div >
-                                <h5>Diagnostico Primario: <strong><t t-esc="diagnostico_primario"/></strong></h5>
-                            </div>
-                            <div>
-                                <h5>Motivo de Remision: <strong><t t-esc="oftalmoscopia"/></strong></h5>
-                            </div>
-                            <div >
-                                <h5>Proxima cita: <strong>Un año</strong></h5>
-                            </div>
-                            <div>
-                                <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
-                            </div>
-                        </div>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       OI
+                                    </td>
+                                    <td><p><t t-esc="rx_final_oi_esf"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_cil"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_eje"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_add"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_prisma"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_av"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_dp"/></p></td>
+                                    <td><p><t t-esc="rx_final_oi_dnp"/></p></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                <h4>Queratrometria</h4>
+                <center>
+                    <table id="rx_uso" class="table table-condensed" style="width:90%">
+                        <tr>
+                            <td>OD</td>
+                            <th><p t-esc="queratometria_od"/></th>
+                            <td>OI</td>
+                            <th><p t-esc="queratometria_oi"/></th>
+                        </tr>
+                    </table>
+                    </center>
+            </div>
+            <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                <h4>Refraccion</h4>
+                <center>
+                    <table id="rx_uso" class="table table-condensed" style="width:90%">
+                        <tr>
+                            <td>OJO DERECHO</td>
+                            <th><p t-esc="refraccion_od"/></th>
+                            <td>OJO IZQUIERDO</td>
+                            <th><p t-esc="refraccion_oi"/></th>
+                        </tr>
+                    </table>
+                    </center>
+            </div>
+            <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
+                <div >
+                    <h5>Diagnostico Primario: <strong><t t-esc="diagnostico_primario"/></strong></h5>
+                </div>
+                <div>
+                    <h5>Motivo de Remision: <strong><t t-esc="oftalmoscopia"/></strong></h5>
+                </div>
+                <div >
+                    <h5>Proxima cita: <strong>Un año</strong></h5>
+                </div>
+                <div>
+                    <h5>Medico: <strong><t t-esc="user.name"/> </strong></h5>
+                </div>
+            </div>
+        </t>
      </template>
     <template id="formula_report_template">
         <t t-call="web.html_container">
