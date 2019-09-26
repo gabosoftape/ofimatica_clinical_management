@@ -87,7 +87,6 @@ class ProjectReportButton(models.TransientModel):
             'rx_final_oi_prisma': hs.rx_final_oi_prisma,
             'rx_final_od_av': hs.rx_final_od_av,
             'rx_final_oi_av': hs.rx_final_oi_av,
-
             'queratometria_od': hs.queratometria_od,
             'queratometria_oi': hs.queratometria_oi,
             'refraccion_od': hs.refraccion_od,

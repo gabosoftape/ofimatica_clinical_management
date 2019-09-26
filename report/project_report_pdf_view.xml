@@ -212,15 +212,15 @@
                             </div>
                             <div class="col-xs-12">
                                 <div class="col-xs-6">
-                                    Queratometria OD
-                                    Queratometria OI
+                                    <p>Queratometria OD: <t t-esc="queratometria_od"/></p>
+                                    <p>Queratometria OI: <t t-esc="queratometria_oi"/></p>
                                 </div>
                                 <div class="col-xs-6">
-                                    Segmento Ext OD
-                                    Segmento Ext OI
+                                    <p>Refraccion OD: <t t-esc="refraccion_od"/></p>
+                                    <p>Refraccion OI: <t t-esc="refraccion_oi"/></p>
                                 </div>
                                 <div class="col-xs-12">
-                                    Motivo de remision
+                                    <p>Motivo de remision: <t t-esc="remision_desc"/></p>
                                 </div>
                             </div>
                         </div>
