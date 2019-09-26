@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article" style="margin-top: 1px;">
+            <div class="article" style="margin-top: 1px !important;">
                 <t t-raw="0" />
             </div>
         </template>
