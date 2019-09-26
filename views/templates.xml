@@ -6,10 +6,28 @@
              </xpath>
         </template>
         <template id="remision_layout_standard">
-            <div class="header" style="position: absolute; top: -20rem; z-index: 1;">
-
+            <div class="header" style="position: absolute; z-index: 1;">
+                <div class="row">
+                            <div class="col-xs-4">
+                                    <img src='/web/binary/company_logo' style="width:100%"/>
+                            </div>
+                            <div class="col-xs-4">
+                                <center><h2>Remision Especialista</h2></center>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="col-xs-6">
+                                    <p>Fecha:</p>
+                                    <p>Caja:</p>
+                                    <p>Registro:</p>
+                                </div>
+                                <div class="col-xs-6">
+                                   <p>Factura:</p>
+                                    <p>Autorizacion: </p>
+                                </div>
+                            </div>
+                        </div>
             </div>
-            <div class="article" style="position: absolute; top: -10rem; z-index:99;">
+            <div class="article" style="position: absolute; top: -9rem; z-index:99;">
                 <t t-raw="0" />
             </div>
         </template>
