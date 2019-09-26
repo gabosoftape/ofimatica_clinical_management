@@ -434,7 +434,6 @@
                                     </div>
                                 </div>
                                 <div class="row" >
-                                    <t t-foreach="vals" t-as="hs">
                                     <div class="col-xs-12">
                                         <center>
                                             <h2>Antecedentes Medicos</h2>
@@ -450,7 +449,6 @@
                                         <div class="col-xs-3"><p>Medicacion: <strong><t t-if="hs['medicacion']"><p><t t-esc="hs['medicacion_desc']"/></p></t><t t-else=""><p>NO</p></t></strong></p></div>
                                         <div class="col-xs-3"><p>Antecedentes oculares: <strong><t t-if="hs['antecedentes_oculares']"><p><t t-esc="hs['antecedentes_oculares']"/></p></t><t t-else=""><p>NO</p></t></strong></p></div>
                                     </div>
-                                    </t>
                                 </div>
                                 <div class="row">
 
