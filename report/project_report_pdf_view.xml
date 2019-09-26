@@ -245,9 +245,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <center>
+                            <div class="col-xs-8">
+                                <center>
                                 <img src="/ofimatica_clinical_management/static/src/img/footer_tecnioptica.png"/>
-                            </center>
+                                </center>
+                            </div>
+                            <div class="col-xs-4">
+                                <p>Optometra: <t t-esc="optometra"/></p>
+                            </div>
                         </div>
 
                 </t>
