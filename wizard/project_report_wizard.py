@@ -64,7 +64,7 @@ class ProjectReportButton(models.TransientModel):
             'fecha': hs.fecha,
             'motivo': hs.motivo,
             'rx_uso_od_esf': hs.rx_uso_od_esf,
-            'rx_uso_od_esf': hs.rx_uso_od_cil,
+            'rx_uso_od_cil': hs.rx_uso_od_cil,
             'rx_uso_oi_esf': hs.rx_uso_oi_esf,
             'rx_uso_oi_cil': hs.rx_uso_oi_cil,
             'rx_final_od_vp_esf': hs.rx_final_od_vp_esf,

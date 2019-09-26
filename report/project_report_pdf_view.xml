@@ -434,10 +434,10 @@
                                     </div>
                                     <div class="col-xs-12" style="border: 1px solid #000;">
                                         <div class="col-xs-4">
+                                            <p>Nombres: <strong><t t-esc="nombres"/></strong></p>
                                             <p>Apellidos: <strong><t t-esc="apellidos"/></strong></p>
                                             <p>Telefono: <strong><t t-esc="telefono"/></strong></p>
                                             <p>Edad: <strong><t t-esc="edad"/></strong></p>
-                                            <p>Tipo Us: <strong><t t-esc="tipo_us"/></strong></p>
                                             <p>Ciudad: <strong><t t-esc="ciudad"/></strong></p>
                                             <p>Departamento: <strong><t t-esc="departamento"/></strong></p>
                                         </div>
@@ -451,7 +451,7 @@
                                             <p>Pat Repot: <strong><t t-esc="pat_repot"/></strong></p>
                                         </div>
                                         <div class="col-xs-4">
-                                            <p>Nombres: <strong><t t-esc="nombres"/></strong></p>
+                                            <p>Tipo Us: <strong><t t-esc="tipo_us"/></strong></p>
                                             <p>Direccion: <strong><t t-esc="direccion"/></strong></p>
                                             <p>Profesion: <strong><t t-esc="profesion"/></strong></p>
                                             <p>Tipo Afil: <strong><t t-esc="tipo_afil"/></strong></p>
