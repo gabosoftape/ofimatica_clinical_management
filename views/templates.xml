@@ -12,12 +12,14 @@
                             <img src='/web/binary/company_logo' style="width:100%"/>
                     </div>
                     <div class="col-xs-4">
-                        <h2>Remision Especialista</h2>
+                        <center><h2>Remision Especialista</h2></center>
                     </div>
                     <div class="col-xs-4">
-                        <p>
-                            Data
-                        </p>
+                        <p>Fecha:</p>
+                        <p>Caja:</p>
+                        <p>Registro:</p>
+                        <p>Factura:</p>
+                        <p>Autorizacion: </p>
                     </div>
                 </div>
             </div>
@@ -25,7 +27,5 @@
             <div class="article o_report_layout_standard">
                 <t t-raw="0" />
             </div>
-
-
         </template>
 </odoo>
