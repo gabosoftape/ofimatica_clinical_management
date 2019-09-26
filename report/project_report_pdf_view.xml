@@ -227,17 +227,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <h4>Queratrometria</h4>
                             <center>
-                                <table id="rx_uso" class="table table-condensed" style="width:90%">
-                                    <tr>
-                                        <td>OD</td>
-                                        <th><p t-esc="queratometria_od"/></th>
-                                        <td>OI</td>
-                                        <th><p t-esc="queratometria_oi"/></th>
-                                    </tr>
-                                </table>
-                                </center>
+                                <img src="/ofimatica_clinical_management/static/src/img/footer_tecnioptica.png"/>
+                            </center>
                         </div>
 
                 </t>
