@@ -107,22 +107,22 @@
     <template id="remission_report_template">
         <t t-call="web.html_container">
                 <t t-call="ofimatica_clinical_management.remision_layout_standard">
-                        <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
-                            <div >
-                                <h4>Datos de Paciente </h4>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                Nombres y apellidos :<strong><t t-esc="nombre"/></strong>
+                                identificacion :<strong><t t-esc="documento"/></strong>
+                                telefono :<strong><t t-esc="telefono"/></strong>
                             </div>
-                            <div >
-                                 Usuario: <strong><t t-esc="nombre"/></strong>
+                            <div class="col-xs-4">
+                                eps :<strong><t t-esc="eps"/></strong>
+                                edad :<strong><t t-esc="edad"/></strong>
+                                sexo :<strong><t t-esc="sexo"/></strong>
                             </div>
-                            <div>
-                                Identificacion: <strong><t t-esc="documento"/></strong>
+                            <div class="col-xs-4">
+                                motivo_consulta:<strong><t t-esc="motivo"/></strong>
+                                remitido a: <strong><t t-esc="remitido_a"/></strong>
                             </div>
-                            <div >
-                                Profesion/Oficio: <strong><t t-esc="function"/></strong>
-                            </div>
-                            <div>
-                                Fecha de Consulta : <strong><t t-esc="fecha"/></strong>
-                            </div>
+
 
                         </div>
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
