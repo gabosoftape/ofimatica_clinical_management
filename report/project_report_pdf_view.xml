@@ -242,7 +242,7 @@
                                 <div class="col-xs-8">
                                     <p>Motivo de remision: <t t-esc="remision_desc"/></p>
                                 </div>
-                                <div class="col-xs-4" style="border: 1px solid #000; border-radius: 20px;">
+                                <div class="col-xs-4" style="border: 1px solid #000;">
                                     <p>Optometra: <t t-esc="optometra"/></p>
                                 </div>
                             </div>
