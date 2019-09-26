@@ -106,23 +106,11 @@
      </template>
     <template id="remission_report_template">
         <t t-call="web.html_container">
-                <t t-call="web.minimal_layout">
+                <t t-call="ofimatica_clinical_management.remision_layout_standard">
                         <div style="text-align:center;color:black!important;">
                             <h1><center>REMISION A ESPECIALISTA</center></h1>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-4">
-                                    <img src='/web/binary/company_logo' style="width:100%"/>
-                            </div>
-                            <div class="col-xs-4">
-                                <h2>Remision Especialista</h2>
-                            </div>
-                            <div class="col-xs-4">
-                                <p>
-                                    Data
-                                </p>
-                            </div>
-                        </div>
+
                         <div class="row" style="margin-left: 5rem; margin-right: 5rem;">
                             <div >
                                 <h4>Datos de Paciente </h4>
