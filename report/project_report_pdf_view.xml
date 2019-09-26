@@ -106,7 +106,7 @@
      </template>
     <template id="remission_report_template">
         <t t-call="web.html_container">
-                <t t-call="web.external_layout">
+                <t t-call="web.minimal_layout">
                         <div style="text-align:center;color:black!important;">
                             <h1><center>REMISION A ESPECIALISTA</center></h1>
                         </div>
