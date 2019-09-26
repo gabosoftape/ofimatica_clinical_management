@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article">
+            <div>
                 <t t-raw="0" />
             </div>
         </template>
