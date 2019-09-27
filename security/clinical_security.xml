@@ -21,6 +21,6 @@
     <record id="group_clinical_manager" model="res.groups">
         <field name="name">Ofimatica Clinical / Administrador</field>
         <field name="category_id" ref="ofimatica_clinical_management.module_category_ofimatica_clinical_management"/>
-        <field name="implied_ids" eval="[(4, ref('ofimatica_clinical_manager.group_clinical_doctor')),(4, ref('ofimatica_clinical_manager.group_clinical_user'))]"/>
+        <field name="implied_ids" eval="[(4, ref('group_clinical_doctor'))],(4, ref('group_clinical_user'))]"/>
     </record>
 </odoo>
