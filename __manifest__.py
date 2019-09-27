@@ -2,7 +2,7 @@
 
 {
     'name': 'Administracion Consultorio Oftalmologico',
-    'version': '11.0.1',
+    'version': '11.0.2',
     'author': 'Gabriel Pabón',
     'category': 'Health',
     'website': 'https://github.com/gabosoftape/',
