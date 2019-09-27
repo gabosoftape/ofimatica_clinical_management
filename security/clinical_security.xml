@@ -3,16 +3,16 @@
 <odoo noupdate="1">
     <!--Group for clinical manager -->
     <record id="group_clinical_manager" model="res.groups">
-        <field name="name">Administrador</field>
+        <field name="name">Ofimatica Clinical / Administrador</field>
     </record>
 
     <!--Group for clinical doctor -->
     <record id="group_clinical_doctor" model="res.groups">
-        <field name="name">Optometra</field>
+        <field name="name">Ofimatica Clinical /Optometra</field>
     </record>
 
     <!--Group for clinical doctor -->
     <record id="group_clinical_user" model="res.groups">
-        <field name="name">user</field>
+        <field name="name">Ofimatica Clinical / Comercial</field>
     </record>
 </odoo>
