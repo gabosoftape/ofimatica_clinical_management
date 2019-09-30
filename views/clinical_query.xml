@@ -106,9 +106,9 @@ historial clinico
                     <header>
                         <button name="print_remission_pdf" type="action" string="Imprimir Remision" class="oe_highlight" attrs="{'invisible':[('is_remision','=',False)]}"/>
                         <button name="cita" states="cancelada" string="Cita" type="object" />
-                        <button name="proceso" states="cita" string="En Proceso" type="object" />
-                        <button name="cerrada" states="proceso" string="Finalizar Consulta" type="object" />
-                        <button name="cancelada" states="cita,proceso" string="Cancelar" type="object" />
+                        <button name="proceso" states="cita"  group="ofimatica_clinical_management.group_clinical_doctor" string="En Proceso" type="object" />
+                        <button name="cerrada" states="proceso"  group="ofimatica_clinical_management.group_clinical_doctor"  string="Finalizar Consulta" type="object" />
+                        <button name="cancelada" states="cita,proceso"  group="ofimatica_clinical_management.group_clinical_doctor"  string="Cancelar" type="object" />
                         <field name="state" widget="statusbar" />
                     </header>
                     <sheet>

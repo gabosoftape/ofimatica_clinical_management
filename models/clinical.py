@@ -27,8 +27,8 @@ class HistorialClinico(models.Model):
         res.update({'load_default': True})
         return res
 
-    state = fields.Selection([('cancelada', 'Cancelada'), ('cita', 'Cita Agendada'), ('proceso', 'En Proceso'),
-                              ('cerrada', 'Consulta Terminada')], 'Estado', default="cita")
+    state = fields.Selection([('cancelada', 'Cancelada'),('nueva', 'Cita Nueva'), ('cita', 'Cita Agendada'), ('proceso', 'En Proceso'),
+                              ('cerrada', 'Consulta Terminada')], 'Estado', default="nueva")
     history_type = fields.Selection([
         ('Primaria', 'Patologia Primaria'),
         ('Historia', 'Historia'),
@@ -241,6 +241,7 @@ class HistorialClinico(models.Model):
     @api.model
     def create(self, vals):
         number = self.env['ir.sequence'].next_by_code('historial.clinicoo')
+        vals['state'] = 'cita'
         vals['folio'] = str(number)
         result = super(HistorialClinico, self).create(vals)
         return result
