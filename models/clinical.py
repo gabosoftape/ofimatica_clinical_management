@@ -28,7 +28,7 @@ class HistorialClinico(models.Model):
         return res
 
     state = fields.Selection([('cancelada', 'Cancelada'),('nueva', 'Cita Nueva'), ('cita', 'Cita Agendada'), ('proceso', 'En Proceso'),
-                              ('cerrada', 'Consulta Terminada')], 'Estado', default="nueva")
+                              ('cerrada', 'Consulta Terminada')], 'Estado', default='nueva')
     history_type = fields.Selection([
         ('Primaria', 'Patologia Primaria'),
         ('Historia', 'Historia'),
