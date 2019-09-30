@@ -9,18 +9,20 @@
         <!--Group for clinical doctor -->
         <record id="group_clinical_doctor" model="res.groups">
             <field name="name">Ofimatica Clinical /Optometra</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
             <field name="category_id" ref="module_category_ofimatica_clinical_management"/>
         </record>
 
         <!--Group for clinical doctor -->
         <record id="group_clinical_user" model="res.groups">
             <field name="name">Ofimatica Clinical / Comercial</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
             <field name="category_id" ref="module_category_ofimatica_clinical_management"/>
         </record>
         <!--Group for clinical manager -->
         <record id="group_clinical_manager" model="res.groups">
             <field name="name">Ofimatica Clinical / Administrador</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
             <field name="category_id" ref="module_category_ofimatica_clinical_management"/>
-            <field name="implied_ids" eval="[(4, ref('group_clinical_doctor')),(4, ref('group_clinical_user'))]"/>
         </record>
     </odoo>
