@@ -131,7 +131,7 @@ historial clinico
                             </group>
                         </group>
                         <group>
-                            <field name="finalidad" attrs="{'readonly':[('state','in',('cancelada','cerrada', 'proceso','cita'))]}"/>
+                            <field name="finalidad" readonly="1"/>
                             <field name="motivo" attrs="{'readonly':[('state','in',('cancelada','cita','cerrada'))]}"/>
                             <field name="tipo_servicio" readonly="1"/>
                         </group>
