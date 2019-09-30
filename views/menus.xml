@@ -14,7 +14,7 @@
                                  <!-- Pacientes -->
                 <menuitem id="directorio" parent="clinical_admin" name="Pacientes" action="base.action_partner_customer_form" sequence="01"/>
                                  <!-- convenios -->
-                <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="action_convenios" sequence="02"/>
+                <menuitem id="clinical_agreements" parent="clinical_admin" name="Convenios"  action="action_convenios" groups="ofimatica_clinical_management.group_clinical_doctor" sequence="02"/>
                                 <!-- Informes -->
 
                 <!-- Informes -->
