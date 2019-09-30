@@ -6,7 +6,7 @@
                 <!-- Historias -->
                 <menuitem id="clinical_histories" parent="principal_optica" name="Historias Clinicas" sequence="02"/>
                 <menuitem id="consultas" parent="clinical_histories" name="Consultas" action="action_historial_clinico" sequence="01"/>
-                <menuitem id="seguimientos" parent="clinical_histories" name="Seguimientos" action="action_seguimiento_clinico" sequence="02"/>
+                <menuitem id="seguimientos" parent="clinical_histories" name="Seguimientos" group="ofimatica_clinical_management.group_clinical_doctor" action="action_seguimiento_clinico" sequence="02"/>
                 <menuitem id="agendar_citas" parent="clinical_histories" name="Agendar Citas" action="action_historial_clinico_agenda" sequence="03"/>
 
            	    <!-- administracion -->
@@ -18,7 +18,7 @@
                                 <!-- Informes -->
 
                 <!-- Informes -->
-                <menuitem id="g_informes" parent="principal_optica" name="Informes" sequence="04"/>
+                <menuitem id="g_informes" parent="principal_optica" group="ofimatica_clinical_management.group_clinical_doctor" name="Informes" sequence="04"/>
                 <menuitem id="TESTEOACTION" parent="g_informes" name="Imprimir Todo"  action="project_report_open_wizard" sequence="03"/>
 
 
